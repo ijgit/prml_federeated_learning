@@ -117,12 +117,11 @@ def partition_dataset(targets, class_to_idx, num_client, alpha, seed):
 
 class ClientDataset(Dataset):
     """TensorDataset with support of transforms."""
-    def __init__(self, data, targets, dist, class_to_idx, transform=None):
+    def __init__(self, data, targets, class_to_idx, transform=None):
 
         # assert all(tensors[0].size(0) == tensor.size(0) for tensor in tensors)
         self.data = data
         self.targets = targets
-        self.dist = dist
         self.class_to_idx = class_to_idx
         self.transform = transform
 
@@ -135,9 +134,6 @@ class ClientDataset(Dataset):
         if self.transform:
             data = self.transform(data)
         return data, targets
-
-    def __dist__(self):
-        return self.dist
     
     def __data__(self):
         return self.data
@@ -200,66 +196,15 @@ def partition_with_dirichlet_distribution(dataset_name, data, targets, class_to_
         ClientDataset(
             data = data[client_data_indecies[idx]], # client_datas[idx] if type(data[0]) == str else torch.Tensor(client_datas[idx]),
             targets = torch.Tensor(targets)[client_data_indecies[idx]],
-            dist = softmax(client_dist[idx]),
             class_to_idx = class_to_idx,
             transform=transform
         )
         for idx in range(0, num_client)
     ]
-    
     return splited_client_dataset
 
-
-def split_dataset_with_test_and_val(dataset):
-    sorted_indecies = torch.argsort(torch.Tensor(dataset.targets))
-    sorted_labels = torch.Tensor(dataset.targets)[sorted_indecies]
     
-    num_of_class_item = {}
-    for i in dataset.class_to_idx.values():
-        num_of_class_item[i] = len(sorted_labels[sorted_labels==i])
-    
-    val_dataset_indecies, test_dataset_indecies = None, None
-    init_idx = 0
-    for i in dataset.class_to_idx.values():
-        val_idx = num_of_class_item[i]//2
-        test_idx = num_of_class_item[i] 
-        
-        if val_dataset_indecies==None and test_dataset_indecies==None:
-            val_dataset_indecies = sorted_indecies[init_idx:init_idx+val_idx]
-            test_dataset_indecies = sorted_indecies[init_idx+val_idx:init_idx+test_idx]
-        else:
-            val_dataset_indecies = torch.cat([val_dataset_indecies, sorted_indecies[init_idx:init_idx+val_idx]], dim=0)
-            test_dataset_indecies = torch.cat([test_dataset_indecies, sorted_indecies[init_idx+val_idx:init_idx+test_idx]], dim=0)
-        
-        init_idx += test_idx
-        
-    
-    return val_dataset_indecies, test_dataset_indecies
-    
-
-def gen_target_distribution_data(targets, class_to_idx, dist):
-    num_of_data = len(targets)//len(class_to_idx.values())
-    sorted_indecies = torch.argsort(torch.Tensor(targets))
-    sorted_labels = torch.Tensor(targets)[sorted_indecies]
-    
-    num_of_class_item = {}
-    for i in class_to_idx.values():
-        num_of_class_item[i] = len(sorted_labels[sorted_labels==i])
-        
-    new_indecies = None
-    init_idx = 0
-    for i in class_to_idx.values():
-        if new_indecies == None:
-            new_indecies = sorted_indecies[init_idx: init_idx+round(dist[i]*num_of_data)]
-        else:
-            new_indecies = torch.cat([new_indecies, sorted_indecies[init_idx: init_idx+round(dist[i]*num_of_data)]], dim=0)
-        
-        init_idx = init_idx + num_of_class_item[i]
-
-    return new_indecies
-
-
-def prepare_dataset(seed, dataset_name, target_dist, num_client, alpha):
+def prepare_dataset(seed, dataset_name, num_client, alpha):
     dataset_name = dataset_name.upper()
 
     if hasattr(torchvision.datasets, dataset_name):
@@ -298,10 +243,10 @@ def prepare_dataset(seed, dataset_name, target_dist, num_client, alpha):
         
 
         # split test dataset into validation set and test set
-        test_dataset_indecies = gen_target_distribution_data(test_dataset.targets, test_dataset.class_to_idx, target_dist)
+        # test_dataset_indecies = gen_target_distribution_data(test_dataset.targets, test_dataset.class_to_idx, target_dist)
         test_dataset = CustomTensorDataset(
-            data = test_dataset.data[test_dataset_indecies],
-            targets = torch.Tensor(test_dataset.targets)[test_dataset_indecies],
+            data = test_dataset.data,
+            targets = torch.Tensor(test_dataset.targets),
             class_to_idx = test_dataset.class_to_idx,
             transform=transform
         )

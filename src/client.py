@@ -30,8 +30,6 @@ class Client(object):
         """Client object is initiated by the center server."""
         self.id = client_id
         self.data = local_data
-        self.dist = self.data.dist.reshape(1, -1)
-        self.num_classes = self.dist.shape[1]
         self.log_path = log_path
         self.device = device
         self.round = 0

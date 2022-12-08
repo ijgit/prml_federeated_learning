@@ -1,4 +1,4 @@
-device=3
+device=1
 num_clients=100
 fraction=0.1
 is_mp='True'

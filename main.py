@@ -111,8 +111,7 @@ if __name__ == "__main__":
     message = f"\n[Target Distribution] ${target_dist}"; logging.info(message)
 
     # federated learning
-    partitioned_train_set, test_dataset = prepare_dataset(seed=args.seed, dataset_name=args.dataset_name, num_client=args.num_clients, 
-                                                            alpha=args.alpha, target_dist=target_dist)
+    partitioned_train_set, test_dataset = prepare_dataset(seed=args.seed, dataset_name=args.dataset_name, num_client=args.num_clients,alpha=args.alpha)
     message = "\n[WELCOME] Unfolding configurations...!"
     print(message); logging.info(message)
 
