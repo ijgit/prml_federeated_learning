@@ -22,7 +22,6 @@ import pickle
 from .models import *
 from .utils import *
 from .client import Client
-from scipy.optimize import nnls
 logger = logging.getLogger(__name__)
 
 

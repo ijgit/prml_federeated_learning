@@ -1,4 +1,4 @@
-device=1
+device=2
 num_clients=100
 fraction=0.1
 is_mp='True'
@@ -18,10 +18,8 @@ tm_local_bs=100
 rounds=300
 alpha=1
 
-for mu in 0 0.1 0.5
-do
-    python3 main.py --mp=True --tm_local_bs=${tm_local_bs} --device=${device} --alpha=${alpha} --dataset_name=${dataset_name} --num_clients=${num_clients} --fraction=${fraction} --rounds=${rounds} --tm_mu=${mu}
-done
+# for mu in 0 0.1 0.5
+python3 main.py --mp=True --tm_local_bs=${tm_local_bs} --device=${device} --alpha=${alpha} --dataset_name=${dataset_name} --num_clients=${num_clients} --fraction=${fraction} --rounds=${rounds}
 
 
 # CIFAR-100
