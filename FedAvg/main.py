@@ -72,11 +72,11 @@ if __name__ == "__main__":
 
     # initiate TensorBaord for tracking losses and metrics
     writer = SummaryWriter(log_dir=log_path, filename_suffix="FL")
-    tb_thread = threading.Thread(
-        target=launch_tensor_board,
-        args=([log_path, 5252, "0.0.0.0"])
-        ).start()
-    time.sleep(3.0)
+    # tb_thread = threading.Thread(
+    #     target=launch_tensor_board,
+    #     args=([log_path, 5252, "0.0.0.0"])
+    #     ).start()
+    # time.sleep(3.0)
 
     # set the configuration of global logger
     logger = logging.getLogger(__name__)
