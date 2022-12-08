@@ -47,7 +47,6 @@ class Server(object):
         self.test_dataset = test_dataset
         self.data_config = data_config
         self.num_classes = int(data_config['num_classes'])
-        self.target_dist = data_config['target_dist']
         
         # gen model
         self.tm_config = tm_config
@@ -285,8 +284,8 @@ class Server(object):
             test_loss, test_accuracy = self.evaluate_global_task_model()
             self.results['loss'].append(test_loss)
             self.results['accuracy'].append(test_accuracy)
-            self.writer.add_scalars('Loss', {f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_target:{self.data_config['target_dist_op']}_lr:{self.tm_config['lr']}_ep:{self.tm_config['local_ep']}": test_loss}, self._round)
-            self.writer.add_scalars('Accuracy', {f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_target:{self.data_config['target_dist_op']}_lr:{self.tm_config['lr']}_ep:{self.tm_config['local_ep']}": test_accuracy}, self._round)
+            self.writer.add_scalars('Loss', {f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_lr:{self.tm_config['lr']}_ep:{self.tm_config['local_ep']}": test_loss}, self._round)
+            self.writer.add_scalars('Accuracy', {f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_lr:{self.tm_config['lr']}_ep:{self.tm_config['local_ep']}": test_accuracy}, self._round)
 
             message = f"[Round: {str(self._round).zfill(4)}] Evaluate global model's performance...!\
                 \n\t[Server] ...finished evaluation!\

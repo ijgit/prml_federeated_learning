@@ -31,13 +31,13 @@ def args_parser():
     # parser.add_argument('--tm_num_classes', type=int, help='number of classes of dataset')
 
     # distribution model arguments
-    parser.add_argument('--dm_lr', type=float, default=0.001, help='learning rate of task model')
-    parser.add_argument('--dm_criterion', default='MultiLabelSoftMarginLoss', help='criterion of distribution model')
-    parser.add_argument('--dm_optimizer', default='Adam', help='optimizer of distribution model')
-    parser.add_argument('--dm_name', default='distribution_fcn', help='task model name')
-    # parser.add_argument('--dm_input_size', type=int, help='size of input of distribution model')
-    parser.add_argument('--dm_preprocessing', default='none', help='model parameter preprocessing option: none/norm_normalization/min_max')
-    parser.add_argument('--dm_input_type', default='gradient', help='gradient/weight/y_derivative/weighted_average')
+    # parser.add_argument('--dm_lr', type=float, default=0.001, help='learning rate of task model')
+    # parser.add_argument('--dm_criterion', default='MultiLabelSoftMarginLoss', help='criterion of distribution model')
+    # parser.add_argument('--dm_optimizer', default='Adam', help='optimizer of distribution model')
+    # parser.add_argument('--dm_name', default='distribution_fcn', help='task model name')
+    # # parser.add_argument('--dm_input_size', type=int, help='size of input of distribution model')
+    # parser.add_argument('--dm_preprocessing', default='none', help='model parameter preprocessing option: none/norm_normalization/min_max')
+    # parser.add_argument('--dm_input_type', default='gradient', help='gradient/weight/y_derivative/weighted_average')
 
     # dataset setting
     parser.add_argument('--dataset_name', help='dataset name')

@@ -10,6 +10,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
 
 from torch.utils.data import DataLoader
+from .optimizer import *
 
 logger = logging.getLogger(__name__)
 

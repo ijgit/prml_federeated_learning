@@ -34,49 +34,31 @@ if __name__ == "__main__":
     if args.dataset_name.upper() == 'MNIST':
         num_classes = 10
         tm_name = 'mnist_fc'
-        dm_input_size = num_classes if args.dm_input_type == 'y_derivative' else 320
     elif args.dataset_name.upper() == 'CIFAR10':
         num_classes = 10
         tm_name = 'cifar10_cnn'
-        dm_input_size = num_classes if args.dm_input_type == 'y_derivative' else 5120
     elif args.dataset_name.upper() == 'CIFAR100':
         num_classes = 100
         tm_name = 'cifar100_cnn'
-        dm_input_size = num_classes if args.dm_input_type == 'y_derivative' else 128000
     elif args.dataset_name.upper() == "EMNIST":
         num_classes = 62
         tm_name = 'emnist_cnn'
-        dm_input_size = num_classes if args.dm_input_type == 'y_derivative' else 126976
     elif args.dataset_name.upper() == 'FEMNIST':
         num_classes = 62
         tm_name = 'femnist_cnn'
-        dm_input_size = num_classes if args.dm_input_type == 'y_derivative' else 126976
     elif args.dataset_name.upper() == 'TINYIMGNET':
         num_classes = 200
         tm_name = 'tinyimgnet_cnn'
-        dm_input_size = num_classes if args.dm_input_type == 'y_derivative' else 102400
 
-    if args.target_dist_op == 1:
-        target_dist = [1]*(num_classes//2)
-        target_dist.extend([0]*(num_classes - (num_classes//2)))
-    elif args.target_dist_op == 2:
-        target_dist = [1]*(num_classes//2)
-        target_dist.extend([.5]*(num_classes - (num_classes//2)))
-    elif args.target_dist_op == 3:
-        target_dist = [1]*int(num_classes*1/4)
-        target_dist.extend([.5]*(num_classes - int(num_classes*1/4)))
-    else:   target_dist = [1]*num_classes
-    target_dist = list(softmax(target_dist))
-
-    log_dir = f'{args.log_dir}/{args.dataset_name}'
+    log_dir = f'{args.log_dir}/{args.dataset_name}/{str(datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S"))}'
     log_path, log_file = log_dir, 'FL_Log.log'
-    log_path = os.path.join(log_path, f'a_{args.alpha}_optim_{args.dm_optimizer}_loss_{args.dm_criterion}_lr_{args.dm_lr}')
+    # log_path = os.path.join(log_path, f'a_{args.alpha}')
 
     fed_config = {
         'init_round': args.init_round, 'num_rounds': args.rounds, 'num_clients': args.num_clients, 'fraction': args.fraction, 'alpha': args.alpha
     }
     data_config = {
-        'name': args.dataset_name, 'num_classes': num_classes, 'alpha': args.alpha, 'target_dist_op': args.target_dist_op, 'target_dist': target_dist
+        'name': args.dataset_name, 'num_classes': num_classes, 'alpha': args.alpha, 
     }
     tm_config = {
         'lr': args.tm_lr, 'momentum': args.tm_momentum, 'name': tm_name,
@@ -107,8 +89,6 @@ if __name__ == "__main__":
     logging.info(f"fed_config: {fed_config}")
     logging.info(f"tm_config: {tm_config}")
     logging.info(f"system_config: {system_config}")
-
-    message = f"\n[Target Distribution] ${target_dist}"; logging.info(message)
 
     # federated learning
     partitioned_train_set, test_dataset = prepare_dataset(seed=args.seed, dataset_name=args.dataset_name, num_client=args.num_clients,alpha=args.alpha)
