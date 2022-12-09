@@ -6,7 +6,7 @@ def parse_none(param):
     if param == "None":
         return None
     else:
-        return param
+        return float(param)
 
 def str_to_bool(param):
     if isinstance(param, bool):
