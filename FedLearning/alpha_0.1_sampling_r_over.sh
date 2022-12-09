@@ -129,3 +129,5 @@ tm_criterion=Ratio_Cross_Entropy;method=feddyn;mu=None
 filename="${seed}_${dataset_name}_${alpha}_${method}(mu:${mu})_${tm_criterion}_${sampling_type}"
 python main.py --mp=${is_mp} --method=${method} --sampling_type=${sampling_type} --tm_mu=${mu} --tm_criterion=${tm_criterion} --tm_local_bs=${tm_local_bs} --device=${device} --alpha=${alpha} --dataset_name=${dataset_name} --num_clients=${num_clients} --fraction=${fraction} --rounds=${rounds} > ./output/${filename}.out 2>&1 &
 
+
+wait
