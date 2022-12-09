@@ -1,4 +1,12 @@
 import argparse
+import sys
+
+def parse_none(param):
+    print(param)
+    if param == "None":
+        return None
+    else:
+        return param
 
 def str_to_bool(param):
     if isinstance(param, bool):
@@ -13,6 +21,8 @@ def str_to_bool(param):
 def args_parser():
     parser = argparse.ArgumentParser()
 
+    parser.add_argument('--method', default='fedavg')
+
     # federated learning arguments
     parser.add_argument('--rounds', type=int, default=100, help="number of round of training")
     parser.add_argument('--num_clients', type=int, default=100, help='number of client (K)')
@@ -25,8 +35,7 @@ def args_parser():
     parser.add_argument('--tm_criterion', default='CrossEntropyLoss', help='criterion of task model')
     parser.add_argument('--tm_optimizer', default='SGD', help='optimizer of task model')
     parser.add_argument('--tm_momentum', type=float, default=0.9, help='momentum of optimizer of task model')
-    parser.add_argument('--tm_mu', type=float, default=0.1, help='mu for FedProx')
-    
+    parser.add_argument('--tm_mu', type=parse_none, default=None, help='mu for FedProx')
     # parser.add_argument('--tm_name', help='task model name')
     # parser.add_argument('--tm_num_classes', type=int, help='number of classes of dataset')
 

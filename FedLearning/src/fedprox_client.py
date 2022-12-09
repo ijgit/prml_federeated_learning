@@ -12,12 +12,10 @@ from torch.utils.data import DataLoader, TensorDataset
 
 from torch.utils.data import DataLoader
 from .optimizer import *
+from .criterion import *
 
 logger = logging.getLogger(__name__)
 
-def model_parameter_vector(model):
-    param = [p.view(-1) for p in model.parameters()]
-    return torch.cat(param, dim=0)
 
 class Client(object):
     """Class for client object having its own (private) data and resources to train a model.
@@ -35,6 +33,7 @@ class Client(object):
         """Client object is initiated by the center server."""
         self.id = client_id
         self.data = local_data
+        self.num_class = len(self.data.class_to_idx.values())
         self.log_path = log_path
         self.device = device
         self.round = 0
@@ -49,17 +48,7 @@ class Client(object):
     def t_model(self, t_model):
         """Local model setter for passing globally aggregated model parameters."""
         self.__t_model = t_model
-        
-        if self.round == 0:
-            # init
-            self.global_model_vector = None
-            old_grad = copy.deepcopy(self.t_model)
-            old_grad = model_parameter_vector(old_grad)
-            self.old_grad = torch.zeros_like(old_grad)
-        else:
-            for new_param, old_param in zip(self.t_model.parameters(), self.model.parameters()):
-                old_param.data = new_param.data.clone()
-            self.global_model_vector = model_parameter_vector(self.t_model).detach().clone()
+        self.global_params = copy.deepcopy(list(self.__t_model.parameters()))
 
     def __len__(self):
         """Return a total size of the client's local data."""
@@ -81,14 +70,9 @@ class Client(object):
         self.t_model.train()
         self.t_model.to(self.device)
 
-        if self.tm_optimizer == "SGD":
-            optimizer = torch.optim.__dict__[self.tm_optimizer](
-                self.t_model.parameters(), lr=self.tm_optim_config['lr'], momentum=self.tm_optim_config['momentum']
-            )
-        else:
-            pass
-        # optimizer = PerturbedGradientDescent(
-            # self.t_model.parameters(), lr=self.tm_optim_config['lr'], mu=self.tm_optim_config['mu'])
+        # optimizer = torch.optim.__dict__[self.tm_optimizer](self.t_model.parameters(), **self.tm_optim_config)
+        optimizer = PerturbedGradientDescent(
+            self.t_model.parameters(), lr=self.tm_optim_config['lr'], mu=self.tm_optim_config['mu'])
         
         for e in range(self.tm_local_ep):
             for data, labels in self.dataloader:
@@ -96,23 +80,22 @@ class Client(object):
   
                 optimizer.zero_grad()
                 preds = self.t_model(data)
-                loss = torch.nn.__dict__[self.tm_criterion]()(preds, labels)
 
-                if self.global_model_vector != None:
-                    v1 = model_parameter_vector(self.t_model)
-                    loss += self.alpha/2 * torch.norm(v1 - self.global_model_vector, 2)
-                    loss -= torch.dot(v1, self.old_grad)
-                
-                print(self.global_model_vector)
+                if self.tm_criterion == 'CrossEntropyLoss':
+                    loss = torch.nn.__dict__[self.tm_criterion]()(preds, labels)
+                    
+                elif self.tm_criterion == 'FocalLoss':
+                    loss_func = FocalLoss(alpha=None, size_average=True)
+                    loss = loss_func(preds, labels)
+                    
+                elif self.tm_criterion == 'Ratio_Cross_Entropy':
+                    loss_func = Ratio_Cross_Entropy(device=self.device, class_num=self.num_class, alpha=None, size_average=True)
+                    loss = loss_func(preds, labels)
 
                 loss.backward()
-                optimizer.step() 
+                optimizer.step(self.global_params, self.device) 
 
             if self.device != 'cpu': torch.cuda.empty_cache()
-        
-        if self.global_model_vector != None:
-            v1 = model_parameter_vector(self.t_model).detach()
-            self.old_grad = self.old_grad - self.alpha * (v1 - self.global_model_vector)
 
         self.t_model.to("cpu")
 
@@ -130,7 +113,18 @@ class Client(object):
                 data, labels = data.float().to(self.device), labels.long().to(self.device)
                 preds = self.t_model(data)
 
-                test_loss +=torch.nn.__dict__[self.tm_criterion]()(preds, labels).item()
+                if self.tm_criterion == 'CrossEntropyLoss':
+                    loss = torch.nn.__dict__[self.tm_criterion]()(preds, labels)
+                    
+                elif self.tm_criterion == 'FocalLoss':
+                    loss_func = FocalLoss(alpha=None, size_average=True)
+                    loss = loss_func(preds, labels)
+                    
+                elif self.tm_criterion == 'Ratio_Cross_Entropy':
+                    loss_func = Ratio_Cross_Entropy(device=self.device, class_num=self.num_class, alpha=None, size_average=True)
+                    loss = loss_func(preds, labels)
+                    
+                test_loss += loss.item()
                 
                 predicted = preds.argmax(dim=1, keepdim=True)
                 correct += predicted.eq(labels.view_as(predicted)).sum().item()

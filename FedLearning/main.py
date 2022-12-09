@@ -50,12 +50,12 @@ if __name__ == "__main__":
         num_classes = 200
         tm_name = 'tinyimgnet_cnn'
 
-    log_dir = f'{args.log_dir}/{args.dataset_name}/{str(datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S"))}'
+    log_dir = f'{args.log_dir}/{args.dataset_name}/{args.seed}_{args.dataset_name}_{args.alpha}_{args.method}(${args.tm_mu})_{args.tm_criterion}_{str(datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S"))}'
     log_path, log_file = log_dir, 'FL_Log.log'
     # log_path = os.path.join(log_path, f'a_{args.alpha}')
 
     fed_config = {
-        'init_round': args.init_round, 'num_rounds': args.rounds, 'num_clients': args.num_clients, 'fraction': args.fraction, 'alpha': args.alpha
+        'method': args.method, 'init_round': args.init_round, 'num_rounds': args.rounds, 'num_clients': args.num_clients, 'fraction': args.fraction, 'alpha': args.alpha
     }
     data_config = {
         'name': args.dataset_name, 'num_classes': num_classes, 'alpha': args.alpha, 
@@ -63,11 +63,11 @@ if __name__ == "__main__":
     tm_config = {
         'lr': args.tm_lr, 'momentum': args.tm_momentum, 'name': tm_name,
         'criterion': args.tm_criterion, 'optimizer': args.tm_optimizer,
+        'local_ep': args.tm_local_ep, 'local_bs': args.tm_local_bs,
         'mu': args.tm_mu,
-        'local_ep': args.tm_local_ep, 'local_bs': args.tm_local_bs
     }
     system_config = {
-        'is_mp': args.mp, 'device': 'cuda', 'seed': args.seed, 'log_dir': log_path, 'time_config': time_config
+        'is_mp': args.mp, 'device': 'cuda', 'seed': args.seed, 'log_dir': log_path, 'time_config': time_config, 'device_id': args.device
     }
 
 
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     #     target=launch_tensor_board,
     #     args=([log_path, 5252, "0.0.0.0"])
     #     ).start()
-    time.sleep(3.0)
+    # time.sleep(3.0)
 
     # set the configuration of global logger
     logger = logging.getLogger(__name__)
@@ -88,9 +88,15 @@ if __name__ == "__main__":
         datefmt="%Y/%m/%d/ %I:%M:%S %p")
 
     logging.info(f"fed_config: {fed_config}")
+    logging.info(f"data_config: {data_config}")
     logging.info(f"tm_config: {tm_config}")
     logging.info(f"system_config: {system_config}")
-
+    
+    print(f"fed_config: {fed_config}")
+    print(f"data_config: {data_config}")
+    print(f"tm_config: {tm_config}")
+    print(f"system_config: {system_config}")
+    
     # federated learning
     partitioned_train_set, test_dataset = prepare_dataset(seed=args.seed, dataset_name=args.dataset_name, num_client=args.num_clients,alpha=args.alpha)
     message = "\n[WELCOME] Unfolding configurations...!"
@@ -106,7 +112,9 @@ if __name__ == "__main__":
 
     message = "...done all learning process!\n...exit program!"
     print(message); logging.info(message)
-    time.sleep(3); exit(0)
+    time.sleep(3); os._exit(0)
+    
+    
   
 
     # # initialize federated learning 

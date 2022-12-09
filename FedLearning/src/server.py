@@ -21,7 +21,11 @@ import pickle
 
 from .models import *
 from .utils import *
-from .client import Client
+from .fedavg_client import Client as FedAvg_Client
+from .feddyn_client import Client as FedDyn_Client
+from .fedprox_client import Client as FedProx_Client
+
+
 from .criterion import *
 logger = logging.getLogger(__name__)
 
@@ -65,6 +69,8 @@ class Server(object):
         self.num_clients = fed_config['num_clients']
         self.num_rounds = fed_config['num_rounds']
         self.fraction = fed_config['fraction']
+        
+        self.method = fed_config['method']
 
         if self.init_round != None:
             self.t_model.load_state_dict(torch.load(f"{self.log_dir}/models/{self.init_round}_t_model.pt"))
@@ -95,7 +101,15 @@ class Server(object):
         """Initialize each Client instance."""
         clients = []
         for k, dataset in tqdm(enumerate(local_datasets), leave=False):
-            client = Client(client_id=k, local_data=dataset, device=self.device, log_path=f"{self.log_dir}")
+            if self.method == 'fedavg':
+                client = FedAvg_Client(client_id=k, local_data=dataset, device=self.device, log_path=f"{self.log_dir}")
+            elif self.method == 'fedprox':
+                client = FedProx_Client(client_id=k, local_data=dataset, device=self.device, log_path=f"{self.log_dir}")
+            elif self.method == 'feddyn':
+                client = FedDyn_Client(client_id=k, local_data=dataset, device=self.device, log_path=f"{self.log_dir}")    
+            else:
+                pass
+                
             clients.append(client)
 
         message = f"[Round: {str(self._round).zfill(4)}] ...successfully created all {str(self.num_clients)} clients!"
@@ -253,7 +267,7 @@ class Server(object):
                 preds = self.t_model(data)
                     
                 if self.tm_config['criterion'] == 'CrossEntropyLoss':
-                    loss = torch.nn.__dict__[self.tm_criterion]()(preds, labels)
+                    loss = torch.nn.__dict__[self.tm_config['criterion']]()(preds, labels)
                     
                 elif self.tm_config['criterion'] == 'FocalLoss':
                     loss_func = FocalLoss(alpha=None, size_average=True)
@@ -296,8 +310,11 @@ class Server(object):
             test_loss, test_accuracy = self.evaluate_global_task_model()
             self.results['loss'].append(test_loss)
             self.results['accuracy'].append(test_accuracy)
-            self.writer.add_scalars('Loss', {f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_lr:{self.tm_config['lr']}_ep:{self.tm_config['local_ep']}_loss:{self.tm_config['criterion']}": test_loss}, self._round)
-            self.writer.add_scalars('Accuracy', {f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_lr:{self.tm_config['lr']}_ep:{self.tm_config['local_ep']}_loss:{self.tm_config['criterion']}": test_accuracy}, self._round)
+
+
+            config_info = f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_method:{self.method}(mu:{self.tm_config['mu']})_loss:{self.tm_config['criterion']}"
+            self.writer.add_scalars('Loss', {f"{config_info}": test_loss}, self._round)
+            self.writer.add_scalars('Accuracy', {f"{config_info}": test_accuracy}, self._round)
 
             message = f"[Round: {str(self._round).zfill(4)}] Evaluate global model's performance...!\
                 \n\t[Server] ...finished evaluation!\
