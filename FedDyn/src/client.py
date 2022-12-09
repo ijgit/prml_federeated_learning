@@ -50,10 +50,16 @@ class Client(object):
         """Local model setter for passing globally aggregated model parameters."""
         self.__t_model = t_model
         
-        self.global_model_vector = None
-        old_grad = copy.deepcopy(self.t_model)
-        old_grad = model_parameter_vector(old_grad)
-        self.old_grad = torch.zeros_like(old_grad)
+        if self.round == 0:
+            # init
+            self.global_model_vector = None
+            old_grad = copy.deepcopy(self.t_model)
+            old_grad = model_parameter_vector(old_grad)
+            self.old_grad = torch.zeros_like(old_grad)
+        else:
+            for new_param, old_param in zip(self.t_model.parameters(), self.model.parameters()):
+                old_param.data = new_param.data.clone()
+            self.global_model_vector = model_parameter_vector(self.t_model).detach().clone()
 
     def __len__(self):
         """Return a total size of the client's local data."""
@@ -96,6 +102,8 @@ class Client(object):
                     v1 = model_parameter_vector(self.t_model)
                     loss += self.alpha/2 * torch.norm(v1 - self.global_model_vector, 2)
                     loss -= torch.dot(v1, self.old_grad)
+                
+                print(self.global_model_vector)
 
                 loss.backward()
                 optimizer.step() 
