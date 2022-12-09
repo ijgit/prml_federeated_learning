@@ -50,7 +50,7 @@ if __name__ == "__main__":
         num_classes = 200
         tm_name = 'tinyimgnet_cnn'
 
-    log_dir = f'{args.log_dir}/{args.dataset_name}/{args.seed}_{args.dataset_name}_{args.alpha}_{args.method}(${args.tm_mu})_{args.tm_criterion}_{args.sampling_type}_{time_config}'
+    log_dir = f'{args.log_dir}/{args.dataset_name}/{args.seed}_{args.dataset_name}_{args.alpha}_{args.method}(${args.tm_mu})_{args.tm_criterion}_{args.sampling_type}'
     log_path, log_file = log_dir, 'FL_Log.log'
     # log_path = os.path.join(log_path, f'a_{args.alpha}')
 
