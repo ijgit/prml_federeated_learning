@@ -312,7 +312,7 @@ class Server(object):
             self.results['accuracy'].append(test_accuracy)
 
 
-            config_info = f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_method:{self.method}(mu:{self.tm_config['mu']})_loss:{self.tm_config['criterion']}"
+            config_info = f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_method:{self.method}(mu:{self.tm_config['mu']})_loss:{self.tm_config['criterion']}_sampling:{self.data_config['sampling_type']}"
             self.writer.add_scalars('Loss', {f"{config_info}": test_loss}, self._round)
             self.writer.add_scalars('Accuracy', {f"{config_info}": test_accuracy}, self._round)
 

@@ -176,8 +176,8 @@ class ClientDataset(Dataset):
         print(f">>>>> Resampling Started : {self.sampling_type}")
         _X = self.data
         _y = self.targets.numpy().reshape(-1,1)
-
-        if len(set(_y.tolist())) == 1:
+        
+        if len(set(_y.flatten().tolist())) == 1:
             return self.data, self.targets # do nothing
 
         print(f"  orig.shape; {_X.shape}, {_y.shape}")
