@@ -117,9 +117,10 @@ def partition_dataset(targets, class_to_idx, num_client, alpha, seed):
 
 class ClientDataset(Dataset):
     """TensorDataset with support of transforms."""
-    def __init__(self, data, targets, class_to_idx, sampling_type, seed, transform=None):
+    def __init__(self, data, targets, class_to_idx, sampling_type, seed, client_id, dataset_name, alpha, transform=None):
         self.s_types = ["smote", "r_over", "r_under"]
         self.seed = seed
+        self.client_id = client_id
 
         # assert all(tensors[0].size(0) == tensor.size(0) for tensor in tensors)
         self.data = data
@@ -130,7 +131,11 @@ class ClientDataset(Dataset):
 
         print(f"sampling_type: {self.sampling_type}")
         if self.sampling_type in self.s_types:
-            self.data, self.targets = self.sampling()
+            _X, _y = self.sampling()
+            c_file = f"_y.{dataset_name}.a{alpha}.{sampling_type}.{client_id}"
+            np.savetxt(f"./csv/{c_file}.orig.csv", self.targets.numpy().flatten(), delimiter=",")
+            np.savetxt(f"./csv/{c_file}.resampled.csv", _y.numpy().flatten(), delimiter=",")
+            self.data, self.targets = _X, _y
         else :
             print(f"sampling types : {self.s_types}")
 
@@ -177,7 +182,7 @@ class ClientDataset(Dataset):
         _X = self.data
         _y = self.targets.numpy().reshape(-1,1)
 
-        if len(set(_y.tolist())) == 1:
+        if len(set(_y.flatten().tolist())) == 1:
             return self.data, self.targets # do nothing
 
         print(f"  orig.shape; {_X.shape}, {_y.shape}")
@@ -238,7 +243,7 @@ def partition_with_dirichlet_distribution(dataset_name, data, targets, class_to_
         ClientDataset(
             data = data[client_data_indecies[idx]], # client_datas[idx] if type(data[0]) == str else torch.Tensor(client_datas[idx]),
             targets = torch.Tensor(targets)[client_data_indecies[idx]],
-            class_to_idx = class_to_idx, sampling_type=sampling_type, seed=seed,
+            class_to_idx = class_to_idx, sampling_type=sampling_type, seed=seed, client_id=idx, dataset_name=dataset_name, alpha=alpha,
             transform=transform
         )
         for idx in range(0, num_client)

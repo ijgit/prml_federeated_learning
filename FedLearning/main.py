@@ -99,20 +99,20 @@ if __name__ == "__main__":
     
     # federated learning
     partitioned_train_set, test_dataset = prepare_dataset(seed=args.seed, dataset_name=args.dataset_name, num_client=args.num_clients,alpha=args.alpha, sampling_type=args.sampling_type)
-    message = "\n[WELCOME] Unfolding configurations...!"
-    print(message); logging.info(message)
+    # message = "\n[WELCOME] Unfolding configurations...!"
+    # print(message); logging.info(message)
 
-    central_server = Server(writer, partitioned_train_set, test_dataset,
-                            fed_config, data_config, tm_config, system_config)
-    central_server.setup()
-    central_server.fit()
+    # central_server = Server(writer, partitioned_train_set, test_dataset,
+    #                         fed_config, data_config, tm_config, system_config)
+    # central_server.setup()
+    # central_server.fit()
 
-    with open(os.path.join(log_path, "result.pkl"), "wb") as f:
-        pickle.dump(central_server.results, f)
+    # with open(os.path.join(log_path, "result.pkl"), "wb") as f:
+    #     pickle.dump(central_server.results, f)
 
-    message = "...done all learning process!\n...exit program!"
-    print(message); logging.info(message)
-    time.sleep(3); os._exit(0)
+    # message = "...done all learning process!\n...exit program!"
+    # print(message); logging.info(message)
+    # time.sleep(3); os._exit(0)
     
     
   
