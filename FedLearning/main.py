@@ -98,7 +98,7 @@ if __name__ == "__main__":
     print(f"system_config: {system_config}")
     
     # federated learning
-    partitioned_train_set, test_dataset = prepare_dataset(seed=args.seed, dataset_name=args.dataset_name, num_client=args.num_clients,alpha=args.alpha)
+    partitioned_train_set, test_dataset = prepare_dataset(seed=args.seed, dataset_name=args.dataset_name, num_client=args.num_clients,alpha=args.alpha, sampling_type=args.sampling_type)
     message = "\n[WELCOME] Unfolding configurations...!"
     print(message); logging.info(message)
 

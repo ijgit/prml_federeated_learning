@@ -118,12 +118,23 @@ def partition_dataset(targets, class_to_idx, num_client, alpha, seed):
 class ClientDataset(Dataset):
     """TensorDataset with support of transforms."""
     def __init__(self, data, targets, class_to_idx, transform=None):
+        self.s_types = ["smote", "r_over", "r_under"]
 
         # assert all(tensors[0].size(0) == tensor.size(0) for tensor in tensors)
         self.data = data
         self.targets = targets
         self.class_to_idx = class_to_idx
         self.transform = transform
+
+        print(f"sampling_type: {self.sampling_type}")
+        if self.sampling_type in self.s_types:
+            self.sampling()
+        else :
+            print(f"sampling types : {self.s_types}")
+
+    def __init__(self, data, targets, class_to_idx, sampling_type, transform=None):
+        self.sampling_type = sampling_type
+        self.__init__(data, targets, class_to_idx, transform)
 
     def __getitem__(self, index):
         if type(self.data[index]) == str:
@@ -148,6 +159,34 @@ class ClientDataset(Dataset):
         return self.data.shape[0]
         
         #len(self.data) if type(self.data) == list else self.data.size(0)
+
+    def sampling(self):
+        # set resampler for each sampling type
+        if self.sampling_type == "smote":
+            from imblearn.over_sampling import SMOTE
+            resampler = SMOTE() # sm = SMOTE(random_state=42)
+        elif self.sampling_type == "r_under":
+            from imblearn.under_sampling import RandomUnderSampler
+            resampler = RandomUnderSampler() # RandomUnderSampler(sampling_strategy='auto', random_state=42)
+
+        elif self.sampling_type == "r_over":
+            from imblearn.over_sampling import RandomOverSampler
+            resampler = RandomOverSampler() # RandomOverSampler(sampling_strategy='auto', random_state=42)
+        else :
+            return self.data, self.targets # do nothing
+
+        print(f">>>>> Resampling Started ({self.class_to_idx}) : {self.sampling_type}")
+        _X = self.data
+        _y = self.targets.numpy().reshape(-1,1)
+        print(f"  orig.shape; {_X.shape}, {_y.shape}")
+        reshaped_X_train = _X.reshape(_X.shape[0], -1)
+        X_resampled, y_resampled = resampler.fit_resample(reshaped_X_train, _y)
+        _X = X_resampled.reshape(-1, self.data.shape[1], self.data.shape[2])
+        _y = torch.Tensor(y_resampled)
+        print(f"  resampled.shape; {_X.shape}, {_y.shape}")
+        self.data = _X
+        self.targets = _y
+        print(f">>>>> Resampling Completed ({self.class_to_idx}) : {self.sampling_type}")
 
 class CustomTensorDataset(Dataset):
     """TensorDataset with support of transforms."""
@@ -184,7 +223,7 @@ class CustomTensorDataset(Dataset):
 
 
 
-def partition_with_dirichlet_distribution(dataset_name, data, targets, class_to_idx, num_client, alpha, transform, seed):
+def partition_with_dirichlet_distribution(dataset_name, data, targets, class_to_idx, num_client, alpha, transform, seed, sampling_type):
 
     idcs = [i for i in range(0, len(data.data))]
     client_data_indecies, client_dist = split_noniid(idcs, targets, alpha, num_client, seed)
@@ -204,7 +243,7 @@ def partition_with_dirichlet_distribution(dataset_name, data, targets, class_to_
     return splited_client_dataset
 
     
-def prepare_dataset(seed, dataset_name, num_client, alpha):
+def prepare_dataset(seed, dataset_name, num_client, alpha, sampling_type = "None"):
     dataset_name = dataset_name.upper()
 
     if hasattr(torchvision.datasets, dataset_name):
@@ -251,6 +290,6 @@ def prepare_dataset(seed, dataset_name, num_client, alpha):
             transform=transform
         )
 
-        partitioned_train_set = partition_with_dirichlet_distribution(dataset_name, train_dataset.data, train_dataset.targets, train_dataset.class_to_idx, num_client, alpha, transform, seed)
+        partitioned_train_set = partition_with_dirichlet_distribution(dataset_name, train_dataset.data, train_dataset.targets, train_dataset.class_to_idx, num_client, alpha, transform, seed, sampling_type)
         
     return partitioned_train_set, test_dataset
