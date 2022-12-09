@@ -59,7 +59,7 @@ class Client(object):
             old_grad = model_parameter_vector(old_grad)
             self.old_grad = torch.zeros_like(old_grad)
         else:
-            for new_param, old_param in zip(self.t_model.parameters(), self.model.parameters()):
+            for new_param, old_param in zip(self.t_model.parameters(), self.t_model.parameters()):
                 old_param.data = new_param.data.clone()
             self.global_model_vector = model_parameter_vector(self.t_model).detach().clone()
 
