@@ -130,7 +130,7 @@ class ClientDataset(Dataset):
 
         print(f"sampling_type: {self.sampling_type}")
         if self.sampling_type in self.s_types:
-            self.sampling()
+            self.data, self.targets = self.sampling()
         else :
             print(f"sampling types : {self.s_types}")
 
@@ -176,6 +176,10 @@ class ClientDataset(Dataset):
         print(f">>>>> Resampling Started : {self.sampling_type}")
         _X = self.data
         _y = self.targets.numpy().reshape(-1,1)
+
+        if len(set(_y.tolist())) == 1:
+            return self.data, self.targets # do nothing
+
         print(f"  orig.shape; {_X.shape}, {_y.shape}")
         reshaped_X_train = _X.reshape(_X.shape[0], -1)
         X_resampled, y_resampled = resampler.fit_resample(reshaped_X_train, _y)
@@ -184,9 +188,8 @@ class ClientDataset(Dataset):
         _X = X_resampled.reshape(origin_shape)
         _y = torch.Tensor(y_resampled)
         print(f"  resampled.shape; {_X.shape}, {_y.shape}")
-        self.data = _X
-        self.targets = _y
         print(f">>>>> Resampling Completed : {self.sampling_type}")
+        return _X, _y
 
 class CustomTensorDataset(Dataset):
     """TensorDataset with support of transforms."""
