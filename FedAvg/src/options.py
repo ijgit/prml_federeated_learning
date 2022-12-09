@@ -18,9 +18,7 @@ def args_parser():
     parser.add_argument('--num_clients', type=int, default=100, help='number of client (K)')
     parser.add_argument('--fraction', type=float, default=0.1, help='fraction of client (C)')
     parser.add_argument('--tm_local_ep', type=int, default=1, help='the number of local epochs of task model: E_t')
-    parser.add_argument('--dm_local_ep', type=int, default=1, help='the number of local epochs of distribution model: E_d')
     parser.add_argument('--tm_local_bs', type=int, default=10, help='batch size of local target model: B_t')
-    parser.add_argument('--dm_local_bs', type=int, default=10, help='batch size of local distribution model: B_t')
 
     # target model arguments
     parser.add_argument('--tm_lr', type=float, default=0.01, help='learning rate of task model')

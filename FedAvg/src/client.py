@@ -11,6 +11,7 @@ from torch.utils.data import DataLoader, TensorDataset
 
 from torch.utils.data import DataLoader
 from .optimizer import *
+from .criterion import *
 
 logger = logging.getLogger(__name__)
 
@@ -31,6 +32,7 @@ class Client(object):
         """Client object is initiated by the center server."""
         self.id = client_id
         self.data = local_data
+        self.num_class = len(self.data.class_to_idx.values())
         self.log_path = log_path
         self.device = device
         self.round = 0
@@ -66,6 +68,7 @@ class Client(object):
         self.t_model.train()
         self.t_model.to(self.device)
 
+
         optimizer = torch.optim.__dict__[self.tm_optimizer](self.t_model.parameters(), **self.tm_optim_config)
         for e in range(self.tm_local_ep):
             for data, labels in self.dataloader:
@@ -73,7 +76,17 @@ class Client(object):
   
                 optimizer.zero_grad()
                 preds = self.t_model(data)
-                loss = torch.nn.__dict__[self.tm_criterion]()(preds, labels)
+                
+                if self.tm_criterion == 'CrossEntropyLoss':
+                    loss = torch.nn.__dict__[self.tm_criterion]()(preds, labels)
+                    
+                elif self.tm_criterion == 'FocalLoss':
+                    loss_func = FocalLoss(alpha=None, size_average=True)
+                    loss = loss_func(preds, labels)
+                    
+                elif self.tm_criterion == 'Ratio_Cross_Entropy':
+                    loss_func = Ratio_Cross_Entropy(device=self.device, class_num=self.num_class, alpha=None, size_average=True)
+                    loss = loss_func(preds, labels)
 
                 loss.backward()
                 optimizer.step() 
@@ -96,7 +109,18 @@ class Client(object):
                 data, labels = data.float().to(self.device), labels.long().to(self.device)
                 preds = self.t_model(data)
 
-                test_loss +=torch.nn.__dict__[self.tm_criterion]()(preds, labels).item()
+                if self.tm_criterion == 'CrossEntropyLoss':
+                    loss = torch.nn.__dict__[self.tm_criterion]()(preds, labels)
+                    
+                elif self.tm_criterion == 'FocalLoss':
+                    loss_func = FocalLoss(alpha=None, size_average=True)
+                    loss = loss_func(preds, labels)
+                    
+                elif self.tm_criterion == 'Ratio_Cross_Entropy':
+                    loss_func = Ratio_Cross_Entropy(device=self.device, class_num=self.num_class, alpha=None, size_average=True)
+                    loss = loss_func(preds, labels)
+                    
+                test_loss += loss.item()
                 
                 predicted = preds.argmax(dim=1, keepdim=True)
                 correct += predicted.eq(labels.view_as(predicted)).sum().item()

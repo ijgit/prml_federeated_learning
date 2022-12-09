@@ -22,6 +22,7 @@ import pickle
 from .models import *
 from .utils import *
 from .client import Client
+from .criterion import *
 logger = logging.getLogger(__name__)
 
 
@@ -250,7 +251,19 @@ class Server(object):
             for data, labels in self.test_dataloader:
                 data, labels = data.float().to(self.device), labels.long().to(self.device)
                 preds = self.t_model(data)
-                test_loss += torch.nn.__dict__[self.tm_config['criterion']]()(preds, labels).item()
+                    
+                if self.tm_config['criterion'] == 'CrossEntropyLoss':
+                    loss = torch.nn.__dict__[self.tm_criterion]()(preds, labels)
+                    
+                elif self.tm_config['criterion'] == 'FocalLoss':
+                    loss_func = FocalLoss(alpha=None, size_average=True)
+                    loss = loss_func(preds, labels)
+                    
+                elif self.tm_config['criterion'] == 'Ratio_Cross_Entropy':
+                    loss_func = Ratio_Cross_Entropy(device=self.device, class_num=self.num_classes, alpha=None, size_average=True)
+                    loss = loss_func(preds, labels)
+                
+                test_loss += loss.item()
 
                 predicted = preds.argmax(dim=1, keepdim=True)
                 correct += predicted.eq(labels.view_as(predicted)).sum().item()
@@ -283,8 +296,8 @@ class Server(object):
             test_loss, test_accuracy = self.evaluate_global_task_model()
             self.results['loss'].append(test_loss)
             self.results['accuracy'].append(test_accuracy)
-            self.writer.add_scalars('Loss', {f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_lr:{self.tm_config['lr']}_ep:{self.tm_config['local_ep']}": test_loss}, self._round)
-            self.writer.add_scalars('Accuracy', {f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_lr:{self.tm_config['lr']}_ep:{self.tm_config['local_ep']}": test_accuracy}, self._round)
+            self.writer.add_scalars('Loss', {f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_lr:{self.tm_config['lr']}_ep:{self.tm_config['local_ep']}_loss:{self.tm_config['criterion']}": test_loss}, self._round)
+            self.writer.add_scalars('Accuracy', {f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_lr:{self.tm_config['lr']}_ep:{self.tm_config['local_ep']}_loss:{self.tm_config['criterion']}": test_accuracy}, self._round)
 
             message = f"[Round: {str(self._round).zfill(4)}] Evaluate global model's performance...!\
                 \n\t[Server] ...finished evaluation!\
