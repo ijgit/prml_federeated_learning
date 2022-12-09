@@ -117,7 +117,7 @@ def partition_dataset(targets, class_to_idx, num_client, alpha, seed):
 
 class ClientDataset(Dataset):
     """TensorDataset with support of transforms."""
-    def __init__(self, data, targets, class_to_idx, transform=None):
+    def __init__(self, data, targets, class_to_idx, sampling_type, transform=None):
         self.s_types = ["smote", "r_over", "r_under"]
 
         # assert all(tensors[0].size(0) == tensor.size(0) for tensor in tensors)
@@ -125,16 +125,13 @@ class ClientDataset(Dataset):
         self.targets = targets
         self.class_to_idx = class_to_idx
         self.transform = transform
+        self.sampling_type = sampling_type
 
         print(f"sampling_type: {self.sampling_type}")
         if self.sampling_type in self.s_types:
             self.sampling()
         else :
             print(f"sampling types : {self.s_types}")
-
-    def __init__(self, data, targets, class_to_idx, sampling_type, transform=None):
-        self.sampling_type = sampling_type
-        self.__init__(data, targets, class_to_idx, transform)
 
     def __getitem__(self, index):
         if type(self.data[index]) == str:
@@ -235,7 +232,7 @@ def partition_with_dirichlet_distribution(dataset_name, data, targets, class_to_
         ClientDataset(
             data = data[client_data_indecies[idx]], # client_datas[idx] if type(data[0]) == str else torch.Tensor(client_datas[idx]),
             targets = torch.Tensor(targets)[client_data_indecies[idx]],
-            class_to_idx = class_to_idx,
+            class_to_idx = class_to_idx, sampling_type=sampling_type,
             transform=transform
         )
         for idx in range(0, num_client)
@@ -243,7 +240,7 @@ def partition_with_dirichlet_distribution(dataset_name, data, targets, class_to_
     return splited_client_dataset
 
     
-def prepare_dataset(seed, dataset_name, num_client, alpha, sampling_type = "None"):
+def prepare_dataset(seed, dataset_name, num_client, alpha, sampling_type = None):
     dataset_name = dataset_name.upper()
 
     if hasattr(torchvision.datasets, dataset_name):

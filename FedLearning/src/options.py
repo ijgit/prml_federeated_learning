@@ -52,6 +52,7 @@ def args_parser():
     parser.add_argument('--dataset_name', help='dataset name')
     parser.add_argument('--alpha',  type=float, default=1, help='alpha of dirichlet distribution')
     parser.add_argument('--target_dist_op', type=int, default=4, help='target distribution select option')
+    parser.add_argument('--sampling_type', default=None, help='target distribution select option')
 
     # system setting
     parser.add_argument('--mp',  type=str_to_bool, default=False, help='multi processing')
