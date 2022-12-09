@@ -117,8 +117,9 @@ def partition_dataset(targets, class_to_idx, num_client, alpha, seed):
 
 class ClientDataset(Dataset):
     """TensorDataset with support of transforms."""
-    def __init__(self, data, targets, class_to_idx, sampling_type, transform=None):
+    def __init__(self, data, targets, class_to_idx, sampling_type, seed, transform=None):
         self.s_types = ["smote", "r_over", "r_under"]
+        self.seed = seed
 
         # assert all(tensors[0].size(0) == tensor.size(0) for tensor in tensors)
         self.data = data
@@ -161,14 +162,14 @@ class ClientDataset(Dataset):
         # set resampler for each sampling type
         if self.sampling_type == "smote":
             from imblearn.over_sampling import SMOTE
-            resampler = SMOTE() # sm = SMOTE(random_state=42)
+            resampler = SMOTE(random_state=self.seed)
         elif self.sampling_type == "r_under":
             from imblearn.under_sampling import RandomUnderSampler
-            resampler = RandomUnderSampler() # RandomUnderSampler(sampling_strategy='auto', random_state=42)
+            resampler = RandomUnderSampler(random_state=self.seed)
 
         elif self.sampling_type == "r_over":
             from imblearn.over_sampling import RandomOverSampler
-            resampler = RandomOverSampler() # RandomOverSampler(sampling_strategy='auto', random_state=42)
+            resampler = RandomOverSampler(random_state=self.seed)
         else :
             return self.data, self.targets # do nothing
 
@@ -232,7 +233,7 @@ def partition_with_dirichlet_distribution(dataset_name, data, targets, class_to_
         ClientDataset(
             data = data[client_data_indecies[idx]], # client_datas[idx] if type(data[0]) == str else torch.Tensor(client_datas[idx]),
             targets = torch.Tensor(targets)[client_data_indecies[idx]],
-            class_to_idx = class_to_idx, sampling_type=sampling_type,
+            class_to_idx = class_to_idx, sampling_type=sampling_type, seed=seed,
             transform=transform
         )
         for idx in range(0, num_client)

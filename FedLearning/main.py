@@ -50,7 +50,7 @@ if __name__ == "__main__":
         num_classes = 200
         tm_name = 'tinyimgnet_cnn'
 
-    log_dir = f'{args.log_dir}/{args.dataset_name}/{args.seed}_{args.dataset_name}_{args.alpha}_{args.method}(${args.tm_mu})_{args.tm_criterion}_{str(datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S"))}'
+    log_dir = f'{args.log_dir}/{args.dataset_name}/{args.seed}_{args.dataset_name}_{args.alpha}_{args.method}(${args.tm_mu})_{args.tm_criterion}_{args.sampling_type}_{time_config}'
     log_path, log_file = log_dir, 'FL_Log.log'
     # log_path = os.path.join(log_path, f'a_{args.alpha}')
 
@@ -58,7 +58,7 @@ if __name__ == "__main__":
         'method': args.method, 'init_round': args.init_round, 'num_rounds': args.rounds, 'num_clients': args.num_clients, 'fraction': args.fraction, 'alpha': args.alpha
     }
     data_config = {
-        'name': args.dataset_name, 'num_classes': num_classes, 'alpha': args.alpha, 
+        'name': args.dataset_name, 'num_classes': num_classes, 'alpha': args.alpha, 'sampling_type':args.sampling_type
     }
     tm_config = {
         'lr': args.tm_lr, 'momentum': args.tm_momentum, 'name': tm_name,
