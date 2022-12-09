@@ -5,22 +5,24 @@ is_mp='True'
 
 
 # CIFAR-10
-dataset_name='cifar10'
-tm_local_bs=10
-rounds=100 
-alpha=1
+# dataset_name='cifar10'
+# tm_local_bs=10
+# rounds=100 
+# alpha=1
 
-python3 main.py --mp=True --tm_local_bs=${tm_local_bs} --device=${device} --alpha=${alpha} --dataset_name=${dataset_name} --num_clients=${num_clients} --fraction=${fraction} --rounds=${rounds}
+# python3 main.py --mp=True --tm_local_bs=${tm_local_bs} --device=${device} --alpha=${alpha} --dataset_name=${dataset_name} --num_clients=${num_clients} --fraction=${fraction} --rounds=${rounds}
 
 
-# # EMNIST
-# dataset_name='emnist'
-# tm_local_bs=128
-# rounds=200
+# EMNIST
+dataset_name='emnist'
+tm_local_bs=100
+rounds=300
 
 # for alpha in 0.1 0.5 1
 # do
-#     python3 main.py --device=${device} --alpha=${alpha} --tm_local_bs=${tm_local_bs} --dataset_name=${dataset_name} --num_clients=${num_clients} --fraction=${fraction} --rounds=${rounds}
+#    
+alpha=1
+python3 main.py --device=${device} --alpha=${alpha} --tm_local_bs=${tm_local_bs} --dataset_name=${dataset_name} --num_clients=${num_clients} --fraction=${fraction} --rounds=${rounds}
 # done
 
 
