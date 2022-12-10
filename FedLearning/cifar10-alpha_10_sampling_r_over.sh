@@ -6,7 +6,7 @@
 
 # Fix Setting
 is_mp='False';num_clients=100;fraction=0.1
-rounds=5;seed=42;alpha=10;sampling_type=r_over
+rounds=300;seed=42;alpha=10;sampling_type=r_over
 
 # CIFAR-10
 dataset_name='cifar10';tm_local_bs=10
