@@ -5,12 +5,12 @@
 ######################################################
 
 # Fix Setting
-is_mp='False';num_clients=100;fraction=0.1
-rounds=300;seed=42;alpha=10;sampling_type=r_over
+is_mp='True';num_clients=100;fraction=0.1
+rounds=300;seed=42;alpha=10;sampling_type=r_under
 
-# CIFAR-10
-dataset_name='cifar10';tm_local_bs=10
-div1=3;div2=4;div3=5
+# EMNIST
+dataset_name='emnist';tm_local_bs=100
+div1=0;div2=1;div3=2;div4=3;
 
 #################### FedProx ########################
 device=${div1}

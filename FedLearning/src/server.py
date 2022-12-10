@@ -244,7 +244,7 @@ class Server(object):
 
         # updated selected clients with local dataset
         if self.mp_flag:
-            with pool.ThreadPool(5) as workhorse:
+            with pool.ThreadPool(12) as workhorse:
                 selected_total_size = workhorse.map(self.mp_update_selected_clients, sampled_client_indices)
             selected_total_size = sum(selected_total_size)
         else:
