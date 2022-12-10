@@ -1,1797 +1,0 @@
-0.0001
-fed_config: {'method': 'fedprox', 'init_round': None, 'num_rounds': 300, 'num_clients': 100, 'fraction': 0.1, 'alpha': 0.1}
-data_config: {'name': 'cifar10', 'num_classes': 10, 'alpha': 0.1, 'sampling_type': 'r_over'}
-tm_config: {'lr': 0.01, 'momentum': 0.9, 'name': 'cifar10_cnn', 'criterion': 'CrossEntropyLoss', 'optimizer': 'SGD', 'local_ep': 1, 'local_bs': 10, 'mu': 0.0001}
-system_config: {'is_mp': False, 'device': 'cuda', 'seed': 42, 'log_dir': 'log/cifar10/42_cifar10_0.1_fedprox($0.0001)_CrossEntropyLoss_r_over', 'time_config': '2022-12-10_18:09:48', 'device_id': '4'}
-Files already downloaded and verified
-Files already downloaded and verified
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (555, 32, 32, 3), (555, 1)
-  resampled.shape; (1827, 32, 32, 3), torch.Size([1827])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (778, 32, 32, 3), (778, 1)
-  resampled.shape; (3056, 32, 32, 3), torch.Size([3056])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (1360, 32, 32, 3), (1360, 1)
-  resampled.shape; (2646, 32, 32, 3), torch.Size([2646])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (182, 32, 32, 3), (182, 1)
-  resampled.shape; (408, 32, 32, 3), torch.Size([408])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (119, 32, 32, 3), (119, 1)
-  resampled.shape; (318, 32, 32, 3), torch.Size([318])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (426, 32, 32, 3), (426, 1)
-  resampled.shape; (1584, 32, 32, 3), torch.Size([1584])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (2082, 32, 32, 3), (2082, 1)
-  resampled.shape; (8415, 32, 32, 3), torch.Size([8415])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (314, 32, 32, 3), (314, 1)
-  resampled.shape; (1362, 32, 32, 3), torch.Size([1362])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (272, 32, 32, 3), (272, 1)
-  resampled.shape; (1808, 32, 32, 3), torch.Size([1808])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (396, 32, 32, 3), (396, 1)
-  resampled.shape; (1056, 32, 32, 3), torch.Size([1056])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (669, 32, 32, 3), (669, 1)
-  resampled.shape; (1708, 32, 32, 3), torch.Size([1708])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (1565, 32, 32, 3), (1565, 1)
-  resampled.shape; (3980, 32, 32, 3), torch.Size([3980])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (334, 32, 32, 3), (334, 1)
-  resampled.shape; (910, 32, 32, 3), torch.Size([910])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (288, 32, 32, 3), (288, 1)
-  resampled.shape; (630, 32, 32, 3), torch.Size([630])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (240, 32, 32, 3), (240, 1)
-  resampled.shape; (580, 32, 32, 3), torch.Size([580])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (1377, 32, 32, 3), (1377, 1)
-  resampled.shape; (3976, 32, 32, 3), torch.Size([3976])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (462, 32, 32, 3), (462, 1)
-  resampled.shape; (738, 32, 32, 3), torch.Size([738])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (232, 32, 32, 3), (232, 1)
-  resampled.shape; (366, 32, 32, 3), torch.Size([366])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (35, 32, 32, 3), (35, 1)
-  resampled.shape; (64, 32, 32, 3), torch.Size([64])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (127, 32, 32, 3), (127, 1)
-  resampled.shape; (560, 32, 32, 3), torch.Size([560])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (55, 32, 32, 3), (55, 1)
-  resampled.shape; (140, 32, 32, 3), torch.Size([140])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (533, 32, 32, 3), (533, 1)
-  resampled.shape; (2508, 32, 32, 3), torch.Size([2508])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (404, 32, 32, 3), (404, 1)
-  resampled.shape; (1043, 32, 32, 3), torch.Size([1043])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (3, 32, 32, 3), (3, 1)
-  resampled.shape; (4, 32, 32, 3), torch.Size([4])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (478, 32, 32, 3), (478, 1)
-  resampled.shape; (2580, 32, 32, 3), torch.Size([2580])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (1316, 32, 32, 3), (1316, 1)
-  resampled.shape; (5988, 32, 32, 3), torch.Size([5988])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (428, 32, 32, 3), (428, 1)
-  resampled.shape; (1352, 32, 32, 3), torch.Size([1352])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (113, 32, 32, 3), (113, 1)
-  resampled.shape; (240, 32, 32, 3), torch.Size([240])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (108, 32, 32, 3), (108, 1)
-  resampled.shape; (214, 32, 32, 3), torch.Size([214])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (188, 32, 32, 3), (188, 1)
-  resampled.shape; (328, 32, 32, 3), torch.Size([328])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (213, 32, 32, 3), (213, 1)
-  resampled.shape; (432, 32, 32, 3), torch.Size([432])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (1668, 32, 32, 3), (1668, 1)
-  resampled.shape; (6655, 32, 32, 3), torch.Size([6655])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (473, 32, 32, 3), (473, 1)
-  resampled.shape; (1182, 32, 32, 3), torch.Size([1182])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (145, 32, 32, 3), (145, 1)
-  resampled.shape; (612, 32, 32, 3), torch.Size([612])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (16, 32, 32, 3), (16, 1)
-  resampled.shape; (26, 32, 32, 3), torch.Size([26])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (47, 32, 32, 3), (47, 1)
-  resampled.shape; (112, 32, 32, 3), torch.Size([112])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (261, 32, 32, 3), (261, 1)
-  resampled.shape; (1141, 32, 32, 3), torch.Size([1141])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (473, 32, 32, 3), (473, 1)
-  resampled.shape; (1508, 32, 32, 3), torch.Size([1508])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (767, 32, 32, 3), (767, 1)
-  resampled.shape; (1734, 32, 32, 3), torch.Size([1734])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (177, 32, 32, 3), (177, 1)
-  resampled.shape; (480, 32, 32, 3), torch.Size([480])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (293, 32, 32, 3), (293, 1)
-  resampled.shape; (312, 32, 32, 3), torch.Size([312])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (837, 32, 32, 3), (837, 1)
-  resampled.shape; (1515, 32, 32, 3), torch.Size([1515])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (66, 32, 32, 3), (66, 1)
-  resampled.shape; (155, 32, 32, 3), torch.Size([155])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (304, 32, 32, 3), (304, 1)
-  resampled.shape; (656, 32, 32, 3), torch.Size([656])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (201, 32, 32, 3), (201, 1)
-  resampled.shape; (435, 32, 32, 3), torch.Size([435])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (27, 32, 32, 3), (27, 1)
-  resampled.shape; (44, 32, 32, 3), torch.Size([44])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (106, 32, 32, 3), (106, 1)
-  resampled.shape; (264, 32, 32, 3), torch.Size([264])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (61, 32, 32, 3), (61, 1)
-  resampled.shape; (177, 32, 32, 3), torch.Size([177])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (503, 32, 32, 3), (503, 1)
-  resampled.shape; (918, 32, 32, 3), torch.Size([918])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (291, 32, 32, 3), (291, 1)
-  resampled.shape; (830, 32, 32, 3), torch.Size([830])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (160, 32, 32, 3), (160, 1)
-  resampled.shape; (375, 32, 32, 3), torch.Size([375])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (218, 32, 32, 3), (218, 1)
-  resampled.shape; (555, 32, 32, 3), torch.Size([555])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (846, 32, 32, 3), (846, 1)
-  resampled.shape; (3356, 32, 32, 3), torch.Size([3356])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (448, 32, 32, 3), (448, 1)
-  resampled.shape; (976, 32, 32, 3), torch.Size([976])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (25, 32, 32, 3), (25, 1)
-  resampled.shape; (40, 32, 32, 3), torch.Size([40])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (366, 32, 32, 3), (366, 1)
-  resampled.shape; (1304, 32, 32, 3), torch.Size([1304])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (1068, 32, 32, 3), (1068, 1)
-  resampled.shape; (4760, 32, 32, 3), torch.Size([4760])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (283, 32, 32, 3), (283, 1)
-  resampled.shape; (1270, 32, 32, 3), torch.Size([1270])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (97, 32, 32, 3), (97, 1)
-  resampled.shape; (215, 32, 32, 3), torch.Size([215])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (1055, 32, 32, 3), (1055, 1)
-  resampled.shape; (4800, 32, 32, 3), torch.Size([4800])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (512, 32, 32, 3), (512, 1)
-  resampled.shape; (1022, 32, 32, 3), torch.Size([1022])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (678, 32, 32, 3), (678, 1)
-  resampled.shape; (1620, 32, 32, 3), torch.Size([1620])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (507, 32, 32, 3), (507, 1)
-  resampled.shape; (2430, 32, 32, 3), torch.Size([2430])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (1120, 32, 32, 3), (1120, 1)
-  resampled.shape; (4300, 32, 32, 3), torch.Size([4300])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (404, 32, 32, 3), (404, 1)
-  resampled.shape; (1290, 32, 32, 3), torch.Size([1290])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (565, 32, 32, 3), (565, 1)
-  resampled.shape; (2442, 32, 32, 3), torch.Size([2442])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (1194, 32, 32, 3), (1194, 1)
-  resampled.shape; (4230, 32, 32, 3), torch.Size([4230])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (210, 32, 32, 3), (210, 1)
-  resampled.shape; (350, 32, 32, 3), torch.Size([350])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (777, 32, 32, 3), (777, 1)
-  resampled.shape; (2960, 32, 32, 3), torch.Size([2960])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (1510, 32, 32, 3), (1510, 1)
-  resampled.shape; (3755, 32, 32, 3), torch.Size([3755])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (673, 32, 32, 3), (673, 1)
-  resampled.shape; (1884, 32, 32, 3), torch.Size([1884])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (71, 32, 32, 3), (71, 1)
-  resampled.shape; (270, 32, 32, 3), torch.Size([270])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (714, 32, 32, 3), (714, 1)
-  resampled.shape; (2076, 32, 32, 3), torch.Size([2076])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (581, 32, 32, 3), (581, 1)
-  resampled.shape; (1578, 32, 32, 3), torch.Size([1578])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (39, 32, 32, 3), (39, 1)
-  resampled.shape; (112, 32, 32, 3), torch.Size([112])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (322, 32, 32, 3), (322, 1)
-  resampled.shape; (1208, 32, 32, 3), torch.Size([1208])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (1272, 32, 32, 3), (1272, 1)
-  resampled.shape; (5995, 32, 32, 3), torch.Size([5995])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (538, 32, 32, 3), (538, 1)
-  resampled.shape; (1410, 32, 32, 3), torch.Size([1410])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (499, 32, 32, 3), (499, 1)
-  resampled.shape; (1860, 32, 32, 3), torch.Size([1860])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (176, 32, 32, 3), (176, 1)
-  resampled.shape; (624, 32, 32, 3), torch.Size([624])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (98, 32, 32, 3), (98, 1)
-  resampled.shape; (189, 32, 32, 3), torch.Size([189])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (235, 32, 32, 3), (235, 1)
-  resampled.shape; (738, 32, 32, 3), torch.Size([738])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (280, 32, 32, 3), (280, 1)
-  resampled.shape; (565, 32, 32, 3), torch.Size([565])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (335, 32, 32, 3), (335, 1)
-  resampled.shape; (959, 32, 32, 3), torch.Size([959])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (65, 32, 32, 3), (65, 1)
-  resampled.shape; (108, 32, 32, 3), torch.Size([108])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (748, 32, 32, 3), (748, 1)
-  resampled.shape; (2400, 32, 32, 3), torch.Size([2400])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (2460, 32, 32, 3), (2460, 1)
-  resampled.shape; (11135, 32, 32, 3), torch.Size([11135])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (2462, 32, 32, 3), (2462, 1)
-  resampled.shape; (10764, 32, 32, 3), torch.Size([10764])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (588, 32, 32, 3), (588, 1)
-  resampled.shape; (1715, 32, 32, 3), torch.Size([1715])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (203, 32, 32, 3), (203, 1)
-  resampled.shape; (630, 32, 32, 3), torch.Size([630])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (175, 32, 32, 3), (175, 1)
-  resampled.shape; (510, 32, 32, 3), torch.Size([510])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (56, 32, 32, 3), (56, 1)
-  resampled.shape; (215, 32, 32, 3), torch.Size([215])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (848, 32, 32, 3), (848, 1)
-  resampled.shape; (1368, 32, 32, 3), torch.Size([1368])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (481, 32, 32, 3), (481, 1)
-  resampled.shape; (956, 32, 32, 3), torch.Size([956])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (946, 32, 32, 3), (946, 1)
-  resampled.shape; (1210, 32, 32, 3), torch.Size([1210])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (67, 32, 32, 3), (67, 1)
-  resampled.shape; (224, 32, 32, 3), torch.Size([224])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (428, 32, 32, 3), (428, 1)
-  resampled.shape; (1806, 32, 32, 3), torch.Size([1806])
->>>>> Resampling Completed : r_over
-sampling_type: r_over
->>>>> Resampling Started : r_over
-  orig.shape; (226, 32, 32, 3), (226, 1)
-  resampled.shape; (1150, 32, 32, 3), torch.Size([1150])
->>>>> Resampling Completed : r_over
-
-[WELCOME] Unfolding configurations...!
-cifar10_cnn(
-  (activation): ReLU(inplace=True)
-  (conv1): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), padding=(1, 1), bias=False)
-  (maxpool1): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=1, dilation=1, ceil_mode=False)
-  (conv2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(1, 1), bias=False)
-  (maxpool2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=1, dilation=1, ceil_mode=False)
-  (flatten): Flatten(start_dim=1, end_dim=-1)
-  (fc1): Linear(in_features=4096, out_features=512, bias=False)
-  (fc2): Linear(in_features=512, out_features=10, bias=False)
-)
-[Round: 0000] ...successfully initialized model (# parameters: 2155872)!
-0it [00:00, ?it/s]                  [Round: 0000] ...successfully created all 100 clients!
-0it [00:00, ?it/s]                  [Round: 0000] ...successfully finished setup of all 100 clients!
-  0%|          | 0/100 [00:00<?, ?it/s]  5%|▌         | 5/100 [00:00<00:02, 46.12it/s] 14%|█▍        | 14/100 [00:00<00:01, 70.64it/s] 23%|██▎       | 23/100 [00:00<00:00, 78.93it/s] 31%|███       | 31/100 [00:00<00:00, 76.60it/s] 39%|███▉      | 39/100 [00:00<00:00, 69.74it/s] 47%|████▋     | 47/100 [00:00<00:00, 71.66it/s] 55%|█████▌    | 55/100 [00:00<00:00, 69.89it/s] 63%|██████▎   | 63/100 [00:00<00:00, 61.45it/s] 70%|███████   | 70/100 [00:01<00:00, 53.53it/s] 76%|███████▌  | 76/100 [00:01<00:00, 46.64it/s] 87%|████████▋ | 87/100 [00:01<00:00, 60.64it/s]100%|██████████| 100/100 [00:01<00:00, 77.08it/s]                                                 [Round: 0000] ...successfully transmitted models to all 100 clients!
-[Round: 0001] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:01,  7.79it/s] 50%|█████     | 5/10 [00:00<00:00, 19.87it/s]                                              [Round: 0001] ...successfully transmitted models to 10 selected clients!
-[Round: 0001] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:10<01:35, 10.56s/it] 20%|██        | 2/10 [00:11<00:39,  4.95s/it] 30%|███       | 3/10 [00:12<00:22,  3.24s/it] 40%|████      | 4/10 [00:14<00:15,  2.53s/it] 60%|██████    | 6/10 [00:14<00:05,  1.33s/it] 70%|███████   | 7/10 [00:15<00:03,  1.08s/it] 80%|████████  | 8/10 [00:17<00:03,  1.50s/it] 90%|█████████ | 9/10 [00:18<00:01,  1.37s/it]100%|██████████| 10/10 [00:19<00:00,  1.16s/it]                                               [Round: 0001] ...10 clients are selected and updated (with total sample size: 13082)!
-[Round: 0001] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0001] ...updated weights of 10 clients are successfully averaged!
-[Round: 0001] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.4371                
-	=> Accuracy: 16.43%
-
-[Round: 0002] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 80%|████████  | 8/10 [00:00<00:00, 57.54it/s]                                              [Round: 0002] ...successfully transmitted models to 10 selected clients!
-[Round: 0002] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:03<00:30,  3.40s/it] 20%|██        | 2/10 [00:03<00:12,  1.59s/it] 30%|███       | 3/10 [00:03<00:06,  1.09it/s] 40%|████      | 4/10 [00:09<00:16,  2.76s/it] 50%|█████     | 5/10 [00:11<00:12,  2.51s/it] 60%|██████    | 6/10 [00:14<00:10,  2.62s/it] 70%|███████   | 7/10 [00:14<00:05,  1.82s/it] 80%|████████  | 8/10 [00:17<00:04,  2.32s/it] 90%|█████████ | 9/10 [00:19<00:01,  1.99s/it]100%|██████████| 10/10 [00:20<00:00,  1.74s/it]                                               [Round: 0002] ...10 clients are selected and updated (with total sample size: 22234)!
-[Round: 0002] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]3it [00:00, 27.80it/s]                      [Round: 0002] ...updated weights of 10 clients are successfully averaged!
-[Round: 0002] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1952                
-	=> Accuracy: 20.31%
-
-[Round: 0003] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 62.72it/s]                                              [Round: 0003] ...successfully transmitted models to 10 selected clients!
-[Round: 0003] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:10,  1.17s/it] 20%|██        | 2/10 [00:01<00:05,  1.39it/s] 30%|███       | 3/10 [00:03<00:08,  1.18s/it] 40%|████      | 4/10 [00:03<00:04,  1.31it/s] 50%|█████     | 5/10 [00:05<00:05,  1.08s/it] 60%|██████    | 6/10 [00:05<00:03,  1.25it/s] 70%|███████   | 7/10 [00:06<00:03,  1.06s/it] 80%|████████  | 8/10 [00:07<00:01,  1.05it/s] 90%|█████████ | 9/10 [00:08<00:00,  1.12it/s]100%|██████████| 10/10 [00:08<00:00,  1.47it/s]                                               [Round: 0003] ...10 clients are selected and updated (with total sample size: 9627)!
-[Round: 0003] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]2it [00:00, 16.11it/s]8it [00:00, 32.14it/s]                      [Round: 0003] ...updated weights of 10 clients are successfully averaged!
-[Round: 0003] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.3358                
-	=> Accuracy: 24.61%
-
-[Round: 0004] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 22.79it/s] 80%|████████  | 8/10 [00:00<00:00, 33.92it/s]                                              [Round: 0004] ...successfully transmitted models to 10 selected clients!
-[Round: 0004] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:03,  2.79it/s] 20%|██        | 2/10 [00:02<00:11,  1.47s/it] 30%|███       | 3/10 [00:03<00:07,  1.05s/it] 40%|████      | 4/10 [00:04<00:05,  1.01it/s] 50%|█████     | 5/10 [00:08<00:11,  2.35s/it] 60%|██████    | 6/10 [00:09<00:06,  1.68s/it] 70%|███████   | 7/10 [00:18<00:12,  4.23s/it] 80%|████████  | 8/10 [00:18<00:05,  2.96s/it] 90%|█████████ | 9/10 [00:20<00:02,  2.53s/it]100%|██████████| 10/10 [00:22<00:00,  2.41s/it]                                               [Round: 0004] ...10 clients are selected and updated (with total sample size: 23357)!
-[Round: 0004] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0004] ...updated weights of 10 clients are successfully averaged!
-[Round: 0004] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.9350                
-	=> Accuracy: 19.63%
-
-[Round: 0005] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]                                      [Round: 0005] ...successfully transmitted models to 10 selected clients!
-[Round: 0005] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:07<01:11,  7.97s/it] 20%|██        | 2/10 [00:10<00:36,  4.62s/it] 30%|███       | 3/10 [00:11<00:21,  3.03s/it] 40%|████      | 4/10 [00:11<00:12,  2.04s/it] 50%|█████     | 5/10 [00:16<00:14,  2.95s/it] 60%|██████    | 6/10 [00:20<00:13,  3.30s/it] 70%|███████   | 7/10 [00:22<00:08,  2.85s/it] 80%|████████  | 8/10 [00:23<00:04,  2.26s/it] 90%|█████████ | 9/10 [00:24<00:01,  1.93s/it]100%|██████████| 10/10 [00:25<00:00,  1.72s/it]                                               [Round: 0005] ...10 clients are selected and updated (with total sample size: 27619)!
-[Round: 0005] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]7it [00:00, 65.07it/s]                      [Round: 0005] ...updated weights of 10 clients are successfully averaged!
-[Round: 0005] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1326                
-	=> Accuracy: 29.88%
-
-[Round: 0006] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 29.39it/s]100%|██████████| 10/10 [00:00<00:00, 50.99it/s]                                               [Round: 0006] ...successfully transmitted models to 10 selected clients!
-[Round: 0006] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:13,  1.54s/it] 20%|██        | 2/10 [00:02<00:08,  1.01s/it] 30%|███       | 3/10 [00:03<00:08,  1.27s/it] 40%|████      | 4/10 [00:10<00:20,  3.41s/it] 50%|█████     | 5/10 [00:11<00:13,  2.60s/it] 60%|██████    | 6/10 [00:13<00:08,  2.24s/it] 90%|█████████ | 9/10 [00:17<00:01,  1.77s/it]100%|██████████| 10/10 [00:18<00:00,  1.57s/it]                                               [Round: 0006] ...10 clients are selected and updated (with total sample size: 18717)!
-[Round: 0006] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]7it [00:00, 65.30it/s]                      [Round: 0006] ...updated weights of 10 clients are successfully averaged!
-[Round: 0006] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9316                
-	=> Accuracy: 36.56%
-
-[Round: 0007] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:00<00:00, 18.96it/s] 80%|████████  | 8/10 [00:00<00:00, 41.50it/s]                                              [Round: 0007] ...successfully transmitted models to 10 selected clients!
-[Round: 0007] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:08<01:13,  8.15s/it] 20%|██        | 2/10 [00:09<00:33,  4.18s/it] 40%|████      | 4/10 [00:10<00:10,  1.73s/it] 50%|█████     | 5/10 [00:11<00:07,  1.51s/it] 60%|██████    | 6/10 [00:14<00:08,  2.16s/it] 70%|███████   | 7/10 [00:16<00:05,  1.98s/it] 80%|████████  | 8/10 [00:21<00:06,  3.09s/it] 90%|█████████ | 9/10 [00:22<00:02,  2.37s/it]100%|██████████| 10/10 [00:23<00:00,  1.78s/it]                                               [Round: 0007] ...10 clients are selected and updated (with total sample size: 24644)!
-[Round: 0007] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]8it [00:00, 75.79it/s]                      [Round: 0007] ...updated weights of 10 clients are successfully averaged!
-[Round: 0007] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9299                
-	=> Accuracy: 37.23%
-
-[Round: 0008] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 94.05it/s]                                               [Round: 0008] ...successfully transmitted models to 10 selected clients!
-[Round: 0008] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:08<01:13,  8.12s/it] 20%|██        | 2/10 [00:09<00:35,  4.42s/it] 30%|███       | 3/10 [00:11<00:20,  2.92s/it] 40%|████      | 4/10 [00:14<00:19,  3.26s/it] 50%|█████     | 5/10 [00:15<00:10,  2.16s/it] 60%|██████    | 6/10 [00:15<00:06,  1.62s/it] 70%|███████   | 7/10 [00:15<00:03,  1.18s/it] 80%|████████  | 8/10 [00:17<00:02,  1.20s/it] 90%|█████████ | 9/10 [00:20<00:02,  2.02s/it]100%|██████████| 10/10 [00:22<00:00,  1.90s/it]                                               [Round: 0008] ...10 clients are selected and updated (with total sample size: 23443)!
-[Round: 0008] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0008] ...updated weights of 10 clients are successfully averaged!
-[Round: 0008] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.2409                
-	=> Accuracy: 33.51%
-
-[Round: 0009] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 28.87it/s] 60%|██████    | 6/10 [00:00<00:00, 27.25it/s]                                              [Round: 0009] ...successfully transmitted models to 10 selected clients!
-[Round: 0009] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:16,  1.82s/it] 20%|██        | 2/10 [00:02<00:08,  1.10s/it] 30%|███       | 3/10 [00:02<00:05,  1.37it/s] 40%|████      | 4/10 [00:04<00:06,  1.04s/it] 50%|█████     | 5/10 [00:06<00:06,  1.36s/it] 60%|██████    | 6/10 [00:06<00:04,  1.01s/it] 70%|███████   | 7/10 [00:06<00:02,  1.37it/s] 80%|████████  | 8/10 [00:07<00:01,  1.23it/s] 90%|█████████ | 9/10 [00:08<00:00,  1.38it/s]100%|██████████| 10/10 [00:09<00:00,  1.07it/s]                                               [Round: 0009] ...10 clients are selected and updated (with total sample size: 9409)!
-[Round: 0009] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0009] ...updated weights of 10 clients are successfully averaged!
-[Round: 0009] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9826                
-	=> Accuracy: 35.95%
-
-[Round: 0010] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 26.81it/s] 80%|████████  | 8/10 [00:00<00:00, 37.33it/s]                                              [Round: 0010] ...successfully transmitted models to 10 selected clients!
-[Round: 0010] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:07<01:11,  7.90s/it] 20%|██        | 2/10 [00:11<00:43,  5.44s/it] 30%|███       | 3/10 [00:12<00:22,  3.17s/it] 40%|████      | 4/10 [00:12<00:12,  2.05s/it] 50%|█████     | 5/10 [00:12<00:07,  1.43s/it] 70%|███████   | 7/10 [00:14<00:03,  1.03s/it] 80%|████████  | 8/10 [00:16<00:02,  1.44s/it] 90%|█████████ | 9/10 [00:16<00:01,  1.09s/it]100%|██████████| 10/10 [00:27<00:00,  3.71s/it]                                               [Round: 0010] ...10 clients are selected and updated (with total sample size: 28158)!
-[Round: 0010] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0010] ...updated weights of 10 clients are successfully averaged!
-[Round: 0010] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.5007                
-	=> Accuracy: 31.52%
-
-[Round: 0011] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 61.85it/s]                                              [Round: 0011] ...successfully transmitted models to 10 selected clients!
-[Round: 0011] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:11,  1.32s/it] 20%|██        | 2/10 [00:03<00:13,  1.71s/it] 30%|███       | 3/10 [00:05<00:12,  1.86s/it] 40%|████      | 4/10 [00:05<00:08,  1.35s/it] 50%|█████     | 5/10 [00:06<00:04,  1.05it/s] 60%|██████    | 6/10 [00:06<00:03,  1.14it/s] 70%|███████   | 7/10 [00:07<00:02,  1.38it/s] 90%|█████████ | 9/10 [00:09<00:00,  1.15it/s]100%|██████████| 10/10 [00:09<00:00,  1.32it/s]                                               [Round: 0011] ...10 clients are selected and updated (with total sample size: 10266)!
-[Round: 0011] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]5it [00:00, 43.39it/s]10it [00:00, 39.96it/s]                       [Round: 0011] ...updated weights of 10 clients are successfully averaged!
-[Round: 0011] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8671                
-	=> Accuracy: 38.25%
-
-[Round: 0012] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 80%|████████  | 8/10 [00:00<00:00, 77.76it/s]                                              [Round: 0012] ...successfully transmitted models to 10 selected clients!
-[Round: 0012] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:03,  2.31it/s] 20%|██        | 2/10 [00:01<00:04,  1.69it/s] 30%|███       | 3/10 [00:04<00:13,  1.96s/it] 40%|████      | 4/10 [00:09<00:19,  3.19s/it] 50%|█████     | 5/10 [00:14<00:18,  3.67s/it] 60%|██████    | 6/10 [00:18<00:15,  3.83s/it] 70%|███████   | 7/10 [00:18<00:08,  2.67s/it] 80%|████████  | 8/10 [00:20<00:04,  2.44s/it] 90%|█████████ | 9/10 [00:22<00:02,  2.29s/it]100%|██████████| 10/10 [00:22<00:00,  1.65s/it]                                               [Round: 0012] ...10 clients are selected and updated (with total sample size: 23768)!
-[Round: 0012] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]6it [00:00, 59.20it/s]                      [Round: 0012] ...updated weights of 10 clients are successfully averaged!
-[Round: 0012] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0506                
-	=> Accuracy: 35.91%
-
-[Round: 0013] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:00<00:00, 16.81it/s] 60%|██████    | 6/10 [00:00<00:00, 28.50it/s]                                              [Round: 0013] ...successfully transmitted models to 10 selected clients!
-[Round: 0013] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:11,  1.23s/it] 20%|██        | 2/10 [00:02<00:08,  1.08s/it] 30%|███       | 3/10 [00:04<00:12,  1.80s/it] 40%|████      | 4/10 [00:05<00:07,  1.26s/it] 50%|█████     | 5/10 [00:06<00:06,  1.35s/it] 60%|██████    | 6/10 [00:07<00:03,  1.03it/s] 80%|████████  | 8/10 [00:07<00:01,  1.84it/s] 90%|█████████ | 9/10 [00:11<00:01,  1.40s/it]100%|██████████| 10/10 [00:12<00:00,  1.46s/it]                                               [Round: 0013] ...10 clients are selected and updated (with total sample size: 13368)!
-[Round: 0013] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]7it [00:00, 61.23it/s]                      [Round: 0013] ...updated weights of 10 clients are successfully averaged!
-[Round: 0013] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8994                
-	=> Accuracy: 37.36%
-
-[Round: 0014] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 37.95it/s]100%|██████████| 10/10 [00:00<00:00, 38.58it/s]                                               [Round: 0014] ...successfully transmitted models to 10 selected clients!
-[Round: 0014] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:02,  3.81it/s] 20%|██        | 2/10 [00:07<00:36,  4.55s/it] 30%|███       | 3/10 [00:08<00:19,  2.82s/it] 40%|████      | 4/10 [00:12<00:19,  3.22s/it] 50%|█████     | 5/10 [00:13<00:13,  2.61s/it] 60%|██████    | 6/10 [00:14<00:07,  1.95s/it] 70%|███████   | 7/10 [00:15<00:04,  1.48s/it] 80%|████████  | 8/10 [00:16<00:02,  1.44s/it] 90%|█████████ | 9/10 [00:16<00:01,  1.10s/it]100%|██████████| 10/10 [00:17<00:00,  1.04it/s]                                               [Round: 0014] ...10 clients are selected and updated (with total sample size: 18957)!
-[Round: 0014] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0014] ...updated weights of 10 clients are successfully averaged!
-[Round: 0014] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0135                
-	=> Accuracy: 38.55%
-
-[Round: 0015] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 28.33it/s] 90%|█████████ | 9/10 [00:00<00:00, 43.51it/s]                                              [Round: 0015] ...successfully transmitted models to 10 selected clients!
-[Round: 0015] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:10,  1.17s/it] 20%|██        | 2/10 [00:02<00:10,  1.37s/it] 30%|███       | 3/10 [00:07<00:19,  2.76s/it] 40%|████      | 4/10 [00:07<00:10,  1.71s/it] 50%|█████     | 5/10 [00:08<00:07,  1.51s/it] 60%|██████    | 6/10 [00:08<00:04,  1.21s/it] 70%|███████   | 7/10 [00:11<00:04,  1.63s/it] 80%|████████  | 8/10 [00:13<00:03,  1.73s/it] 90%|█████████ | 9/10 [00:15<00:01,  1.71s/it]100%|██████████| 10/10 [00:16<00:00,  1.47s/it]                                               [Round: 0015] ...10 clients are selected and updated (with total sample size: 16442)!
-[Round: 0015] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]2it [00:00, 15.02it/s]9it [00:00, 43.09it/s]                      [Round: 0015] ...updated weights of 10 clients are successfully averaged!
-[Round: 0015] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7514                
-	=> Accuracy: 42.80%
-
-[Round: 0016] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 70.78it/s]                                              [Round: 0016] ...successfully transmitted models to 10 selected clients!
-[Round: 0016] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:07<01:08,  7.63s/it] 20%|██        | 2/10 [00:08<00:29,  3.72s/it] 30%|███       | 3/10 [00:11<00:23,  3.31s/it] 40%|████      | 4/10 [00:12<00:15,  2.61s/it] 50%|█████     | 5/10 [00:13<00:09,  1.83s/it] 60%|██████    | 6/10 [00:14<00:06,  1.57s/it] 70%|███████   | 7/10 [00:15<00:03,  1.32s/it] 80%|████████  | 8/10 [00:17<00:03,  1.60s/it] 90%|█████████ | 9/10 [00:19<00:01,  1.62s/it]100%|██████████| 10/10 [00:19<00:00,  1.23s/it]                                               [Round: 0016] ...10 clients are selected and updated (with total sample size: 20518)!
-[Round: 0016] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]2it [00:00, 19.56it/s]                      [Round: 0016] ...updated weights of 10 clients are successfully averaged!
-[Round: 0016] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1337                
-	=> Accuracy: 36.45%
-
-[Round: 0017] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 49.07it/s]                                              [Round: 0017] ...successfully transmitted models to 10 selected clients!
-[Round: 0017] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:04<00:36,  4.05s/it] 30%|███       | 3/10 [00:05<00:10,  1.51s/it] 50%|█████     | 5/10 [00:08<00:07,  1.56s/it] 60%|██████    | 6/10 [00:13<00:09,  2.39s/it] 70%|███████   | 7/10 [00:13<00:05,  1.76s/it] 80%|████████  | 8/10 [00:16<00:04,  2.28s/it] 90%|█████████ | 9/10 [00:18<00:02,  2.04s/it]100%|██████████| 10/10 [00:19<00:00,  1.77s/it]                                               [Round: 0017] ...10 clients are selected and updated (with total sample size: 21000)!
-[Round: 0017] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]4it [00:00, 35.90it/s]8it [00:00, 37.22it/s]                      [Round: 0017] ...updated weights of 10 clients are successfully averaged!
-[Round: 0017] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7296                
-	=> Accuracy: 43.05%
-
-[Round: 0018] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 64.15it/s]                                              [Round: 0018] ...successfully transmitted models to 10 selected clients!
-[Round: 0018] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:04,  1.87it/s] 20%|██        | 2/10 [00:01<00:07,  1.00it/s] 30%|███       | 3/10 [00:09<00:28,  4.05s/it] 40%|████      | 4/10 [00:09<00:15,  2.59s/it] 60%|██████    | 6/10 [00:10<00:05,  1.34s/it] 70%|███████   | 7/10 [00:11<00:03,  1.21s/it] 80%|████████  | 8/10 [00:12<00:02,  1.22s/it] 90%|█████████ | 9/10 [00:12<00:00,  1.03it/s]100%|██████████| 10/10 [00:13<00:00,  1.33it/s]                                               [Round: 0018] ...10 clients are selected and updated (with total sample size: 13229)!
-[Round: 0018] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]1it [00:00,  9.81it/s]                      [Round: 0018] ...updated weights of 10 clients are successfully averaged!
-[Round: 0018] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.5480                
-	=> Accuracy: 34.55%
-
-[Round: 0019] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 80%|████████  | 8/10 [00:00<00:00, 74.94it/s]                                              [Round: 0019] ...successfully transmitted models to 10 selected clients!
-[Round: 0019] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:14,  1.62s/it] 20%|██        | 2/10 [00:03<00:14,  1.78s/it] 30%|███       | 3/10 [00:03<00:07,  1.12s/it] 40%|████      | 4/10 [00:05<00:07,  1.23s/it] 60%|██████    | 6/10 [00:06<00:03,  1.22it/s] 70%|███████   | 7/10 [00:08<00:03,  1.23s/it] 80%|████████  | 8/10 [00:11<00:03,  1.65s/it] 90%|█████████ | 9/10 [00:11<00:01,  1.36s/it]100%|██████████| 10/10 [00:12<00:00,  1.05s/it]                                               [Round: 0019] ...10 clients are selected and updated (with total sample size: 12606)!
-[Round: 0019] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0019] ...updated weights of 10 clients are successfully averaged!
-[Round: 0019] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8138                
-	=> Accuracy: 42.80%
-
-[Round: 0020] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 51.80it/s]                                              [Round: 0020] ...successfully transmitted models to 10 selected clients!
-[Round: 0020] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:07<01:09,  7.69s/it] 20%|██        | 2/10 [00:08<00:30,  3.84s/it] 30%|███       | 3/10 [00:11<00:22,  3.21s/it] 40%|████      | 4/10 [00:12<00:14,  2.47s/it] 50%|█████     | 5/10 [00:13<00:09,  1.97s/it] 60%|██████    | 6/10 [00:16<00:09,  2.32s/it] 70%|███████   | 7/10 [00:18<00:06,  2.08s/it] 80%|████████  | 8/10 [00:18<00:03,  1.62s/it] 90%|█████████ | 9/10 [00:19<00:01,  1.28s/it]100%|██████████| 10/10 [00:20<00:00,  1.27s/it]                                               [Round: 0020] ...10 clients are selected and updated (with total sample size: 21438)!
-[Round: 0020] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0020] ...updated weights of 10 clients are successfully averaged!
-[Round: 0020] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.2950                
-	=> Accuracy: 37.09%
-
-[Round: 0021] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 56.55it/s]                                              [Round: 0021] ...successfully transmitted models to 10 selected clients!
-[Round: 0021] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:04,  2.19it/s] 20%|██        | 2/10 [00:02<00:12,  1.59s/it] 30%|███       | 3/10 [00:04<00:10,  1.55s/it] 40%|████      | 4/10 [00:10<00:19,  3.32s/it] 60%|██████    | 6/10 [00:11<00:07,  1.96s/it] 70%|███████   | 7/10 [00:12<00:04,  1.66s/it] 80%|████████  | 8/10 [00:14<00:03,  1.73s/it] 90%|█████████ | 9/10 [00:17<00:02,  2.02s/it]100%|██████████| 10/10 [00:18<00:00,  1.72s/it]                                               [Round: 0021] ...10 clients are selected and updated (with total sample size: 18860)!
-[Round: 0021] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]3it [00:00, 18.33it/s]7it [00:00, 26.05it/s]10it [00:00, 26.04it/s]                       [Round: 0021] ...updated weights of 10 clients are successfully averaged!
-[Round: 0021] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7206                
-	=> Accuracy: 44.56%
-
-[Round: 0022] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 45.73it/s]                                              [Round: 0022] ...successfully transmitted models to 10 selected clients!
-[Round: 0022] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:17,  1.99s/it] 20%|██        | 2/10 [00:02<00:08,  1.11s/it] 30%|███       | 3/10 [00:07<00:21,  3.06s/it] 40%|████      | 4/10 [00:08<00:13,  2.28s/it] 50%|█████     | 5/10 [00:10<00:10,  2.15s/it] 60%|██████    | 6/10 [00:11<00:06,  1.60s/it] 70%|███████   | 7/10 [00:15<00:07,  2.36s/it] 80%|████████  | 8/10 [00:16<00:03,  1.85s/it] 90%|█████████ | 9/10 [00:25<00:04,  4.36s/it]100%|██████████| 10/10 [00:27<00:00,  3.39s/it]                                               [Round: 0022] ...10 clients are selected and updated (with total sample size: 28676)!
-[Round: 0022] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0022] ...updated weights of 10 clients are successfully averaged!
-[Round: 0022] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0880                
-	=> Accuracy: 37.01%
-
-[Round: 0023] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 32.62it/s]                                              [Round: 0023] ...successfully transmitted models to 10 selected clients!
-[Round: 0023] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:14,  1.58s/it] 20%|██        | 2/10 [00:02<00:09,  1.13s/it] 30%|███       | 3/10 [00:02<00:05,  1.26it/s] 40%|████      | 4/10 [00:04<00:06,  1.01s/it] 50%|█████     | 5/10 [00:05<00:05,  1.04s/it] 60%|██████    | 6/10 [00:08<00:07,  1.83s/it] 70%|███████   | 7/10 [00:08<00:04,  1.35s/it] 80%|████████  | 8/10 [00:15<00:05,  2.91s/it] 90%|█████████ | 9/10 [00:24<00:04,  4.94s/it]100%|██████████| 10/10 [00:25<00:00,  3.79s/it]                                               [Round: 0023] ...10 clients are selected and updated (with total sample size: 27017)!
-[Round: 0023] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]8it [00:00, 70.69it/s]                      [Round: 0023] ...updated weights of 10 clients are successfully averaged!
-[Round: 0023] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9268                
-	=> Accuracy: 42.32%
-
-[Round: 0024] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 89.18it/s]                                              [Round: 0024] ...successfully transmitted models to 10 selected clients!
-[Round: 0024] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:02,  3.46it/s] 20%|██        | 2/10 [00:01<00:08,  1.05s/it] 40%|████      | 4/10 [00:02<00:02,  2.08it/s] 50%|█████     | 5/10 [00:02<00:01,  2.60it/s] 60%|██████    | 6/10 [00:03<00:02,  1.76it/s] 80%|████████  | 8/10 [00:03<00:00,  2.37it/s] 90%|█████████ | 9/10 [00:07<00:01,  1.26s/it]100%|██████████| 10/10 [00:07<00:00,  1.02it/s]                                               [Round: 0024] ...10 clients are selected and updated (with total sample size: 7952)!
-[Round: 0024] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]5it [00:00, 49.89it/s]10it [00:00, 36.53it/s]                       [Round: 0024] ...updated weights of 10 clients are successfully averaged!
-[Round: 0024] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.4288                
-	=> Accuracy: 35.02%
-
-[Round: 0025] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 27.69it/s] 80%|████████  | 8/10 [00:00<00:00, 39.95it/s]                                              [Round: 0025] ...successfully transmitted models to 10 selected clients!
-[Round: 0025] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:03<00:33,  3.74s/it] 20%|██        | 2/10 [00:06<00:24,  3.05s/it] 30%|███       | 3/10 [00:06<00:12,  1.84s/it] 50%|█████     | 5/10 [00:07<00:04,  1.11it/s] 60%|██████    | 6/10 [00:07<00:03,  1.26it/s] 70%|███████   | 7/10 [00:11<00:05,  1.81s/it] 80%|████████  | 8/10 [00:12<00:02,  1.36s/it] 90%|█████████ | 9/10 [00:12<00:01,  1.18s/it]100%|██████████| 10/10 [00:14<00:00,  1.34s/it]                                               [Round: 0025] ...10 clients are selected and updated (with total sample size: 15658)!
-[Round: 0025] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0025] ...updated weights of 10 clients are successfully averaged!
-[Round: 0025] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0117                
-	=> Accuracy: 39.60%
-
-[Round: 0026] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:00<00:00, 19.57it/s] 90%|█████████ | 9/10 [00:00<00:00, 46.70it/s]                                              [Round: 0026] ...successfully transmitted models to 10 selected clients!
-[Round: 0026] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:11,  1.25s/it] 20%|██        | 2/10 [00:02<00:08,  1.07s/it] 30%|███       | 3/10 [00:07<00:22,  3.23s/it] 50%|█████     | 5/10 [00:08<00:07,  1.50s/it] 60%|██████    | 6/10 [00:09<00:05,  1.47s/it] 70%|███████   | 7/10 [00:10<00:03,  1.30s/it] 80%|████████  | 8/10 [00:12<00:02,  1.40s/it] 90%|█████████ | 9/10 [00:22<00:04,  4.08s/it]100%|██████████| 10/10 [00:24<00:00,  3.30s/it]                                               [Round: 0026] ...10 clients are selected and updated (with total sample size: 25181)!
-[Round: 0026] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]8it [00:00, 72.84it/s]                      [Round: 0026] ...updated weights of 10 clients are successfully averaged!
-[Round: 0026] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0586                
-	=> Accuracy: 41.42%
-
-[Round: 0027] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 91.50it/s]                                               [Round: 0027] ...successfully transmitted models to 10 selected clients!
-[Round: 0027] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:00<00:01,  7.99it/s] 30%|███       | 3/10 [00:00<00:00,  7.07it/s] 40%|████      | 4/10 [00:00<00:01,  3.99it/s] 50%|█████     | 5/10 [00:01<00:01,  3.72it/s] 60%|██████    | 6/10 [00:02<00:02,  1.81it/s] 70%|███████   | 7/10 [00:04<00:03,  1.18s/it] 80%|████████  | 8/10 [00:07<00:03,  1.75s/it] 90%|█████████ | 9/10 [00:08<00:01,  1.30s/it]100%|██████████| 10/10 [00:08<00:00,  1.06s/it]                                               [Round: 0027] ...10 clients are selected and updated (with total sample size: 9034)!
-[Round: 0027] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]4it [00:00, 32.57it/s]                      [Round: 0027] ...updated weights of 10 clients are successfully averaged!
-[Round: 0027] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7631                
-	=> Accuracy: 44.40%
-
-[Round: 0028] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 27.29it/s] 70%|███████   | 7/10 [00:00<00:00, 32.57it/s]                                              [Round: 0028] ...successfully transmitted models to 10 selected clients!
-[Round: 0028] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:24,  2.75s/it] 20%|██        | 2/10 [00:09<00:42,  5.31s/it] 30%|███       | 3/10 [00:11<00:24,  3.44s/it] 40%|████      | 4/10 [00:14<00:20,  3.49s/it] 50%|█████     | 5/10 [00:14<00:11,  2.33s/it] 60%|██████    | 6/10 [00:16<00:08,  2.07s/it] 70%|███████   | 7/10 [00:17<00:04,  1.61s/it] 80%|████████  | 8/10 [00:17<00:02,  1.22s/it] 90%|█████████ | 9/10 [00:20<00:01,  1.89s/it]100%|██████████| 10/10 [00:22<00:00,  1.78s/it]                                               [Round: 0028] ...10 clients are selected and updated (with total sample size: 24676)!
-[Round: 0028] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0028] ...updated weights of 10 clients are successfully averaged!
-[Round: 0028] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9212                
-	=> Accuracy: 43.55%
-
-[Round: 0029] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 57.20it/s]                                              [Round: 0029] ...successfully transmitted models to 10 selected clients!
-[Round: 0029] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:12,  1.36s/it] 20%|██        | 2/10 [00:02<00:11,  1.43s/it] 30%|███       | 3/10 [00:04<00:10,  1.54s/it] 50%|█████     | 5/10 [00:05<00:05,  1.06s/it] 60%|██████    | 6/10 [00:07<00:04,  1.24s/it] 70%|███████   | 7/10 [00:10<00:05,  1.77s/it] 80%|████████  | 8/10 [00:21<00:08,  4.40s/it] 90%|█████████ | 9/10 [00:21<00:03,  3.24s/it]100%|██████████| 10/10 [00:23<00:00,  2.66s/it]                                               [Round: 0029] ...10 clients are selected and updated (with total sample size: 22706)!
-[Round: 0029] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0029] ...updated weights of 10 clients are successfully averaged!
-[Round: 0029] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1646                
-	=> Accuracy: 40.34%
-
-[Round: 0030] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 79.39it/s]                                              [Round: 0030] ...successfully transmitted models to 10 selected clients!
-[Round: 0030] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:05,  1.64it/s] 20%|██        | 2/10 [00:00<00:02,  2.69it/s] 30%|███       | 3/10 [00:01<00:02,  2.33it/s] 50%|█████     | 5/10 [00:01<00:01,  2.92it/s] 60%|██████    | 6/10 [00:04<00:04,  1.09s/it] 70%|███████   | 7/10 [00:04<00:02,  1.23it/s] 80%|████████  | 8/10 [00:07<00:02,  1.29s/it] 90%|█████████ | 9/10 [00:08<00:01,  1.17s/it]100%|██████████| 10/10 [00:17<00:00,  3.66s/it]                                               [Round: 0030] ...10 clients are selected and updated (with total sample size: 19820)!
-[Round: 0030] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]8it [00:00, 55.29it/s]                      [Round: 0030] ...updated weights of 10 clients are successfully averaged!
-[Round: 0030] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 3.4778                
-	=> Accuracy: 31.50%
-
-[Round: 0031] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 36.20it/s] 90%|█████████ | 9/10 [00:00<00:00, 37.54it/s]                                              [Round: 0031] ...successfully transmitted models to 10 selected clients!
-[Round: 0031] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:10,  1.18s/it] 30%|███       | 3/10 [00:01<00:03,  2.08it/s] 40%|████      | 4/10 [00:06<00:12,  2.15s/it] 50%|█████     | 5/10 [00:07<00:07,  1.53s/it] 60%|██████    | 6/10 [00:07<00:05,  1.28s/it] 70%|███████   | 7/10 [00:09<00:04,  1.35s/it] 80%|████████  | 8/10 [00:10<00:02,  1.29s/it] 90%|█████████ | 9/10 [00:13<00:01,  1.92s/it]100%|██████████| 10/10 [00:14<00:00,  1.55s/it]                                               [Round: 0031] ...10 clients are selected and updated (with total sample size: 16141)!
-[Round: 0031] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]4it [00:00, 39.95it/s]8it [00:00, 39.02it/s]                      [Round: 0031] ...updated weights of 10 clients are successfully averaged!
-[Round: 0031] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1935                
-	=> Accuracy: 37.87%
-
-[Round: 0032] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:00<00:00, 17.80it/s] 50%|█████     | 5/10 [00:00<00:00, 22.81it/s]                                              [Round: 0032] ...successfully transmitted models to 10 selected clients!
-[Round: 0032] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:08,  1.00it/s] 20%|██        | 2/10 [00:02<00:08,  1.03s/it] 40%|████      | 4/10 [00:02<00:02,  2.26it/s] 50%|█████     | 5/10 [00:03<00:03,  1.36it/s] 60%|██████    | 6/10 [00:03<00:02,  1.73it/s] 70%|███████   | 7/10 [00:05<00:03,  1.04s/it] 80%|████████  | 8/10 [00:06<00:01,  1.04it/s] 90%|█████████ | 9/10 [00:08<00:01,  1.13s/it]100%|██████████| 10/10 [00:08<00:00,  1.01it/s]                                               [Round: 0032] ...10 clients are selected and updated (with total sample size: 8530)!
-[Round: 0032] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0032] ...updated weights of 10 clients are successfully averaged!
-[Round: 0032] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.6426                
-	=> Accuracy: 48.10%
-
-[Round: 0033] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 25.35it/s]                                              [Round: 0033] ...successfully transmitted models to 10 selected clients!
-[Round: 0033] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:07<01:07,  7.50s/it] 20%|██        | 2/10 [00:08<00:28,  3.61s/it] 30%|███       | 3/10 [00:12<00:25,  3.62s/it] 40%|████      | 4/10 [00:12<00:14,  2.33s/it] 50%|█████     | 5/10 [00:12<00:08,  1.64s/it] 60%|██████    | 6/10 [00:12<00:04,  1.13s/it] 70%|███████   | 7/10 [00:16<00:06,  2.06s/it] 80%|████████  | 8/10 [00:18<00:03,  1.85s/it] 90%|█████████ | 9/10 [00:23<00:02,  2.92s/it]100%|██████████| 10/10 [00:24<00:00,  2.22s/it]                                               [Round: 0033] ...10 clients are selected and updated (with total sample size: 26365)!
-[Round: 0033] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]10it [00:00, 90.85it/s]                       [Round: 0033] ...updated weights of 10 clients are successfully averaged!
-[Round: 0033] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7690                
-	=> Accuracy: 46.40%
-
-[Round: 0034] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 35.53it/s] 90%|█████████ | 9/10 [00:00<00:00, 29.04it/s]                                              [Round: 0034] ...successfully transmitted models to 10 selected clients!
-[Round: 0034] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:05,  1.73it/s] 20%|██        | 2/10 [00:06<00:29,  3.71s/it] 30%|███       | 3/10 [00:08<00:19,  2.78s/it] 40%|████      | 4/10 [00:08<00:10,  1.82s/it] 50%|█████     | 5/10 [00:08<00:06,  1.21s/it] 70%|███████   | 7/10 [00:09<00:02,  1.07it/s] 80%|████████  | 8/10 [00:11<00:02,  1.04s/it] 90%|█████████ | 9/10 [00:12<00:01,  1.05s/it]100%|██████████| 10/10 [00:13<00:00,  1.02s/it]                                               [Round: 0034] ...10 clients are selected and updated (with total sample size: 13752)!
-[Round: 0034] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0034] ...updated weights of 10 clients are successfully averaged!
-[Round: 0034] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1699                
-	=> Accuracy: 43.07%
-
-[Round: 0035] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 24.98it/s] 90%|█████████ | 9/10 [00:00<00:00, 34.26it/s]                                              [Round: 0035] ...successfully transmitted models to 10 selected clients!
-[Round: 0035] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:06,  1.30it/s] 20%|██        | 2/10 [00:04<00:21,  2.65s/it] 30%|███       | 3/10 [00:05<00:12,  1.85s/it] 40%|████      | 4/10 [00:06<00:09,  1.53s/it] 50%|█████     | 5/10 [00:09<00:09,  1.84s/it] 60%|██████    | 6/10 [00:10<00:06,  1.61s/it] 70%|███████   | 7/10 [00:14<00:07,  2.46s/it] 80%|████████  | 8/10 [00:15<00:03,  1.95s/it] 90%|█████████ | 9/10 [00:19<00:02,  2.53s/it]100%|██████████| 10/10 [00:20<00:00,  2.21s/it]                                               [Round: 0035] ...10 clients are selected and updated (with total sample size: 22451)!
-[Round: 0035] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]3it [00:00, 29.22it/s]                      [Round: 0035] ...updated weights of 10 clients are successfully averaged!
-[Round: 0035] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8330                
-	=> Accuracy: 45.00%
-
-[Round: 0036] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 18.54it/s] 70%|███████   | 7/10 [00:00<00:00, 18.34it/s]                                              [Round: 0036] ...successfully transmitted models to 10 selected clients!
-[Round: 0036] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:07,  1.13it/s] 20%|██        | 2/10 [00:01<00:05,  1.57it/s] 30%|███       | 3/10 [00:01<00:04,  1.56it/s] 40%|████      | 4/10 [00:03<00:05,  1.16it/s] 50%|█████     | 5/10 [00:05<00:07,  1.50s/it] 60%|██████    | 6/10 [00:06<00:04,  1.07s/it] 70%|███████   | 7/10 [00:06<00:02,  1.07it/s] 80%|████████  | 8/10 [00:07<00:01,  1.01it/s] 90%|█████████ | 9/10 [00:09<00:01,  1.09s/it]100%|██████████| 10/10 [00:09<00:00,  1.18it/s]                                               [Round: 0036] ...10 clients are selected and updated (with total sample size: 8866)!
-[Round: 0036] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]10it [00:00, 91.91it/s]                       [Round: 0036] ...updated weights of 10 clients are successfully averaged!
-[Round: 0036] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.6701                
-	=> Accuracy: 48.43%
-
-[Round: 0037] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 36.78it/s] 80%|████████  | 8/10 [00:00<00:00, 23.58it/s]                                              [Round: 0037] ...successfully transmitted models to 10 selected clients!
-[Round: 0037] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:08<01:14,  8.26s/it] 20%|██        | 2/10 [00:09<00:32,  4.09s/it] 40%|████      | 4/10 [00:10<00:11,  1.88s/it] 50%|█████     | 5/10 [00:12<00:08,  1.78s/it] 60%|██████    | 6/10 [00:14<00:07,  1.97s/it] 70%|███████   | 7/10 [00:14<00:04,  1.42s/it] 80%|████████  | 8/10 [00:20<00:05,  2.68s/it] 90%|█████████ | 9/10 [00:20<00:02,  2.01s/it]100%|██████████| 10/10 [00:21<00:00,  1.50s/it]                                               [Round: 0037] ...10 clients are selected and updated (with total sample size: 21414)!
-[Round: 0037] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]7it [00:00, 65.90it/s]                      [Round: 0037] ...updated weights of 10 clients are successfully averaged!
-[Round: 0037] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7985                
-	=> Accuracy: 47.77%
-
-[Round: 0038] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 63.58it/s]                                              [Round: 0038] ...successfully transmitted models to 10 selected clients!
-[Round: 0038] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:00<00:01,  4.49it/s] 30%|███       | 3/10 [00:06<00:17,  2.46s/it] 40%|████      | 4/10 [00:07<00:12,  2.09s/it] 50%|█████     | 5/10 [00:07<00:07,  1.51s/it] 70%|███████   | 7/10 [00:10<00:04,  1.49s/it] 80%|████████  | 8/10 [00:12<00:02,  1.40s/it] 90%|█████████ | 9/10 [00:15<00:01,  1.88s/it]100%|██████████| 10/10 [00:16<00:00,  1.65s/it]                                               [Round: 0038] ...10 clients are selected and updated (with total sample size: 16184)!
-[Round: 0038] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]4it [00:00, 33.97it/s]                      [Round: 0038] ...updated weights of 10 clients are successfully averaged!
-[Round: 0038] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.3330                
-	=> Accuracy: 41.70%
-
-[Round: 0039] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 55.98it/s]                                              [Round: 0039] ...successfully transmitted models to 10 selected clients!
-[Round: 0039] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:03<00:29,  3.24s/it] 20%|██        | 2/10 [00:05<00:23,  2.89s/it] 30%|███       | 3/10 [00:06<00:11,  1.68s/it] 40%|████      | 4/10 [00:07<00:08,  1.38s/it] 50%|█████     | 5/10 [00:07<00:04,  1.03it/s] 70%|███████   | 7/10 [00:07<00:01,  1.72it/s] 80%|████████  | 8/10 [00:08<00:01,  1.66it/s] 90%|█████████ | 9/10 [00:09<00:00,  1.54it/s]100%|██████████| 10/10 [00:09<00:00,  1.59it/s]                                               [Round: 0039] ...10 clients are selected and updated (with total sample size: 9302)!
-[Round: 0039] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0039] ...updated weights of 10 clients are successfully averaged!
-[Round: 0039] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0734                
-	=> Accuracy: 42.55%
-
-[Round: 0040] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:00,  9.66it/s] 50%|█████     | 5/10 [00:00<00:00, 26.63it/s]                                              [Round: 0040] ...successfully transmitted models to 10 selected clients!
-[Round: 0040] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:08<01:15,  8.35s/it] 20%|██        | 2/10 [00:09<00:31,  3.95s/it] 30%|███       | 3/10 [00:09<00:17,  2.44s/it] 40%|████      | 4/10 [00:10<00:11,  1.89s/it] 60%|██████    | 6/10 [00:12<00:05,  1.31s/it] 70%|███████   | 7/10 [00:14<00:04,  1.63s/it] 80%|████████  | 8/10 [00:16<00:03,  1.62s/it] 90%|█████████ | 9/10 [00:16<00:01,  1.19s/it]100%|██████████| 10/10 [00:17<00:00,  1.03s/it]                                               [Round: 0040] ...10 clients are selected and updated (with total sample size: 17276)!
-[Round: 0040] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0040] ...updated weights of 10 clients are successfully averaged!
-[Round: 0040] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9561                
-	=> Accuracy: 45.77%
-
-[Round: 0041] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 39.97it/s]100%|██████████| 10/10 [00:00<00:00, 39.95it/s]                                               [Round: 0041] ...successfully transmitted models to 10 selected clients!
-[Round: 0041] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:20,  2.24s/it] 20%|██        | 2/10 [00:02<00:10,  1.31s/it] 30%|███       | 3/10 [00:03<00:05,  1.18it/s] 40%|████      | 4/10 [00:03<00:03,  1.73it/s] 50%|█████     | 5/10 [00:03<00:02,  2.27it/s] 60%|██████    | 6/10 [00:03<00:01,  2.65it/s] 70%|███████   | 7/10 [00:04<00:01,  2.27it/s] 80%|████████  | 8/10 [00:08<00:02,  1.46s/it] 90%|█████████ | 9/10 [00:08<00:01,  1.16s/it]100%|██████████| 10/10 [00:10<00:00,  1.35s/it]                                               [Round: 0041] ...10 clients are selected and updated (with total sample size: 10204)!
-[Round: 0041] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0041] ...updated weights of 10 clients are successfully averaged!
-[Round: 0041] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9766                
-	=> Accuracy: 44.54%
-
-[Round: 0042] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 80.10it/s]                                              [Round: 0042] ...successfully transmitted models to 10 selected clients!
-[Round: 0042] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:02,  3.33it/s] 20%|██        | 2/10 [00:08<00:39,  4.88s/it] 30%|███       | 3/10 [00:09<00:23,  3.29s/it] 40%|████      | 4/10 [00:09<00:12,  2.05s/it] 50%|█████     | 5/10 [00:15<00:16,  3.36s/it] 60%|██████    | 6/10 [00:16<00:10,  2.53s/it] 70%|███████   | 7/10 [00:17<00:06,  2.10s/it] 80%|████████  | 8/10 [00:18<00:03,  1.68s/it] 90%|█████████ | 9/10 [00:20<00:01,  1.71s/it]100%|██████████| 10/10 [00:20<00:00,  1.25s/it]                                               [Round: 0042] ...10 clients are selected and updated (with total sample size: 21670)!
-[Round: 0042] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0042] ...updated weights of 10 clients are successfully averaged!
-[Round: 0042] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.3566                
-	=> Accuracy: 41.67%
-
-[Round: 0043] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:00<00:00, 15.32it/s]                                              [Round: 0043] ...successfully transmitted models to 10 selected clients!
-[Round: 0043] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:22,  2.52s/it] 20%|██        | 2/10 [00:02<00:09,  1.24s/it] 40%|████      | 4/10 [00:04<00:06,  1.07s/it] 60%|██████    | 6/10 [00:05<00:02,  1.39it/s] 70%|███████   | 7/10 [00:05<00:01,  1.70it/s] 80%|████████  | 8/10 [00:05<00:00,  2.05it/s] 90%|█████████ | 9/10 [00:06<00:00,  1.88it/s]100%|██████████| 10/10 [00:16<00:00,  3.27s/it]                                               [Round: 0043] ...10 clients are selected and updated (with total sample size: 17244)!
-[Round: 0043] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]7it [00:00, 50.69it/s]                      [Round: 0043] ...updated weights of 10 clients are successfully averaged!
-[Round: 0043] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.4773                
-	=> Accuracy: 40.63%
-
-[Round: 0044] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]                                      [Round: 0044] ...successfully transmitted models to 10 selected clients!
-[Round: 0044] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:02,  3.70it/s] 20%|██        | 2/10 [00:04<00:20,  2.56s/it] 30%|███       | 3/10 [00:05<00:12,  1.75s/it] 40%|████      | 4/10 [00:08<00:14,  2.47s/it] 50%|█████     | 5/10 [00:09<00:09,  1.81s/it] 60%|██████    | 6/10 [00:10<00:06,  1.72s/it] 70%|███████   | 7/10 [00:11<00:03,  1.25s/it] 80%|████████  | 8/10 [00:12<00:02,  1.34s/it] 90%|█████████ | 9/10 [00:15<00:01,  1.68s/it]100%|██████████| 10/10 [00:17<00:00,  1.78s/it]                                               [Round: 0044] ...10 clients are selected and updated (with total sample size: 17115)!
-[Round: 0044] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0044] ...updated weights of 10 clients are successfully averaged!
-[Round: 0044] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.6497                
-	=> Accuracy: 47.60%
-
-[Round: 0045] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 25.87it/s] 70%|███████   | 7/10 [00:00<00:00, 25.01it/s]                                              [Round: 0045] ...successfully transmitted models to 10 selected clients!
-[Round: 0045] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:05<00:50,  5.65s/it] 20%|██        | 2/10 [00:06<00:24,  3.07s/it] 30%|███       | 3/10 [00:07<00:12,  1.83s/it] 40%|████      | 4/10 [00:07<00:07,  1.23s/it] 50%|█████     | 5/10 [00:07<00:04,  1.16it/s] 60%|██████    | 6/10 [00:12<00:08,  2.03s/it] 70%|███████   | 7/10 [00:15<00:07,  2.47s/it] 80%|████████  | 8/10 [00:26<00:10,  5.27s/it] 90%|█████████ | 9/10 [00:36<00:06,  6.79s/it]100%|██████████| 10/10 [00:37<00:00,  4.85s/it]                                               [Round: 0045] ...10 clients are selected and updated (with total sample size: 38703)!
-[Round: 0045] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]5it [00:00, 35.05it/s]10it [00:00, 35.75it/s]                       [Round: 0045] ...updated weights of 10 clients are successfully averaged!
-[Round: 0045] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0640                
-	=> Accuracy: 44.35%
-
-[Round: 0046] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]                                      [Round: 0046] ...successfully transmitted models to 10 selected clients!
-[Round: 0046] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:05,  1.55it/s] 20%|██        | 2/10 [00:04<00:18,  2.35s/it] 30%|███       | 3/10 [00:04<00:10,  1.51s/it] 40%|████      | 4/10 [00:10<00:19,  3.22s/it] 50%|█████     | 5/10 [00:11<00:12,  2.41s/it] 60%|██████    | 6/10 [00:12<00:08,  2.03s/it] 70%|███████   | 7/10 [00:15<00:06,  2.14s/it] 80%|████████  | 8/10 [00:15<00:03,  1.63s/it] 90%|█████████ | 9/10 [00:16<00:01,  1.22s/it]100%|██████████| 10/10 [00:17<00:00,  1.15s/it]                                               [Round: 0046] ...10 clients are selected and updated (with total sample size: 18032)!
-[Round: 0046] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]4it [00:00, 37.96it/s]8it [00:00, 33.68it/s]                      [Round: 0046] ...updated weights of 10 clients are successfully averaged!
-[Round: 0046] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.3260                
-	=> Accuracy: 40.21%
-
-[Round: 0047] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 63.95it/s]                                              [Round: 0047] ...successfully transmitted models to 10 selected clients!
-[Round: 0047] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:01,  8.79it/s] 20%|██        | 2/10 [00:00<00:04,  1.84it/s] 40%|████      | 4/10 [00:01<00:01,  3.10it/s] 50%|█████     | 5/10 [00:04<00:06,  1.25s/it] 60%|██████    | 6/10 [00:05<00:04,  1.09s/it] 70%|███████   | 7/10 [00:06<00:03,  1.00s/it] 80%|████████  | 8/10 [00:07<00:02,  1.14s/it] 90%|█████████ | 9/10 [00:09<00:01,  1.45s/it]100%|██████████| 10/10 [00:10<00:00,  1.12s/it]                                               [Round: 0047] ...10 clients are selected and updated (with total sample size: 9050)!
-[Round: 0047] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]3it [00:00, 29.52it/s]9it [00:00, 43.51it/s]                      [Round: 0047] ...updated weights of 10 clients are successfully averaged!
-[Round: 0047] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.6904                
-	=> Accuracy: 35.36%
-
-[Round: 0048] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 65.71it/s]                                              [Round: 0048] ...successfully transmitted models to 10 selected clients!
-[Round: 0048] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:00<00:02,  3.22it/s] 30%|███       | 3/10 [00:02<00:05,  1.32it/s] 40%|████      | 4/10 [00:02<00:03,  1.70it/s] 50%|█████     | 5/10 [00:04<00:04,  1.01it/s] 60%|██████    | 6/10 [00:08<00:08,  2.06s/it] 70%|███████   | 7/10 [00:11<00:06,  2.33s/it] 80%|████████  | 8/10 [00:11<00:03,  1.70s/it] 90%|█████████ | 9/10 [00:12<00:01,  1.41s/it]100%|██████████| 10/10 [00:13<00:00,  1.39s/it]                                               [Round: 0048] ...10 clients are selected and updated (with total sample size: 12616)!
-[Round: 0048] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]5it [00:00, 38.92it/s]9it [00:00, 22.22it/s]                      [Round: 0048] ...updated weights of 10 clients are successfully averaged!
-[Round: 0048] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8210                
-	=> Accuracy: 46.31%
-
-[Round: 0049] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]                                      [Round: 0049] ...successfully transmitted models to 10 selected clients!
-[Round: 0049] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:06,  1.41it/s] 20%|██        | 2/10 [00:06<00:28,  3.60s/it] 30%|███       | 3/10 [00:07<00:18,  2.61s/it] 40%|████      | 4/10 [00:09<00:12,  2.14s/it] 50%|█████     | 5/10 [00:09<00:07,  1.56s/it] 60%|██████    | 6/10 [00:14<00:10,  2.66s/it] 70%|███████   | 7/10 [00:16<00:06,  2.30s/it] 80%|████████  | 8/10 [00:16<00:03,  1.73s/it] 90%|█████████ | 9/10 [00:17<00:01,  1.50s/it]100%|██████████| 10/10 [00:19<00:00,  1.68s/it]                                               [Round: 0049] ...10 clients are selected and updated (with total sample size: 20706)!
-[Round: 0049] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]7it [00:00, 64.50it/s]                      [Round: 0049] ...updated weights of 10 clients are successfully averaged!
-[Round: 0049] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8329                
-	=> Accuracy: 46.79%
-
-[Round: 0050] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 28.90it/s] 60%|██████    | 6/10 [00:00<00:00, 23.66it/s] 90%|█████████ | 9/10 [00:00<00:00, 25.00it/s]                                              [Round: 0050] ...successfully transmitted models to 10 selected clients!
-[Round: 0050] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:18,  2.06s/it] 20%|██        | 2/10 [00:05<00:22,  2.85s/it] 30%|███       | 3/10 [00:05<00:12,  1.73s/it] 40%|████      | 4/10 [00:07<00:09,  1.50s/it] 50%|█████     | 5/10 [00:09<00:08,  1.78s/it] 60%|██████    | 6/10 [00:10<00:06,  1.68s/it] 70%|███████   | 7/10 [00:14<00:07,  2.37s/it] 80%|████████  | 8/10 [00:14<00:03,  1.70s/it] 90%|█████████ | 9/10 [00:15<00:01,  1.31s/it]100%|██████████| 10/10 [00:16<00:00,  1.17s/it]                                               [Round: 0050] ...10 clients are selected and updated (with total sample size: 16729)!
-[Round: 0050] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]6it [00:00, 51.16it/s]                      [Round: 0050] ...updated weights of 10 clients are successfully averaged!
-[Round: 0050] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7790                
-	=> Accuracy: 46.94%
-
-[Round: 0051] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:00<00:00, 19.43it/s] 70%|███████   | 7/10 [00:00<00:00, 36.29it/s]                                              [Round: 0051] ...successfully transmitted models to 10 selected clients!
-[Round: 0051] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:15,  1.68s/it] 20%|██        | 2/10 [00:01<00:06,  1.19it/s] 30%|███       | 3/10 [00:02<00:03,  1.78it/s] 40%|████      | 4/10 [00:02<00:03,  1.86it/s] 50%|█████     | 5/10 [00:03<00:02,  1.74it/s] 60%|██████    | 6/10 [00:03<00:02,  1.93it/s] 70%|███████   | 7/10 [00:03<00:01,  2.59it/s] 80%|████████  | 8/10 [00:04<00:00,  2.26it/s] 90%|█████████ | 9/10 [00:05<00:00,  1.72it/s]100%|██████████| 10/10 [00:14<00:00,  3.13s/it]                                               [Round: 0051] ...10 clients are selected and updated (with total sample size: 16215)!
-[Round: 0051] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0051] ...updated weights of 10 clients are successfully averaged!
-[Round: 0051] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 3.0461                
-	=> Accuracy: 36.74%
-
-[Round: 0052] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]                                      [Round: 0052] ...successfully transmitted models to 10 selected clients!
-[Round: 0052] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:03,  2.25it/s] 20%|██        | 2/10 [00:02<00:10,  1.26s/it] 30%|███       | 3/10 [00:09<00:28,  4.07s/it] 40%|████      | 4/10 [00:10<00:16,  2.71s/it] 50%|█████     | 5/10 [00:12<00:12,  2.55s/it] 60%|██████    | 6/10 [00:14<00:08,  2.24s/it] 70%|███████   | 7/10 [00:19<00:09,  3.21s/it] 80%|████████  | 8/10 [00:21<00:05,  2.96s/it] 90%|█████████ | 9/10 [00:30<00:04,  4.69s/it]100%|██████████| 10/10 [00:31<00:00,  3.57s/it]                                               [Round: 0052] ...10 clients are selected and updated (with total sample size: 35074)!
-[Round: 0052] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]7it [00:00, 66.37it/s]                      [Round: 0052] ...updated weights of 10 clients are successfully averaged!
-[Round: 0052] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1039                
-	=> Accuracy: 46.45%
-
-[Round: 0053] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 45.61it/s]100%|██████████| 10/10 [00:00<00:00, 28.53it/s]                                               [Round: 0053] ...successfully transmitted models to 10 selected clients!
-[Round: 0053] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:07<01:03,  7.05s/it] 20%|██        | 2/10 [00:07<00:26,  3.37s/it] 30%|███       | 3/10 [00:08<00:14,  2.06s/it] 50%|█████     | 5/10 [00:08<00:05,  1.06s/it] 60%|██████    | 6/10 [00:09<00:03,  1.12it/s] 70%|███████   | 7/10 [00:13<00:05,  1.77s/it] 80%|████████  | 8/10 [00:13<00:02,  1.33s/it] 90%|█████████ | 9/10 [00:13<00:01,  1.05s/it]100%|██████████| 10/10 [00:15<00:00,  1.27s/it]                                               [Round: 0053] ...10 clients are selected and updated (with total sample size: 17563)!
-[Round: 0053] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0053] ...updated weights of 10 clients are successfully averaged!
-[Round: 0053] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.2309                
-	=> Accuracy: 45.31%
-
-[Round: 0054] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 61.73it/s]                                              [Round: 0054] ...successfully transmitted models to 10 selected clients!
-[Round: 0054] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:04,  2.18it/s] 20%|██        | 2/10 [00:07<00:33,  4.22s/it] 30%|███       | 3/10 [00:07<00:17,  2.48s/it] 40%|████      | 4/10 [00:10<00:16,  2.77s/it] 50%|█████     | 5/10 [00:15<00:17,  3.52s/it] 60%|██████    | 6/10 [00:17<00:10,  2.74s/it] 70%|███████   | 7/10 [00:17<00:06,  2.04s/it] 80%|████████  | 8/10 [00:22<00:05,  2.81s/it] 90%|█████████ | 9/10 [00:23<00:02,  2.23s/it]100%|██████████| 10/10 [00:24<00:00,  1.95s/it]                                               [Round: 0054] ...10 clients are selected and updated (with total sample size: 29544)!
-[Round: 0054] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]9it [00:00, 89.60it/s]                      [Round: 0054] ...updated weights of 10 clients are successfully averaged!
-[Round: 0054] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7688                
-	=> Accuracy: 50.46%
-
-[Round: 0055] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 43.24it/s]                                              [Round: 0055] ...successfully transmitted models to 10 selected clients!
-[Round: 0055] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:01,  6.70it/s] 20%|██        | 2/10 [00:02<00:13,  1.68s/it] 30%|███       | 3/10 [00:03<00:07,  1.13s/it] 40%|████      | 4/10 [00:04<00:05,  1.03it/s] 50%|█████     | 5/10 [00:04<00:03,  1.40it/s] 60%|██████    | 6/10 [00:04<00:02,  1.93it/s] 70%|███████   | 7/10 [00:06<00:02,  1.00it/s] 80%|████████  | 8/10 [00:08<00:02,  1.17s/it] 90%|█████████ | 9/10 [00:09<00:01,  1.33s/it]100%|██████████| 10/10 [00:09<00:00,  1.04it/s]                                               [Round: 0055] ...10 clients are selected and updated (with total sample size: 11269)!
-[Round: 0055] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0055] ...updated weights of 10 clients are successfully averaged!
-[Round: 0055] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.4123                
-	=> Accuracy: 40.30%
-
-[Round: 0056] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 35.36it/s] 80%|████████  | 8/10 [00:00<00:00, 34.86it/s]                                              [Round: 0056] ...successfully transmitted models to 10 selected clients!
-[Round: 0056] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:11,  1.31s/it] 20%|██        | 2/10 [00:02<00:11,  1.43s/it] 30%|███       | 3/10 [00:03<00:07,  1.04s/it] 50%|█████     | 5/10 [00:03<00:02,  2.02it/s] 60%|██████    | 6/10 [00:04<00:02,  1.48it/s] 80%|████████  | 8/10 [00:05<00:01,  1.65it/s] 90%|█████████ | 9/10 [00:05<00:00,  2.07it/s]100%|██████████| 10/10 [00:06<00:00,  1.84it/s]                                               [Round: 0056] ...10 clients are selected and updated (with total sample size: 7569)!
-[Round: 0056] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0056] ...updated weights of 10 clients are successfully averaged!
-[Round: 0056] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7646                
-	=> Accuracy: 47.93%
-
-[Round: 0057] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:01,  8.12it/s] 60%|██████    | 6/10 [00:00<00:00, 23.19it/s]                                              [Round: 0057] ...successfully transmitted models to 10 selected clients!
-[Round: 0057] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:15,  1.72s/it] 40%|████      | 4/10 [00:02<00:03,  1.73it/s] 50%|█████     | 5/10 [00:02<00:02,  1.96it/s] 60%|██████    | 6/10 [00:03<00:01,  2.45it/s] 70%|███████   | 7/10 [00:04<00:01,  1.76it/s] 80%|████████  | 8/10 [00:04<00:01,  1.90it/s] 90%|█████████ | 9/10 [00:05<00:00,  1.38it/s]100%|██████████| 10/10 [00:14<00:00,  2.99s/it]                                               [Round: 0057] ...10 clients are selected and updated (with total sample size: 17537)!
-[Round: 0057] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]6it [00:00, 43.71it/s]                      [Round: 0057] ...updated weights of 10 clients are successfully averaged!
-[Round: 0057] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.4391                
-	=> Accuracy: 42.16%
-
-[Round: 0058] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 28.67it/s]                                              [Round: 0058] ...successfully transmitted models to 10 selected clients!
-[Round: 0058] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:17,  1.98s/it] 20%|██        | 2/10 [00:03<00:13,  1.70s/it] 30%|███       | 3/10 [00:03<00:07,  1.06s/it] 40%|████      | 4/10 [00:04<00:05,  1.01it/s] 50%|█████     | 5/10 [00:04<00:03,  1.43it/s] 70%|███████   | 7/10 [00:05<00:01,  2.61it/s] 80%|████████  | 8/10 [00:05<00:00,  3.11it/s] 90%|█████████ | 9/10 [00:06<00:00,  1.69it/s]                                              [Round: 0058] ...10 clients are selected and updated (with total sample size: 7596)!
-[Round: 0058] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]5it [00:00, 47.52it/s]                      [Round: 0058] ...updated weights of 10 clients are successfully averaged!
-[Round: 0058] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0165                
-	=> Accuracy: 44.35%
-
-[Round: 0059] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]                                      [Round: 0059] ...successfully transmitted models to 10 selected clients!
-[Round: 0059] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:04<00:43,  4.86s/it] 20%|██        | 2/10 [00:05<00:18,  2.31s/it] 30%|███       | 3/10 [00:06<00:11,  1.69s/it] 40%|████      | 4/10 [00:07<00:08,  1.37s/it] 50%|█████     | 5/10 [00:11<00:11,  2.26s/it] 60%|██████    | 6/10 [00:13<00:09,  2.42s/it] 70%|███████   | 7/10 [00:15<00:06,  2.13s/it] 80%|████████  | 8/10 [00:15<00:03,  1.54s/it] 90%|█████████ | 9/10 [00:16<00:01,  1.30s/it]100%|██████████| 10/10 [00:17<00:00,  1.12s/it]                                               [Round: 0059] ...10 clients are selected and updated (with total sample size: 20097)!
-[Round: 0059] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]9it [00:00, 87.53it/s]                      [Round: 0059] ...updated weights of 10 clients are successfully averaged!
-[Round: 0059] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9657                
-	=> Accuracy: 46.39%
-
-[Round: 0060] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 32.36it/s]100%|██████████| 10/10 [00:00<00:00, 45.65it/s]                                               [Round: 0060] ...successfully transmitted models to 10 selected clients!
-[Round: 0060] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:02,  3.00it/s] 20%|██        | 2/10 [00:01<00:04,  1.63it/s] 30%|███       | 3/10 [00:01<00:02,  2.63it/s] 40%|████      | 4/10 [00:01<00:01,  3.27it/s] 50%|█████     | 5/10 [00:02<00:03,  1.50it/s] 60%|██████    | 6/10 [00:05<00:06,  1.52s/it] 70%|███████   | 7/10 [00:10<00:07,  2.63s/it] 80%|████████  | 8/10 [00:12<00:04,  2.20s/it] 90%|█████████ | 9/10 [00:20<00:04,  4.11s/it]100%|██████████| 10/10 [00:20<00:00,  2.96s/it]                                               [Round: 0060] ...10 clients are selected and updated (with total sample size: 26004)!
-[Round: 0060] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]6it [00:00, 51.64it/s]                      [Round: 0060] ...updated weights of 10 clients are successfully averaged!
-[Round: 0060] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9120                
-	=> Accuracy: 49.80%
-
-[Round: 0061] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 47.14it/s]100%|██████████| 10/10 [00:00<00:00, 28.68it/s]                                               [Round: 0061] ...successfully transmitted models to 10 selected clients!
-[Round: 0061] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:15,  1.68s/it] 20%|██        | 2/10 [00:01<00:06,  1.16it/s] 30%|███       | 3/10 [00:02<00:05,  1.20it/s] 50%|█████     | 5/10 [00:03<00:02,  2.33it/s] 60%|██████    | 6/10 [00:06<00:05,  1.29s/it] 70%|███████   | 7/10 [00:08<00:04,  1.51s/it] 80%|████████  | 8/10 [00:09<00:02,  1.32s/it] 90%|█████████ | 9/10 [00:18<00:03,  3.67s/it]100%|██████████| 10/10 [00:18<00:00,  2.65s/it]                                               [Round: 0061] ...10 clients are selected and updated (with total sample size: 21127)!
-[Round: 0061] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0061] ...updated weights of 10 clients are successfully averaged!
-[Round: 0061] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.5001                
-	=> Accuracy: 43.63%
-
-[Round: 0062] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 26.47it/s] 90%|█████████ | 9/10 [00:00<00:00, 41.64it/s]                                              [Round: 0062] ...successfully transmitted models to 10 selected clients!
-[Round: 0062] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:14,  1.62s/it] 20%|██        | 2/10 [00:03<00:13,  1.63s/it] 30%|███       | 3/10 [00:03<00:07,  1.02s/it] 40%|████      | 4/10 [00:03<00:04,  1.33it/s] 50%|█████     | 5/10 [00:05<00:05,  1.17s/it] 60%|██████    | 6/10 [00:06<00:04,  1.17s/it] 70%|███████   | 7/10 [00:08<00:03,  1.33s/it] 80%|████████  | 8/10 [00:08<00:01,  1.06it/s] 90%|█████████ | 9/10 [00:17<00:03,  3.46s/it]100%|██████████| 10/10 [00:18<00:00,  2.48s/it]                                               [Round: 0062] ...10 clients are selected and updated (with total sample size: 20117)!
-[Round: 0062] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]4it [00:00, 33.70it/s]10it [00:00, 45.72it/s]                       [Round: 0062] ...updated weights of 10 clients are successfully averaged!
-[Round: 0062] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0697                
-	=> Accuracy: 46.17%
-
-[Round: 0063] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 25.08it/s] 60%|██████    | 6/10 [00:00<00:00, 26.11it/s]                                              [Round: 0063] ...successfully transmitted models to 10 selected clients!
-[Round: 0063] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:02,  4.19it/s] 20%|██        | 2/10 [00:01<00:04,  1.78it/s] 30%|███       | 3/10 [00:02<00:05,  1.26it/s] 40%|████      | 4/10 [00:03<00:06,  1.06s/it] 50%|█████     | 5/10 [00:05<00:06,  1.34s/it] 60%|██████    | 6/10 [00:05<00:03,  1.08it/s] 70%|███████   | 7/10 [00:05<00:02,  1.35it/s] 80%|████████  | 8/10 [00:06<00:01,  1.16it/s] 90%|█████████ | 9/10 [00:07<00:00,  1.47it/s]100%|██████████| 10/10 [00:09<00:00,  1.09s/it]                                               [Round: 0063] ...10 clients are selected and updated (with total sample size: 10082)!
-[Round: 0063] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]3it [00:00, 26.03it/s]10it [00:00, 46.01it/s]                       [Round: 0063] ...updated weights of 10 clients are successfully averaged!
-[Round: 0063] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7133                
-	=> Accuracy: 49.76%
-
-[Round: 0064] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 62.02it/s]                                              [Round: 0064] ...successfully transmitted models to 10 selected clients!
-[Round: 0064] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:02,  3.22it/s] 20%|██        | 2/10 [00:00<00:02,  3.92it/s] 30%|███       | 3/10 [00:01<00:03,  2.30it/s] 50%|█████     | 5/10 [00:04<00:05,  1.16s/it] 60%|██████    | 6/10 [00:04<00:03,  1.12it/s] 70%|███████   | 7/10 [00:05<00:02,  1.04it/s] 80%|████████  | 8/10 [00:07<00:02,  1.08s/it] 90%|█████████ | 9/10 [00:09<00:01,  1.29s/it]100%|██████████| 10/10 [00:09<00:00,  1.13s/it]                                               [Round: 0064] ...10 clients are selected and updated (with total sample size: 10698)!
-[Round: 0064] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]6it [00:00, 57.59it/s]                      [Round: 0064] ...updated weights of 10 clients are successfully averaged!
-[Round: 0064] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8976                
-	=> Accuracy: 46.09%
-
-[Round: 0065] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 28.45it/s] 80%|████████  | 8/10 [00:00<00:00, 39.54it/s]                                              [Round: 0065] ...successfully transmitted models to 10 selected clients!
-[Round: 0065] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:10,  1.19s/it] 20%|██        | 2/10 [00:08<00:36,  4.58s/it] 30%|███       | 3/10 [00:09<00:21,  3.07s/it] 40%|████      | 4/10 [00:10<00:12,  2.12s/it] 50%|█████     | 5/10 [00:10<00:07,  1.47s/it] 70%|███████   | 7/10 [00:10<00:02,  1.24it/s] 80%|████████  | 8/10 [00:12<00:02,  1.13s/it] 90%|█████████ | 9/10 [00:16<00:01,  1.83s/it]100%|██████████| 10/10 [00:17<00:00,  1.56s/it]                                               [Round: 0065] ...10 clients are selected and updated (with total sample size: 17968)!
-[Round: 0065] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]2it [00:00, 18.74it/s]                      [Round: 0065] ...updated weights of 10 clients are successfully averaged!
-[Round: 0065] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.4078                
-	=> Accuracy: 39.30%
-
-[Round: 0066] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 33.97it/s] 90%|█████████ | 9/10 [00:00<00:00, 32.28it/s]                                              [Round: 0066] ...successfully transmitted models to 10 selected clients!
-[Round: 0066] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:03<00:28,  3.17s/it] 20%|██        | 2/10 [00:04<00:14,  1.80s/it] 30%|███       | 3/10 [00:04<00:09,  1.40s/it] 40%|████      | 4/10 [00:06<00:07,  1.29s/it] 50%|█████     | 5/10 [00:10<00:11,  2.26s/it] 60%|██████    | 6/10 [00:11<00:08,  2.15s/it] 70%|███████   | 7/10 [00:13<00:06,  2.01s/it] 80%|████████  | 8/10 [00:15<00:03,  1.82s/it]100%|██████████| 10/10 [00:15<00:00,  1.01s/it]                                               [Round: 0066] ...10 clients are selected and updated (with total sample size: 17126)!
-[Round: 0066] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]6it [00:00, 53.15it/s]                      [Round: 0066] ...updated weights of 10 clients are successfully averaged!
-[Round: 0066] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7791                
-	=> Accuracy: 49.47%
-
-[Round: 0067] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 51.86it/s]                                              [Round: 0067] ...successfully transmitted models to 10 selected clients!
-[Round: 0067] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:19,  2.13s/it] 20%|██        | 2/10 [00:06<00:25,  3.19s/it] 30%|███       | 3/10 [00:06<00:14,  2.10s/it] 40%|████      | 4/10 [00:12<00:20,  3.36s/it] 50%|█████     | 5/10 [00:12<00:11,  2.22s/it] 60%|██████    | 6/10 [00:13<00:07,  1.83s/it] 80%|████████  | 8/10 [00:15<00:02,  1.48s/it] 90%|█████████ | 9/10 [00:25<00:03,  3.67s/it]100%|██████████| 10/10 [00:26<00:00,  2.92s/it]                                               [Round: 0067] ...10 clients are selected and updated (with total sample size: 28319)!
-[Round: 0067] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0067] ...updated weights of 10 clients are successfully averaged!
-[Round: 0067] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1373                
-	=> Accuracy: 46.92%
-
-[Round: 0068] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 47.22it/s]                                              [Round: 0068] ...successfully transmitted models to 10 selected clients!
-[Round: 0068] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:03,  2.89it/s] 20%|██        | 2/10 [00:05<00:24,  3.06s/it] 30%|███       | 3/10 [00:05<00:12,  1.73s/it] 40%|████      | 4/10 [00:05<00:06,  1.11s/it] 50%|█████     | 5/10 [00:06<00:05,  1.15s/it] 60%|██████    | 6/10 [00:07<00:03,  1.08it/s] 70%|███████   | 7/10 [00:09<00:03,  1.19s/it] 80%|████████  | 8/10 [00:11<00:02,  1.50s/it] 90%|█████████ | 9/10 [00:20<00:03,  3.82s/it]100%|██████████| 10/10 [00:20<00:00,  2.69s/it]                                               [Round: 0068] ...10 clients are selected and updated (with total sample size: 23768)!
-[Round: 0068] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]2it [00:00, 11.21it/s]10it [00:00, 41.55it/s]                       [Round: 0068] ...updated weights of 10 clients are successfully averaged!
-[Round: 0068] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0826                
-	=> Accuracy: 48.51%
-
-[Round: 0069] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 46.84it/s]                                              [Round: 0069] ...successfully transmitted models to 10 selected clients!
-[Round: 0069] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:02<00:11,  1.39s/it] 40%|████      | 4/10 [00:04<00:06,  1.03s/it] 50%|█████     | 5/10 [00:04<00:04,  1.21it/s] 60%|██████    | 6/10 [00:05<00:03,  1.26it/s] 70%|███████   | 7/10 [00:06<00:02,  1.16it/s] 80%|████████  | 8/10 [00:07<00:01,  1.21it/s] 90%|█████████ | 9/10 [00:09<00:01,  1.15s/it]100%|██████████| 10/10 [00:10<00:00,  1.20s/it]                                               [Round: 0069] ...10 clients are selected and updated (with total sample size: 11772)!
-[Round: 0069] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]4it [00:00, 34.12it/s]                      [Round: 0069] ...updated weights of 10 clients are successfully averaged!
-[Round: 0069] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0683                
-	=> Accuracy: 46.23%
-
-[Round: 0070] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 80%|████████  | 8/10 [00:00<00:00, 55.53it/s]                                              [Round: 0070] ...successfully transmitted models to 10 selected clients!
-[Round: 0070] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:04,  1.82it/s] 30%|███       | 3/10 [00:04<00:11,  1.69s/it] 40%|████      | 4/10 [00:04<00:06,  1.16s/it] 50%|█████     | 5/10 [00:05<00:05,  1.07s/it] 60%|██████    | 6/10 [00:09<00:07,  1.91s/it] 70%|███████   | 7/10 [00:09<00:04,  1.45s/it] 80%|████████  | 8/10 [00:18<00:07,  3.59s/it] 90%|█████████ | 9/10 [00:18<00:02,  2.70s/it]100%|██████████| 10/10 [00:19<00:00,  1.97s/it]                                               [Round: 0070] ...10 clients are selected and updated (with total sample size: 23145)!
-[Round: 0070] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0070] ...updated weights of 10 clients are successfully averaged!
-[Round: 0070] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.7025                
-	=> Accuracy: 37.30%
-
-[Round: 0071] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 61.28it/s]                                              [Round: 0071] ...successfully transmitted models to 10 selected clients!
-[Round: 0071] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:01,  4.78it/s] 30%|███       | 3/10 [00:00<00:02,  3.38it/s] 40%|████      | 4/10 [00:01<00:01,  3.25it/s] 50%|█████     | 5/10 [00:01<00:01,  3.89it/s] 60%|██████    | 6/10 [00:01<00:00,  4.21it/s] 70%|███████   | 7/10 [00:05<00:04,  1.33s/it] 80%|████████  | 8/10 [00:05<00:01,  1.02it/s] 90%|█████████ | 9/10 [00:06<00:01,  1.03s/it]100%|██████████| 10/10 [00:07<00:00,  1.04s/it]                                               [Round: 0071] ...10 clients are selected and updated (with total sample size: 7808)!
-[Round: 0071] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]2it [00:00, 19.53it/s]                      [Round: 0071] ...updated weights of 10 clients are successfully averaged!
-[Round: 0071] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.4710                
-	=> Accuracy: 40.88%
-
-[Round: 0072] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 25.66it/s] 80%|████████  | 8/10 [00:00<00:00, 35.86it/s]                                              [Round: 0072] ...successfully transmitted models to 10 selected clients!
-[Round: 0072] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:02,  3.30it/s] 20%|██        | 2/10 [00:04<00:18,  2.33s/it] 30%|███       | 3/10 [00:06<00:15,  2.21s/it] 40%|████      | 4/10 [00:06<00:08,  1.48s/it] 60%|██████    | 6/10 [00:07<00:03,  1.03it/s] 70%|███████   | 7/10 [00:10<00:04,  1.44s/it] 80%|████████  | 8/10 [00:11<00:02,  1.49s/it] 90%|█████████ | 9/10 [00:13<00:01,  1.60s/it]100%|██████████| 10/10 [00:22<00:00,  3.68s/it]                                               [Round: 0072] ...10 clients are selected and updated (with total sample size: 27200)!
-[Round: 0072] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]6it [00:00, 53.68it/s]                      [Round: 0072] ...updated weights of 10 clients are successfully averaged!
-[Round: 0072] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.4357                
-	=> Accuracy: 39.48%
-
-[Round: 0073] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 56.13it/s]                                              [Round: 0073] ...successfully transmitted models to 10 selected clients!
-[Round: 0073] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:04,  1.88it/s] 20%|██        | 2/10 [00:00<00:03,  2.03it/s] 40%|████      | 4/10 [00:02<00:04,  1.47it/s] 50%|█████     | 5/10 [00:02<00:02,  1.75it/s] 70%|███████   | 7/10 [00:03<00:01,  2.51it/s] 80%|████████  | 8/10 [00:03<00:00,  2.78it/s] 90%|█████████ | 9/10 [00:03<00:00,  3.24it/s]100%|██████████| 10/10 [00:04<00:00,  2.29it/s]                                               [Round: 0073] ...10 clients are selected and updated (with total sample size: 4597)!
-[Round: 0073] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]4it [00:00, 32.96it/s]8it [00:00, 29.19it/s]                      [Round: 0073] ...updated weights of 10 clients are successfully averaged!
-[Round: 0073] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.2330                
-	=> Accuracy: 42.34%
-
-[Round: 0074] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]                                      [Round: 0074] ...successfully transmitted models to 10 selected clients!
-[Round: 0074] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:19,  2.18s/it] 20%|██        | 2/10 [00:03<00:12,  1.61s/it] 30%|███       | 3/10 [00:04<00:08,  1.22s/it] 50%|█████     | 5/10 [00:04<00:02,  1.75it/s] 60%|██████    | 6/10 [00:04<00:01,  2.11it/s] 70%|███████   | 7/10 [00:06<00:02,  1.14it/s] 80%|████████  | 8/10 [00:15<00:06,  3.43s/it] 90%|█████████ | 9/10 [00:24<00:05,  5.02s/it]100%|██████████| 10/10 [00:26<00:00,  3.91s/it]                                               [Round: 0074] ...10 clients are selected and updated (with total sample size: 30712)!
-[Round: 0074] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0074] ...updated weights of 10 clients are successfully averaged!
-[Round: 0074] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.4538                
-	=> Accuracy: 41.67%
-
-[Round: 0075] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 46.80it/s]                                              [Round: 0075] ...successfully transmitted models to 10 selected clients!
-[Round: 0075] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:05,  1.60it/s] 20%|██        | 2/10 [00:01<00:04,  1.78it/s] 30%|███       | 3/10 [00:03<00:10,  1.47s/it] 40%|████      | 4/10 [00:06<00:11,  1.84s/it] 70%|███████   | 7/10 [00:06<00:02,  1.17it/s] 80%|████████  | 8/10 [00:07<00:01,  1.13it/s] 90%|█████████ | 9/10 [00:09<00:01,  1.07s/it]100%|██████████| 10/10 [00:10<00:00,  1.06s/it]                                               [Round: 0075] ...10 clients are selected and updated (with total sample size: 10740)!
-[Round: 0075] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0075] ...updated weights of 10 clients are successfully averaged!
-[Round: 0075] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8726                
-	=> Accuracy: 49.27%
-
-[Round: 0076] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 80%|████████  | 8/10 [00:00<00:00, 57.35it/s]                                              [Round: 0076] ...successfully transmitted models to 10 selected clients!
-[Round: 0076] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:09,  1.03s/it] 20%|██        | 2/10 [00:06<00:27,  3.44s/it] 30%|███       | 3/10 [00:06<00:13,  1.99s/it] 40%|████      | 4/10 [00:08<00:11,  1.90s/it] 60%|██████    | 6/10 [00:08<00:03,  1.03it/s] 70%|███████   | 7/10 [00:09<00:03,  1.05s/it] 80%|████████  | 8/10 [00:12<00:03,  1.51s/it] 90%|█████████ | 9/10 [00:12<00:01,  1.15s/it]100%|██████████| 10/10 [00:13<00:00,  1.06s/it]                                               [Round: 0076] ...10 clients are selected and updated (with total sample size: 15856)!
-[Round: 0076] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]7it [00:00, 49.29it/s]                      [Round: 0076] ...updated weights of 10 clients are successfully averaged!
-[Round: 0076] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0873                
-	=> Accuracy: 47.36%
-
-[Round: 0077] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 60.37it/s]                                              [Round: 0077] ...successfully transmitted models to 10 selected clients!
-[Round: 0077] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:13,  1.55s/it] 30%|███       | 3/10 [00:02<00:05,  1.28it/s] 40%|████      | 4/10 [00:03<00:05,  1.05it/s] 50%|█████     | 5/10 [00:05<00:05,  1.04s/it] 60%|██████    | 6/10 [00:09<00:08,  2.02s/it] 70%|███████   | 7/10 [00:09<00:04,  1.48s/it] 80%|████████  | 8/10 [00:11<00:03,  1.61s/it] 90%|█████████ | 9/10 [00:13<00:01,  1.67s/it]100%|██████████| 10/10 [00:13<00:00,  1.31s/it]                                               [Round: 0077] ...10 clients are selected and updated (with total sample size: 14518)!
-[Round: 0077] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]5it [00:00, 46.01it/s]                      [Round: 0077] ...updated weights of 10 clients are successfully averaged!
-[Round: 0077] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8634                
-	=> Accuracy: 48.37%
-
-[Round: 0078] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]                                      [Round: 0078] ...successfully transmitted models to 10 selected clients!
-[Round: 0078] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:12,  1.44s/it] 20%|██        | 2/10 [00:01<00:05,  1.37it/s] 40%|████      | 4/10 [00:01<00:02,  2.86it/s] 50%|█████     | 5/10 [00:02<00:01,  2.87it/s] 60%|██████    | 6/10 [00:03<00:02,  1.72it/s] 70%|███████   | 7/10 [00:03<00:01,  2.26it/s] 80%|████████  | 8/10 [00:03<00:00,  2.25it/s] 90%|█████████ | 9/10 [00:06<00:01,  1.17s/it]100%|██████████| 10/10 [00:06<00:00,  1.18it/s]                                               [Round: 0078] ...10 clients are selected and updated (with total sample size: 7015)!
-[Round: 0078] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]5it [00:00, 43.55it/s]10it [00:00, 45.23it/s]                       [Round: 0078] ...updated weights of 10 clients are successfully averaged!
-[Round: 0078] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0279                
-	=> Accuracy: 47.74%
-
-[Round: 0079] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 86.86it/s]                                              [Round: 0079] ...successfully transmitted models to 10 selected clients!
-[Round: 0079] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:11,  1.27s/it] 20%|██        | 2/10 [00:01<00:06,  1.16it/s] 30%|███       | 3/10 [00:02<00:03,  1.75it/s] 40%|████      | 4/10 [00:08<00:16,  2.70s/it] 50%|█████     | 5/10 [00:08<00:09,  1.91s/it] 60%|██████    | 6/10 [00:10<00:07,  1.97s/it] 70%|███████   | 7/10 [00:12<00:05,  1.86s/it] 80%|████████  | 8/10 [00:15<00:04,  2.35s/it] 90%|█████████ | 9/10 [00:16<00:02,  2.02s/it]100%|██████████| 10/10 [00:18<00:00,  1.91s/it]                                               [Round: 0079] ...10 clients are selected and updated (with total sample size: 21056)!
-[Round: 0079] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]6it [00:00, 37.88it/s]                      [Round: 0079] ...updated weights of 10 clients are successfully averaged!
-[Round: 0079] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.2573                
-	=> Accuracy: 44.50%
-
-[Round: 0080] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 27.81it/s] 70%|███████   | 7/10 [00:00<00:00, 31.79it/s]                                              [Round: 0080] ...successfully transmitted models to 10 selected clients!
-[Round: 0080] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:09,  1.04s/it] 20%|██        | 2/10 [00:04<00:21,  2.64s/it] 30%|███       | 3/10 [00:07<00:17,  2.49s/it] 50%|█████     | 5/10 [00:07<00:05,  1.11s/it] 60%|██████    | 6/10 [00:07<00:03,  1.15it/s] 70%|███████   | 7/10 [00:07<00:02,  1.40it/s] 80%|████████  | 8/10 [00:11<00:03,  1.56s/it] 90%|█████████ | 9/10 [00:11<00:01,  1.26s/it]100%|██████████| 10/10 [00:13<00:00,  1.40s/it]                                               [Round: 0080] ...10 clients are selected and updated (with total sample size: 16337)!
-[Round: 0080] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0080] ...updated weights of 10 clients are successfully averaged!
-[Round: 0080] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8576                
-	=> Accuracy: 48.40%
-
-[Round: 0081] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 32.80it/s] 80%|████████  | 8/10 [00:00<00:00, 34.95it/s]                                              [Round: 0081] ...successfully transmitted models to 10 selected clients!
-[Round: 0081] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:13,  1.52s/it] 20%|██        | 2/10 [00:03<00:12,  1.62s/it] 30%|███       | 3/10 [00:04<00:11,  1.63s/it] 40%|████      | 4/10 [00:05<00:07,  1.22s/it] 50%|█████     | 5/10 [00:06<00:06,  1.23s/it] 60%|██████    | 6/10 [00:07<00:05,  1.25s/it] 70%|███████   | 7/10 [00:09<00:03,  1.28s/it] 80%|████████  | 8/10 [00:09<00:02,  1.04s/it] 90%|█████████ | 9/10 [00:10<00:00,  1.14it/s]100%|██████████| 10/10 [00:11<00:00,  1.05s/it]                                               [Round: 0081] ...10 clients are selected and updated (with total sample size: 13179)!
-[Round: 0081] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]5it [00:00, 48.52it/s]                      [Round: 0081] ...updated weights of 10 clients are successfully averaged!
-[Round: 0081] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.6001                
-	=> Accuracy: 52.63%
-
-[Round: 0082] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 36.74it/s] 80%|████████  | 8/10 [00:00<00:00, 35.36it/s]                                              [Round: 0082] ...successfully transmitted models to 10 selected clients!
-[Round: 0082] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:10,  1.15s/it] 20%|██        | 2/10 [00:01<00:05,  1.46it/s] 30%|███       | 3/10 [00:02<00:05,  1.37it/s] 40%|████      | 4/10 [00:02<00:04,  1.45it/s] 50%|█████     | 5/10 [00:04<00:05,  1.07s/it] 60%|██████    | 6/10 [00:08<00:07,  1.90s/it] 70%|███████   | 7/10 [00:09<00:05,  1.67s/it] 80%|████████  | 8/10 [00:12<00:04,  2.21s/it] 90%|█████████ | 9/10 [00:18<00:03,  3.35s/it]100%|██████████| 10/10 [00:27<00:00,  5.04s/it]                                               [Round: 0082] ...10 clients are selected and updated (with total sample size: 30908)!
-[Round: 0082] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]6it [00:00, 52.20it/s]                      [Round: 0082] ...updated weights of 10 clients are successfully averaged!
-[Round: 0082] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1932                
-	=> Accuracy: 44.37%
-
-[Round: 0083] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 68.09it/s]                                              [Round: 0083] ...successfully transmitted models to 10 selected clients!
-[Round: 0083] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:03,  2.99it/s] 20%|██        | 2/10 [00:01<00:06,  1.14it/s] 30%|███       | 3/10 [00:02<00:05,  1.32it/s] 40%|████      | 4/10 [00:02<00:03,  1.85it/s] 50%|█████     | 5/10 [00:08<00:13,  2.60s/it] 60%|██████    | 6/10 [00:08<00:07,  1.76s/it] 70%|███████   | 7/10 [00:09<00:04,  1.51s/it] 80%|████████  | 8/10 [00:13<00:04,  2.23s/it] 90%|█████████ | 9/10 [00:15<00:01,  1.99s/it]100%|██████████| 10/10 [00:24<00:00,  4.26s/it]                                               [Round: 0083] ...10 clients are selected and updated (with total sample size: 26683)!
-[Round: 0083] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]4it [00:00, 37.84it/s]                      [Round: 0083] ...updated weights of 10 clients are successfully averaged!
-[Round: 0083] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.2804                
-	=> Accuracy: 46.77%
-
-[Round: 0084] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 52.97it/s]                                              [Round: 0084] ...successfully transmitted models to 10 selected clients!
-[Round: 0084] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:10,  1.17s/it] 20%|██        | 2/10 [00:01<00:06,  1.28it/s] 30%|███       | 3/10 [00:06<00:17,  2.53s/it] 40%|████      | 4/10 [00:09<00:16,  2.69s/it] 50%|█████     | 5/10 [00:10<00:10,  2.01s/it] 60%|██████    | 6/10 [00:11<00:07,  1.81s/it] 70%|███████   | 7/10 [00:13<00:05,  1.90s/it] 80%|████████  | 8/10 [00:14<00:03,  1.64s/it] 90%|█████████ | 9/10 [00:14<00:01,  1.17s/it]100%|██████████| 10/10 [00:15<00:00,  1.18s/it]                                               [Round: 0084] ...10 clients are selected and updated (with total sample size: 19853)!
-[Round: 0084] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]3it [00:00, 19.64it/s]                      [Round: 0084] ...updated weights of 10 clients are successfully averaged!
-[Round: 0084] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0168                
-	=> Accuracy: 48.47%
-
-[Round: 0085] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 29.69it/s] 70%|███████   | 7/10 [00:00<00:00, 34.57it/s]                                              [Round: 0085] ...successfully transmitted models to 10 selected clients!
-[Round: 0085] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:11,  1.32s/it] 20%|██        | 2/10 [00:02<00:08,  1.08s/it] 30%|███       | 3/10 [00:02<00:05,  1.24it/s] 50%|█████     | 5/10 [00:03<00:02,  2.28it/s] 60%|██████    | 6/10 [00:03<00:02,  1.89it/s] 70%|███████   | 7/10 [00:05<00:02,  1.28it/s] 80%|████████  | 8/10 [00:07<00:02,  1.31s/it] 90%|█████████ | 9/10 [00:09<00:01,  1.39s/it]100%|██████████| 10/10 [00:10<00:00,  1.28s/it]                                               [Round: 0085] ...10 clients are selected and updated (with total sample size: 11566)!
-[Round: 0085] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]8it [00:00, 58.49it/s]                      [Round: 0085] ...updated weights of 10 clients are successfully averaged!
-[Round: 0085] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8390                
-	=> Accuracy: 50.11%
-
-[Round: 0086] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 46.65it/s]100%|██████████| 10/10 [00:00<00:00, 36.18it/s]                                               [Round: 0086] ...successfully transmitted models to 10 selected clients!
-[Round: 0086] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:09,  1.11s/it] 20%|██        | 2/10 [00:01<00:05,  1.44it/s] 40%|████      | 4/10 [00:02<00:02,  2.20it/s] 50%|█████     | 5/10 [00:05<00:07,  1.46s/it] 60%|██████    | 6/10 [00:05<00:04,  1.06s/it] 70%|███████   | 7/10 [00:08<00:04,  1.45s/it] 80%|████████  | 8/10 [00:09<00:02,  1.49s/it] 90%|█████████ | 9/10 [00:11<00:01,  1.56s/it]100%|██████████| 10/10 [00:12<00:00,  1.21s/it]                                               [Round: 0086] ...10 clients are selected and updated (with total sample size: 13941)!
-[Round: 0086] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]6it [00:00, 44.78it/s]                      [Round: 0086] ...updated weights of 10 clients are successfully averaged!
-[Round: 0086] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8960                
-	=> Accuracy: 49.09%
-
-[Round: 0087] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 38.37it/s] 80%|████████  | 8/10 [00:00<00:00, 35.15it/s]                                              [Round: 0087] ...successfully transmitted models to 10 selected clients!
-[Round: 0087] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:12,  1.39s/it] 20%|██        | 2/10 [00:08<00:38,  4.76s/it] 30%|███       | 3/10 [00:09<00:20,  2.89s/it] 40%|████      | 4/10 [00:09<00:10,  1.80s/it] 50%|█████     | 5/10 [00:09<00:06,  1.39s/it] 60%|██████    | 6/10 [00:10<00:04,  1.05s/it] 70%|███████   | 7/10 [00:10<00:02,  1.30it/s] 80%|████████  | 8/10 [00:11<00:01,  1.10it/s] 90%|█████████ | 9/10 [00:12<00:00,  1.04it/s]100%|██████████| 10/10 [00:13<00:00,  1.10it/s]                                               [Round: 0087] ...10 clients are selected and updated (with total sample size: 16021)!
-[Round: 0087] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]6it [00:00, 59.56it/s]                      [Round: 0087] ...updated weights of 10 clients are successfully averaged!
-[Round: 0087] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0662                
-	=> Accuracy: 46.84%
-
-[Round: 0088] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 56.31it/s]                                              [Round: 0088] ...successfully transmitted models to 10 selected clients!
-[Round: 0088] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:19,  2.17s/it] 20%|██        | 2/10 [00:05<00:23,  3.00s/it] 40%|████      | 4/10 [00:05<00:06,  1.16s/it] 60%|██████    | 6/10 [00:06<00:03,  1.25it/s] 70%|███████   | 7/10 [00:07<00:02,  1.36it/s] 80%|████████  | 8/10 [00:08<00:01,  1.05it/s] 90%|█████████ | 9/10 [00:10<00:01,  1.07s/it]100%|██████████| 10/10 [00:11<00:00,  1.03s/it]                                               [Round: 0088] ...10 clients are selected and updated (with total sample size: 13124)!
-[Round: 0088] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]8it [00:00, 72.37it/s]                      [Round: 0088] ...updated weights of 10 clients are successfully averaged!
-[Round: 0088] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7856                
-	=> Accuracy: 48.78%
-
-[Round: 0089] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 62.41it/s]                                              [Round: 0089] ...successfully transmitted models to 10 selected clients!
-[Round: 0089] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:06,  1.29it/s] 20%|██        | 2/10 [00:03<00:17,  2.16s/it] 40%|████      | 4/10 [00:09<00:14,  2.49s/it] 60%|██████    | 6/10 [00:09<00:05,  1.40s/it] 70%|███████   | 7/10 [00:10<00:03,  1.21s/it] 80%|████████  | 8/10 [00:14<00:03,  1.97s/it] 90%|█████████ | 9/10 [00:14<00:01,  1.48s/it]100%|██████████| 10/10 [00:15<00:00,  1.39s/it]                                               [Round: 0089] ...10 clients are selected and updated (with total sample size: 18154)!
-[Round: 0089] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0089] ...updated weights of 10 clients are successfully averaged!
-[Round: 0089] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1807                
-	=> Accuracy: 46.34%
-
-[Round: 0090] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]                                      [Round: 0090] ...successfully transmitted models to 10 selected clients!
-[Round: 0090] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:24,  2.67s/it] 30%|███       | 3/10 [00:03<00:05,  1.22it/s] 50%|█████     | 5/10 [00:03<00:02,  2.30it/s] 60%|██████    | 6/10 [00:03<00:01,  2.68it/s] 70%|███████   | 7/10 [00:07<00:04,  1.36s/it] 80%|████████  | 8/10 [00:09<00:03,  1.55s/it] 90%|█████████ | 9/10 [00:09<00:01,  1.29s/it]100%|██████████| 10/10 [00:11<00:00,  1.25s/it]                                               [Round: 0090] ...10 clients are selected and updated (with total sample size: 11825)!
-[Round: 0090] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0090] ...updated weights of 10 clients are successfully averaged!
-[Round: 0090] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.8326                
-	=> Accuracy: 38.78%
-
-[Round: 0091] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:00<00:00, 19.89it/s] 80%|████████  | 8/10 [00:00<00:00, 41.65it/s]                                              [Round: 0091] ...successfully transmitted models to 10 selected clients!
-[Round: 0091] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:21,  2.41s/it] 20%|██        | 2/10 [00:02<00:08,  1.11s/it] 30%|███       | 3/10 [00:02<00:04,  1.52it/s] 40%|████      | 4/10 [00:03<00:03,  1.96it/s] 50%|█████     | 5/10 [00:03<00:02,  1.80it/s] 60%|██████    | 6/10 [00:07<00:06,  1.53s/it] 70%|███████   | 7/10 [00:10<00:06,  2.25s/it] 80%|████████  | 8/10 [00:11<00:03,  1.67s/it] 90%|█████████ | 9/10 [00:11<00:01,  1.33s/it]100%|██████████| 10/10 [00:12<00:00,  1.24s/it]                                               [Round: 0091] ...10 clients are selected and updated (with total sample size: 15138)!
-[Round: 0091] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]10it [00:00, 98.36it/s]                       [Round: 0091] ...updated weights of 10 clients are successfully averaged!
-[Round: 0091] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.3715                
-	=> Accuracy: 45.77%
-
-[Round: 0092] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 91.17it/s]                                               [Round: 0092] ...successfully transmitted models to 10 selected clients!
-[Round: 0092] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:19,  2.17s/it] 20%|██        | 2/10 [00:03<00:12,  1.62s/it] 30%|███       | 3/10 [00:03<00:07,  1.08s/it] 40%|████      | 4/10 [00:05<00:08,  1.39s/it] 50%|█████     | 5/10 [00:07<00:06,  1.37s/it] 60%|██████    | 6/10 [00:07<00:03,  1.00it/s] 70%|███████   | 7/10 [00:11<00:05,  1.92s/it] 80%|████████  | 8/10 [00:13<00:04,  2.09s/it] 90%|█████████ | 9/10 [00:15<00:01,  1.96s/it]100%|██████████| 10/10 [00:16<00:00,  1.71s/it]                                               [Round: 0092] ...10 clients are selected and updated (with total sample size: 19260)!
-[Round: 0092] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0092] ...updated weights of 10 clients are successfully averaged!
-[Round: 0092] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9271                
-	=> Accuracy: 50.23%
-
-[Round: 0093] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 35.89it/s]                                              [Round: 0093] ...successfully transmitted models to 10 selected clients!
-[Round: 0093] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:06<01:00,  6.73s/it] 20%|██        | 2/10 [00:08<00:30,  3.80s/it] 30%|███       | 3/10 [00:11<00:24,  3.56s/it] 50%|█████     | 5/10 [00:12<00:08,  1.62s/it] 60%|██████    | 6/10 [00:12<00:04,  1.24s/it] 70%|███████   | 7/10 [00:12<00:02,  1.07it/s] 80%|████████  | 8/10 [00:13<00:01,  1.23it/s] 90%|█████████ | 9/10 [00:14<00:01,  1.05s/it]100%|██████████| 10/10 [00:15<00:00,  1.11s/it]                                               [Round: 0093] ...10 clients are selected and updated (with total sample size: 18988)!
-[Round: 0093] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0093] ...updated weights of 10 clients are successfully averaged!
-[Round: 0093] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0262                
-	=> Accuracy: 48.85%
-
-[Round: 0094] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 55.80it/s]                                              [Round: 0094] ...successfully transmitted models to 10 selected clients!
-[Round: 0094] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:12,  1.35s/it] 20%|██        | 2/10 [00:01<00:06,  1.30it/s] 30%|███       | 3/10 [00:02<00:04,  1.47it/s] 40%|████      | 4/10 [00:05<00:10,  1.72s/it] 60%|██████    | 6/10 [00:11<00:08,  2.24s/it] 80%|████████  | 8/10 [00:15<00:04,  2.20s/it] 90%|█████████ | 9/10 [00:16<00:02,  2.04s/it]100%|██████████| 10/10 [00:17<00:00,  1.80s/it]                                               [Round: 0094] ...10 clients are selected and updated (with total sample size: 21524)!
-[Round: 0094] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0094] ...updated weights of 10 clients are successfully averaged!
-[Round: 0094] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.4440                
-	=> Accuracy: 41.70%
-
-[Round: 0095] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 29.65it/s]                                              [Round: 0095] ...successfully transmitted models to 10 selected clients!
-[Round: 0095] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:05,  1.79it/s] 20%|██        | 2/10 [00:04<00:19,  2.40s/it] 30%|███       | 3/10 [00:05<00:14,  2.08s/it] 40%|████      | 4/10 [00:06<00:08,  1.41s/it] 50%|█████     | 5/10 [00:06<00:05,  1.04s/it] 60%|██████    | 6/10 [00:07<00:03,  1.10it/s] 70%|███████   | 7/10 [00:07<00:02,  1.38it/s] 80%|████████  | 8/10 [00:09<00:01,  1.05it/s] 90%|█████████ | 9/10 [00:10<00:01,  1.06s/it]100%|██████████| 10/10 [00:11<00:00,  1.11s/it]                                               [Round: 0095] ...10 clients are selected and updated (with total sample size: 14538)!
-[Round: 0095] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]3it [00:00, 26.31it/s]9it [00:00, 42.51it/s]                      [Round: 0095] ...updated weights of 10 clients are successfully averaged!
-[Round: 0095] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.3890                
-	=> Accuracy: 42.79%
-
-[Round: 0096] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 47.35it/s]                                              [Round: 0096] ...successfully transmitted models to 10 selected clients!
-[Round: 0096] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:02<00:21,  2.41s/it] 20%|██        | 2/10 [00:04<00:18,  2.32s/it] 30%|███       | 3/10 [00:05<00:12,  1.78s/it] 40%|████      | 4/10 [00:06<00:07,  1.32s/it] 50%|█████     | 5/10 [00:07<00:06,  1.31s/it] 80%|████████  | 8/10 [00:08<00:01,  1.51it/s] 90%|█████████ | 9/10 [00:08<00:00,  1.70it/s]100%|██████████| 10/10 [00:09<00:00,  1.99it/s]                                               [Round: 0096] ...10 clients are selected and updated (with total sample size: 11214)!
-[Round: 0096] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]8it [00:00, 71.95it/s]                      [Round: 0096] ...updated weights of 10 clients are successfully averaged!
-[Round: 0096] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9580                
-	=> Accuracy: 48.16%
-
-[Round: 0097] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 64.18it/s]                                              [Round: 0097] ...successfully transmitted models to 10 selected clients!
-[Round: 0097] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:01<00:06,  1.29it/s] 40%|████      | 4/10 [00:01<00:02,  2.82it/s] 60%|██████    | 6/10 [00:02<00:01,  3.17it/s] 70%|███████   | 7/10 [00:03<00:01,  1.97it/s] 80%|████████  | 8/10 [00:05<00:02,  1.01s/it] 90%|█████████ | 9/10 [00:07<00:01,  1.09s/it]100%|██████████| 10/10 [00:07<00:00,  1.04it/s]                                               [Round: 0097] ...10 clients are selected and updated (with total sample size: 9056)!
-[Round: 0097] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]9it [00:00, 77.42it/s]                      [Round: 0097] ...updated weights of 10 clients are successfully averaged!
-[Round: 0097] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7253                
-	=> Accuracy: 51.76%
-
-[Round: 0098] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 67.34it/s]                                              [Round: 0098] ...successfully transmitted models to 10 selected clients!
-[Round: 0098] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:14,  1.63s/it] 20%|██        | 2/10 [00:02<00:11,  1.47s/it] 30%|███       | 3/10 [00:09<00:27,  3.99s/it] 40%|████      | 4/10 [00:10<00:14,  2.48s/it] 50%|█████     | 5/10 [00:11<00:10,  2.02s/it] 60%|██████    | 6/10 [00:12<00:06,  1.64s/it] 70%|███████   | 7/10 [00:12<00:03,  1.16s/it] 80%|████████  | 8/10 [00:12<00:01,  1.21it/s] 90%|█████████ | 9/10 [00:13<00:00,  1.10it/s]100%|██████████| 10/10 [00:14<00:00,  1.12it/s]                                               [Round: 0098] ...10 clients are selected and updated (with total sample size: 17775)!
-[Round: 0098] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]9it [00:00, 52.59it/s]                      [Round: 0098] ...updated weights of 10 clients are successfully averaged!
-[Round: 0098] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.2609                
-	=> Accuracy: 45.97%
-
-[Round: 0099] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 97.39it/s]                                               [Round: 0099] ...successfully transmitted models to 10 selected clients!
-[Round: 0099] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 20%|██        | 2/10 [00:00<00:00, 12.51it/s] 40%|████      | 4/10 [00:02<00:04,  1.25it/s] 50%|█████     | 5/10 [00:03<00:03,  1.52it/s] 70%|███████   | 7/10 [00:03<00:01,  2.16it/s] 80%|████████  | 8/10 [00:04<00:01,  1.78it/s] 90%|█████████ | 9/10 [00:07<00:01,  1.33s/it]100%|██████████| 10/10 [00:08<00:00,  1.12s/it]                                               [Round: 0099] ...10 clients are selected and updated (with total sample size: 9926)!
-[Round: 0099] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0099] ...updated weights of 10 clients are successfully averaged!
-[Round: 0099] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1721                
-	=> Accuracy: 46.65%
-
-[Round: 0100] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 31.93it/s] 90%|█████████ | 9/10 [00:00<00:00, 36.05it/s]                                              [Round: 0100] ...successfully transmitted models to 10 selected clients!
-[Round: 0100] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:06<00:59,  6.63s/it] 20%|██        | 2/10 [00:08<00:30,  3.79s/it] 30%|███       | 3/10 [00:08<00:15,  2.26s/it] 40%|████      | 4/10 [00:09<00:09,  1.57s/it] 50%|█████     | 5/10 [00:09<00:05,  1.05s/it] 60%|██████    | 6/10 [00:10<00:03,  1.13it/s] 70%|███████   | 7/10 [00:11<00:02,  1.09it/s] 80%|████████  | 8/10 [00:11<00:01,  1.48it/s] 90%|█████████ | 9/10 [00:12<00:00,  1.32it/s]100%|██████████| 10/10 [00:17<00:00,  2.09s/it]                                               [Round: 0100] ...10 clients are selected and updated (with total sample size: 21883)!
-[Round: 0100] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]4it [00:00, 39.28it/s]                      [Round: 0100] ...updated weights of 10 clients are successfully averaged!
-[Round: 0100] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.0170                
-	=> Accuracy: 50.22%
-
-[Round: 0101] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 29.96it/s] 80%|████████  | 8/10 [00:00<00:00, 38.76it/s]                                              [Round: 0101] ...successfully transmitted models to 10 selected clients!
-[Round: 0101] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:02,  3.42it/s] 20%|██        | 2/10 [00:04<00:22,  2.81s/it] 30%|███       | 3/10 [00:04<00:11,  1.58s/it] 50%|█████     | 5/10 [00:05<00:03,  1.39it/s] 60%|██████    | 6/10 [00:06<00:03,  1.19it/s] 70%|███████   | 7/10 [00:09<00:04,  1.65s/it] 80%|████████  | 8/10 [00:11<00:03,  1.71s/it] 90%|█████████ | 9/10 [00:12<00:01,  1.50s/it]100%|██████████| 10/10 [00:13<00:00,  1.43s/it]                                               [Round: 0101] ...10 clients are selected and updated (with total sample size: 16656)!
-[Round: 0101] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0101] ...updated weights of 10 clients are successfully averaged!
-[Round: 0101] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.4908                
-	=> Accuracy: 46.07%
-
-[Round: 0102] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]                                      [Round: 0102] ...successfully transmitted models to 10 selected clients!
-[Round: 0102] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:10,  1.20s/it] 20%|██        | 2/10 [00:04<00:19,  2.39s/it] 30%|███       | 3/10 [00:04<00:10,  1.55s/it] 50%|█████     | 5/10 [00:05<00:03,  1.25it/s] 60%|██████    | 6/10 [00:05<00:02,  1.52it/s] 70%|███████   | 7/10 [00:06<00:02,  1.43it/s] 80%|████████  | 8/10 [00:07<00:01,  1.23it/s] 90%|█████████ | 9/10 [00:10<00:01,  1.43s/it]100%|██████████| 10/10 [00:11<00:00,  1.16s/it]                                               [Round: 0102] ...10 clients are selected and updated (with total sample size: 14344)!
-[Round: 0102] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]3it [00:00, 27.67it/s]7it [00:00, 34.42it/s]                      [Round: 0102] ...updated weights of 10 clients are successfully averaged!
-[Round: 0102] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.3298                
-	=> Accuracy: 44.97%
-
-[Round: 0103] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 40%|████      | 4/10 [00:00<00:00, 21.02it/s]100%|██████████| 10/10 [00:00<00:00, 36.98it/s]                                               [Round: 0103] ...successfully transmitted models to 10 selected clients!
-[Round: 0103] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:12,  1.40s/it] 20%|██        | 2/10 [00:04<00:19,  2.40s/it] 30%|███       | 3/10 [00:04<00:09,  1.35s/it] 40%|████      | 4/10 [00:05<00:06,  1.03s/it] 50%|█████     | 5/10 [00:05<00:04,  1.09it/s] 60%|██████    | 6/10 [00:06<00:03,  1.31it/s] 70%|███████   | 7/10 [00:06<00:01,  1.58it/s] 90%|█████████ | 9/10 [00:07<00:00,  1.78it/s]100%|██████████| 10/10 [00:09<00:00,  1.31it/s]                                               [Round: 0103] ...10 clients are selected and updated (with total sample size: 10877)!
-[Round: 0103] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0103] ...updated weights of 10 clients are successfully averaged!
-[Round: 0103] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9422                
-	=> Accuracy: 48.36%
-
-[Round: 0104] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 50.69it/s]                                              [Round: 0104] ...successfully transmitted models to 10 selected clients!
-[Round: 0104] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:02,  4.10it/s] 20%|██        | 2/10 [00:01<00:05,  1.51it/s] 30%|███       | 3/10 [00:02<00:05,  1.34it/s] 50%|█████     | 5/10 [00:02<00:02,  1.86it/s] 60%|██████    | 6/10 [00:05<00:05,  1.28s/it] 70%|███████   | 7/10 [00:06<00:03,  1.20s/it] 80%|████████  | 8/10 [00:08<00:02,  1.30s/it] 90%|█████████ | 9/10 [00:09<00:01,  1.11s/it]100%|██████████| 10/10 [00:09<00:00,  1.01it/s]                                               [Round: 0104] ...10 clients are selected and updated (with total sample size: 13328)!
-[Round: 0104] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0104] ...updated weights of 10 clients are successfully averaged!
-[Round: 0104] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.2954                
-	=> Accuracy: 45.18%
-
-[Round: 0105] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 70%|███████   | 7/10 [00:00<00:00, 60.85it/s]                                              [Round: 0105] ...successfully transmitted models to 10 selected clients!
-[Round: 0105] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:08,  1.10it/s] 20%|██        | 2/10 [00:01<00:06,  1.18it/s] 30%|███       | 3/10 [00:02<00:04,  1.60it/s] 40%|████      | 4/10 [00:02<00:02,  2.29it/s] 50%|█████     | 5/10 [00:04<00:05,  1.00s/it] 60%|██████    | 6/10 [00:08<00:09,  2.28s/it] 70%|███████   | 7/10 [00:09<00:04,  1.66s/it] 80%|████████  | 8/10 [00:10<00:02,  1.49s/it] 90%|█████████ | 9/10 [00:12<00:01,  1.62s/it]100%|██████████| 10/10 [00:12<00:00,  1.21s/it]                                               [Round: 0105] ...10 clients are selected and updated (with total sample size: 16653)!
-[Round: 0105] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]10it [00:00, 96.95it/s]                       [Round: 0105] ...updated weights of 10 clients are successfully averaged!
-[Round: 0105] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.2475                
-	=> Accuracy: 47.32%
-
-[Round: 0106] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 57.89it/s]                                              [Round: 0106] ...successfully transmitted models to 10 selected clients!
-[Round: 0106] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:10,  1.21s/it] 20%|██        | 2/10 [00:01<00:06,  1.21it/s] 30%|███       | 3/10 [00:02<00:04,  1.62it/s] 40%|████      | 4/10 [00:02<00:02,  2.41it/s] 50%|█████     | 5/10 [00:05<00:07,  1.41s/it] 60%|██████    | 6/10 [00:05<00:03,  1.01it/s] 70%|███████   | 7/10 [00:06<00:02,  1.24it/s] 80%|████████  | 8/10 [00:07<00:01,  1.14it/s] 90%|█████████ | 9/10 [00:08<00:01,  1.02s/it]100%|██████████| 10/10 [00:09<00:00,  1.09it/s]                                               [Round: 0106] ...10 clients are selected and updated (with total sample size: 13111)!
-[Round: 0106] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0106] ...updated weights of 10 clients are successfully averaged!
-[Round: 0106] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.3849                
-	=> Accuracy: 43.42%
-
-[Round: 0107] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 35.75it/s]                                              [Round: 0107] ...successfully transmitted models to 10 selected clients!
-[Round: 0107] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:03,  2.68it/s] 20%|██        | 2/10 [00:01<00:07,  1.12it/s] 30%|███       | 3/10 [00:01<00:04,  1.54it/s] 40%|████      | 4/10 [00:02<00:03,  1.84it/s] 60%|██████    | 6/10 [00:03<00:02,  1.91it/s] 70%|███████   | 7/10 [00:04<00:01,  1.71it/s] 80%|████████  | 8/10 [00:04<00:01,  1.67it/s] 90%|█████████ | 9/10 [00:04<00:00,  2.17it/s]100%|██████████| 10/10 [00:06<00:00,  1.45it/s]                                               [Round: 0107] ...10 clients are selected and updated (with total sample size: 9172)!
-[Round: 0107] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0107] ...updated weights of 10 clients are successfully averaged!
-[Round: 0107] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7729                
-	=> Accuracy: 51.16%
-
-[Round: 0108] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]                                      [Round: 0108] ...successfully transmitted models to 10 selected clients!
-[Round: 0108] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:03,  2.98it/s] 20%|██        | 2/10 [00:01<00:05,  1.55it/s] 30%|███       | 3/10 [00:01<00:03,  2.26it/s] 40%|████      | 4/10 [00:01<00:02,  2.71it/s] 50%|█████     | 5/10 [00:02<00:02,  2.40it/s] 70%|███████   | 7/10 [00:02<00:00,  3.87it/s] 80%|████████  | 8/10 [00:02<00:00,  4.17it/s] 90%|█████████ | 9/10 [00:03<00:00,  2.98it/s]100%|██████████| 10/10 [00:04<00:00,  2.04it/s]                                               [Round: 0108] ...10 clients are selected and updated (with total sample size: 5205)!
-[Round: 0108] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0108] ...updated weights of 10 clients are successfully averaged!
-[Round: 0108] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.7795                
-	=> Accuracy: 50.32%
-
-[Round: 0109] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 41.32it/s]                                              [Round: 0109] ...successfully transmitted models to 10 selected clients!
-[Round: 0109] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:01,  6.69it/s] 20%|██        | 2/10 [00:00<00:03,  2.09it/s] 30%|███       | 3/10 [00:01<00:04,  1.50it/s] 40%|████      | 4/10 [00:02<00:04,  1.26it/s] 50%|█████     | 5/10 [00:04<00:05,  1.00s/it] 60%|██████    | 6/10 [00:08<00:08,  2.07s/it] 70%|███████   | 7/10 [00:08<00:04,  1.45s/it] 80%|████████  | 8/10 [00:15<00:06,  3.30s/it] 90%|█████████ | 9/10 [00:16<00:02,  2.66s/it]100%|██████████| 10/10 [00:17<00:00,  2.07s/it]                                               [Round: 0109] ...10 clients are selected and updated (with total sample size: 25449)!
-[Round: 0109] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]5it [00:00, 43.03it/s]                      [Round: 0109] ...updated weights of 10 clients are successfully averaged!
-[Round: 0109] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.9168                
-	=> Accuracy: 50.30%
-
-[Round: 0110] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 85.81it/s]                                              [Round: 0110] ...successfully transmitted models to 10 selected clients!
-[Round: 0110] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:16,  1.87s/it] 20%|██        | 2/10 [00:02<00:08,  1.04s/it] 30%|███       | 3/10 [00:02<00:04,  1.49it/s] 40%|████      | 4/10 [00:03<00:04,  1.44it/s] 50%|█████     | 5/10 [00:03<00:02,  1.67it/s] 70%|███████   | 7/10 [00:04<00:01,  2.01it/s] 80%|████████  | 8/10 [00:05<00:01,  1.46it/s] 90%|█████████ | 9/10 [00:06<00:00,  1.51it/s]100%|██████████| 10/10 [00:07<00:00,  1.35it/s]                                               [Round: 0110] ...10 clients are selected and updated (with total sample size: 9703)!
-[Round: 0110] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0110] ...updated weights of 10 clients are successfully averaged!
-[Round: 0110] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 1.8533                
-	=> Accuracy: 49.75%
-
-[Round: 0111] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 60%|██████    | 6/10 [00:00<00:00, 58.19it/s]                                              [Round: 0111] ...successfully transmitted models to 10 selected clients!
-[Round: 0111] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:10,  1.17s/it] 20%|██        | 2/10 [00:02<00:09,  1.21s/it] 30%|███       | 3/10 [00:02<00:06,  1.15it/s] 40%|████      | 4/10 [00:03<00:04,  1.46it/s] 50%|█████     | 5/10 [00:03<00:02,  2.05it/s] 60%|██████    | 6/10 [00:04<00:02,  1.75it/s] 70%|███████   | 7/10 [00:05<00:02,  1.39it/s] 80%|████████  | 8/10 [00:05<00:01,  1.61it/s] 90%|█████████ | 9/10 [00:06<00:00,  1.49it/s]100%|██████████| 10/10 [00:06<00:00,  1.51it/s]                                               [Round: 0111] ...10 clients are selected and updated (with total sample size: 9990)!
-[Round: 0111] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]9it [00:00, 65.21it/s]                      [Round: 0111] ...updated weights of 10 clients are successfully averaged!
-[Round: 0111] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1151                
-	=> Accuracy: 46.74%
-
-[Round: 0112] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 50%|█████     | 5/10 [00:00<00:00, 48.70it/s]                                              [Round: 0112] ...successfully transmitted models to 10 selected clients!
-[Round: 0112] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:05,  1.77it/s] 30%|███       | 3/10 [00:02<00:05,  1.24it/s] 40%|████      | 4/10 [00:03<00:05,  1.15it/s] 50%|█████     | 5/10 [00:04<00:04,  1.18it/s] 60%|██████    | 6/10 [00:04<00:02,  1.36it/s] 70%|███████   | 7/10 [00:04<00:01,  1.66it/s] 80%|████████  | 8/10 [00:07<00:02,  1.28s/it] 90%|█████████ | 9/10 [00:09<00:01,  1.35s/it]100%|██████████| 10/10 [00:09<00:00,  1.04s/it]                                               [Round: 0112] ...10 clients are selected and updated (with total sample size: 12970)!
-[Round: 0112] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]8it [00:00, 79.77it/s]                      [Round: 0112] ...updated weights of 10 clients are successfully averaged!
-[Round: 0112] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1205                
-	=> Accuracy: 47.40%
-
-[Round: 0113] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 95.17it/s]                                               [Round: 0113] ...successfully transmitted models to 10 selected clients!
-[Round: 0113] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:10,  1.20s/it] 20%|██        | 2/10 [00:01<00:05,  1.56it/s] 30%|███       | 3/10 [00:01<00:02,  2.49it/s] 40%|████      | 4/10 [00:03<00:05,  1.15it/s] 50%|█████     | 5/10 [00:03<00:02,  1.67it/s] 60%|██████    | 6/10 [00:04<00:02,  1.34it/s] 70%|███████   | 7/10 [00:07<00:05,  1.71s/it] 80%|████████  | 8/10 [00:09<00:03,  1.71s/it] 90%|█████████ | 9/10 [00:09<00:01,  1.21s/it]100%|██████████| 10/10 [00:11<00:00,  1.25s/it]                                               [Round: 0113] ...10 clients are selected and updated (with total sample size: 14983)!
-[Round: 0113] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  [Round: 0113] ...updated weights of 10 clients are successfully averaged!
-[Round: 0113] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.3757                
-	=> Accuracy: 45.09%
-
-[Round: 0114] Select clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 90%|█████████ | 9/10 [00:00<00:00, 83.17it/s]                                              [Round: 0114] ...successfully transmitted models to 10 selected clients!
-[Round: 0114] Start updating selected 10 clients...!
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:00<00:01,  5.13it/s] 20%|██        | 2/10 [00:01<00:06,  1.28it/s] 30%|███       | 3/10 [00:02<00:08,  1.15s/it] 40%|████      | 4/10 [00:04<00:08,  1.48s/it] 50%|█████     | 5/10 [00:05<00:06,  1.21s/it] 60%|██████    | 6/10 [00:08<00:06,  1.63s/it] 70%|███████   | 7/10 [00:09<00:04,  1.63s/it] 80%|████████  | 8/10 [00:11<00:03,  1.77s/it] 90%|█████████ | 9/10 [00:12<00:01,  1.46s/it]100%|██████████| 10/10 [00:18<00:00,  2.85s/it]                                               [Round: 0114] ...10 clients are selected and updated (with total sample size: 32413)!
-[Round: 0114] Aggregate updated weights of 10 clients...!
-0it [00:00, ?it/s]                  Exception in thread Thread-3:
-Traceback (most recent call last):
-  File "/home/ijeong/anaconda3/envs/python-3.8/lib/python3.8/threading.py", line 932, in _bootstrap_inner
-Exception in thread Thread-4:
-Traceback (most recent call last):
-  File "/home/ijeong/anaconda3/envs/python-3.8/lib/python3.8/threading.py", line 932, in _bootstrap_inner
-[Round: 0114] ...updated weights of 10 clients are successfully averaged!
-[Round: 0114] Evaluate global model's performance...!                
-	[Server] ...finished evaluation!                
-	=> Loss: 2.1908                
-	=> Accuracy: 48.63%
-
-Traceback (most recent call last):
-  File "main.py", line 108, in <module>
-    central_server.fit()
-  File "/home/ijeong/workspace/Lecture/PRML/Project/code/prml_federeated_learning/FedLearning/src/server.py", line 326, in fit
-    with open(os.path.join(f"{self.log_dir}", "result.pkl"), "wb") as f:
-FileNotFoundError: [Errno 2] No such file or directory: 'log/cifar10/42_cifar10_0.1_fedprox($0.0001)_CrossEntropyLoss_r_over/result.pkl'
-    self.run()
-  File "/home/ijeong/anaconda3/envs/python-3.8/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 233, in run
-    self.run()
-  File "/home/ijeong/anaconda3/envs/python-3.8/lib/python3.8/site-packages/tensorboard/summary/writer/event_file_writer.py", line 233, in run
-    self._record_writer.write(data)
-  File "/home/ijeong/anaconda3/envs/python-3.8/lib/python3.8/site-packages/tensorboard/summary/writer/record_writer.py", line 40, in write
-    self._writer.write(header + header_crc + data + footer_crc)
-  File "/home/ijeong/anaconda3/envs/python-3.8/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 766, in write
-    self._record_writer.write(data)
-  File "/home/ijeong/anaconda3/envs/python-3.8/lib/python3.8/site-packages/tensorboard/summary/writer/record_writer.py", line 40, in write
-    self.fs.append(self.filename, file_content, self.binary_mode)
-  File "/home/ijeong/anaconda3/envs/python-3.8/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 160, in append
-    self._writer.write(header + header_crc + data + footer_crc)
-  File "/home/ijeong/anaconda3/envs/python-3.8/lib/python3.8/site-packages/tensorboard/compat/tensorflow_stub/io/gfile.py", line 766, in write
