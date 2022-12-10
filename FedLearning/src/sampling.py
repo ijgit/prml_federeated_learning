@@ -118,7 +118,7 @@ def partition_dataset(targets, class_to_idx, num_client, alpha, seed):
 class ClientDataset(Dataset):
     """TensorDataset with support of transforms."""
     def __init__(self, data, targets, class_to_idx, sampling_type, seed, client_id, dataset_name, alpha, transform=None):
-        self.s_types = ["smote", "r_over", "r_under"]
+        self.s_types = ["smote", "r_over", "r_under", "augment"]
         self.seed = seed
         self.client_id = client_id
 
@@ -164,29 +164,37 @@ class ClientDataset(Dataset):
         #len(self.data) if type(self.data) == list else self.data.size(0)
 
     def sampling(self):
+        _X = self.data
+        _y = self.targets.numpy().reshape(-1,1)
+
         # set resampler for each sampling type
         if self.sampling_type == "smote":
             from imblearn.over_sampling import SMOTE
+            reshaped_X_train = _X.reshape(_X.shape[0], -1)
             resampler = SMOTE(random_state=self.seed)
         elif self.sampling_type == "r_under":
             from imblearn.under_sampling import RandomUnderSampler
+            reshaped_X_train = _X.reshape(_X.shape[0], -1)
             resampler = RandomUnderSampler(random_state=self.seed)
 
         elif self.sampling_type == "r_over":
             from imblearn.over_sampling import RandomOverSampler
+            reshaped_X_train = _X.reshape(_X.shape[0], -1)
             resampler = RandomOverSampler(random_state=self.seed)
+
+        elif self.sampling_type == "augment":
+            reshaped_X_train = _X
+            resampler = MyAugmentator(random_state=self.seed)
+
         else :
             return self.data, self.targets # do nothing
 
         print(f">>>>> Resampling Started : {self.sampling_type}")
-        _X = self.data
-        _y = self.targets.numpy().reshape(-1,1)
 
         if len(set(_y.flatten().tolist())) == 1:
             return self.data, self.targets # do nothing
 
         print(f"  orig.shape; {_X.shape}, {_y.shape}")
-        reshaped_X_train = _X.reshape(_X.shape[0], -1)
         X_resampled, y_resampled = resampler.fit_resample(reshaped_X_train, _y)
         origin_shape = list(self.data.shape)
         origin_shape[0] = -1
@@ -195,6 +203,86 @@ class ClientDataset(Dataset):
         print(f"  resampled.shape; {_X.shape}, {_y.shape}")
         print(f">>>>> Resampling Completed : {self.sampling_type}")
         return _X, _y
+
+class MyAugmentator():
+    def __init__(self, random_state):
+        self.random_state = random_state
+        np.random.seed(self.random_state)
+
+        degrees=[-15,15]
+        scale=(0.9, 1.1)
+        translate=(0.01, 0.01)
+        interpolation=transforms.InterpolationMode.NEAREST
+
+        MyRandomAffine = transforms.RandomAffine(degrees=degrees, 
+                                                    scale = scale,
+                                                    translate = translate,
+                                                    interpolation = interpolation)
+
+        self.my_transform = transforms.Compose([
+                    transforms.ToPILImage(),
+                    MyRandomAffine,
+                    transforms.ToTensor(),
+        ])
+
+    def fit_resample(self, reshaped_X_train, _y):
+
+        K, V = np.unique(_y, return_counts=True)
+        zip_orig = zip(K, V)
+        
+        # count each class count
+        if len(set(_y.flatten().tolist())) == 1:
+            return reshaped_X_train, _y
+
+        max_value = max(V)
+        dic_gen_count = dict()
+
+        count_new_gen = 0
+        for k, v in zip_orig:
+            dic_gen_count[k] = max_value - v
+            count_new_gen = count_new_gen + dic_gen_count[k]
+        
+        print(f"max_value: {max_value}, #{count_new_gen} will be generated.")
+
+        x_origin_shape = list(reshaped_X_train.shape)
+        x_new_shape = x_origin_shape.copy()
+        x_new_shape[0] = x_origin_shape[0] + count_new_gen
+        resampled_x = np.zeros((tuple(x_new_shape)))
+        resampled_x[:x_origin_shape[0]] = reshaped_X_train
+
+        y_origin_shape = list(_y.shape)
+        y_new_shape = y_origin_shape.copy()
+        y_new_shape[0] = y_new_shape[0] + count_new_gen
+        resampled_y = np.zeros((tuple(y_new_shape)))
+        resampled_y[:y_origin_shape[0]] = _y
+
+        created_count = 0
+        for k, v in dic_gen_count.items():
+            _class_no = k
+            _left_count = v
+
+            # find index where _y == _class_no
+            index_list = list(np.where(_y == _class_no)[0])
+
+            while(_left_count > 0) :
+                rand_index = index_list[np.random.randint(0, len(index_list))]
+
+                will_be_augmentated = reshaped_X_train[rand_index]
+                # print(f"will_be_augmentated.shape: {will_be_augmentated.shape}")
+                augmentated = self.my_transform(will_be_augmentated).numpy()
+                # print(f"augmentated.shape: {augmentated.shape}")
+                converted_shape = list(augmentated.shape)
+                converted_shape.append(converted_shape[0])
+                converted_shape = converted_shape[1:]
+
+                resampled_x[x_origin_shape[0] + created_count] = augmentated.reshape(converted_shape)
+                resampled_y[x_origin_shape[0] + created_count] = _y[rand_index]
+
+                created_count = created_count + 1
+                _left_count = _left_count -1
+
+        return resampled_x, resampled_y
+
 
 class CustomTensorDataset(Dataset):
     """TensorDataset with support of transforms."""
