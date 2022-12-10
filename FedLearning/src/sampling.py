@@ -241,13 +241,13 @@ class MyAugmentator():
         x_origin_shape = list(reshaped_X_train.shape)
         x_new_shape = x_origin_shape.copy()
         x_new_shape[0] = x_origin_shape[0] + count_new_gen
-        resampled_x = np.zeros((tuple(x_new_shape)))
+        resampled_x = np.zeros((tuple(x_new_shape)), dtype=reshaped_X_train.dtype)
         resampled_x[:x_origin_shape[0]] = reshaped_X_train
 
         y_origin_shape = list(_y.shape)
         y_new_shape = y_origin_shape.copy()
         y_new_shape[0] = y_new_shape[0] + count_new_gen
-        resampled_y = np.zeros((tuple(y_new_shape)))
+        resampled_y = np.zeros((tuple(y_new_shape)), dtype=_y.dtype)
         resampled_y[:y_origin_shape[0]] = _y
 
         created_count = 0
@@ -269,13 +269,15 @@ class MyAugmentator():
                 # print(f"will_be_augmentated.shape: {will_be_augmentated.shape}")
 
                 if has_channel:
-                    augmentated = self.my_transform(will_be_augmentated).permute(1, 2, 0).numpy() # change C, H, W to H, W, C 
+                    augmentated = self.my_transform(will_be_augmentated).permute(1, 2, 0).numpy() * 255.0 # change C, H, W to H, W, C 
                 else:
-                    augmentated = self.my_transform(will_be_augmentated).numpy().reshape(will_be_augmentated.shape) # in EMNIST case
-                
-                # print(f"augmentated.shape: {augmentated.shape}")
-                resampled_x[x_origin_shape[0] + created_count] = augmentated
-                resampled_y[x_origin_shape[0] + created_count] = _y[rand_index]
+                    augmentated = self.my_transform(will_be_augmentated).numpy().reshape(will_be_augmentated.shape) * 255.0 # in EMNIST case
+
+                resampled_x[x_origin_shape[0] + created_count] = augmentated.astype(reshaped_X_train.dtype)
+                resampled_y[x_origin_shape[0] + created_count] = _y[rand_index].astype(_y.dtype)
+
+                # print(f"will_be_augmentated:{will_be_augmentated}")
+                # print(f"augmentated:{resampled_x[x_origin_shape[0] + created_count]}")
 
                 created_count = created_count + 1
                 _left_count = _left_count -1
