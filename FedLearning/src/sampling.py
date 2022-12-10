@@ -281,7 +281,7 @@ class MyAugmentator():
                 created_count = created_count + 1
                 _left_count = _left_count -1
 
-        return resampled_x, resampled_y
+        return resampled_x, resampled_y.flatten()
 
 
 class CustomTensorDataset(Dataset):

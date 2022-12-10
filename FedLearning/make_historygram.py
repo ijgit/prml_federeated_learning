@@ -7,7 +7,7 @@ import os.path
 dataset_names = ['CIFAR10', 'EMNIST']
 class_sizes = [10, 62]
 alphas = [0.1, 1.0, 10.0]
-sampling_types = ['r_under', 'r_over', 'smote']
+sampling_types = ['r_under', 'r_over', 'smote', 'augment']
 client_ids = [i for i in range(100)]
 
 for i, dataset_name in enumerate(dataset_names):
