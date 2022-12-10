@@ -34,6 +34,7 @@ class Client(object):
     """
     def __init__(self, client_id, local_data, device, log_path):
         """Client object is initiated by the center server."""
+        self.alpha=1e-2
         self.id = client_id
         self.data = local_data
         self.num_class = len(self.data.class_to_idx.values())
@@ -62,7 +63,6 @@ class Client(object):
             for new_param, old_param in zip(self.t_model.parameters(), self.t_model.parameters()):
                 old_param.data = new_param.data.clone()
             self.global_model_vector = model_parameter_vector(self.t_model).detach().clone()
-
 
     def __len__(self):
         """Return a total size of the client's local data."""
@@ -113,6 +113,9 @@ class Client(object):
 
 
                 if self.global_model_vector != None:
+                    self.old_grad = self.old_grad.to(self.device)
+                    self.global_model_vector = self.global_model_vector.to(self.device)
+                    
                     v1 = model_parameter_vector(self.t_model)
                     loss += self.alpha/2 * torch.norm(v1 - self.global_model_vector, 2)
                     loss -= torch.dot(v1, self.old_grad)
@@ -146,11 +149,11 @@ class Client(object):
                     loss = torch.nn.__dict__[self.tm_criterion]()(preds, labels)
                     
                 elif self.tm_criterion == 'FocalLoss':
-                    loss_func = FocalLoss(alpha=None, size_average=True)
+                    loss_func = FocalLoss(size_average=True)
                     loss = loss_func(preds, labels)
                     
                 elif self.tm_criterion == 'Ratio_Cross_Entropy':
-                    loss_func = Ratio_Cross_Entropy(device=self.device, class_num=self.num_class, alpha=None, size_average=True)
+                    loss_func = Ratio_Cross_Entropy(device=self.device, class_num=self.num_class, size_average=True)
                     loss = loss_func(preds, labels)
                     
                 test_loss += loss.item()
