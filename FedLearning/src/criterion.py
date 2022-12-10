@@ -108,7 +108,7 @@ class Ratio_Cross_Entropy(nn.Module):
                                     instead summed for each minibatch.
         """
 
-    def __init__(self, device, class_num, alpha=1.0, size_average=False):
+    def __init__(self, device, class_num, alpha=None, size_average=True):
         self.device = device
         super(Ratio_Cross_Entropy, self).__init__()
         if alpha is None:

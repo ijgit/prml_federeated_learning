@@ -117,11 +117,11 @@ class Client(object):
                     loss = torch.nn.__dict__[self.tm_criterion]()(preds, labels)
                     
                 elif self.tm_criterion == 'FocalLoss':
-                    loss_func = FocalLoss(alpha=None, size_average=True)
+                    loss_func = FocalLoss(size_average=True)
                     loss = loss_func(preds, labels)
                     
                 elif self.tm_criterion == 'Ratio_Cross_Entropy':
-                    loss_func = Ratio_Cross_Entropy(device=self.device, class_num=self.num_class, alpha=None, size_average=True)
+                    loss_func = Ratio_Cross_Entropy(device=self.device, class_num=self.num_class, size_average=True)
                     loss = loss_func(preds, labels)
                     
                 test_loss += loss.item()
