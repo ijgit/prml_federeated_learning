@@ -51,8 +51,10 @@ for i, dataset_name in enumerate(dataset_names):
             plt.title('origin')
             plt.xlabel('Class No.')
             plt.ylabel('Client ID')
-            # plt.xticks([0, 9, 20-1, 30-1, 40-1, 50-1, 60-1], ['0', '10', '20', '30', '40', '50', '60'])
-            # plt.yticks([0, 19, 40-1, 60-1, 80-1, 100-1], ['0', '20', '40', '60', '80', '100'])
+            plt.yticks([0, 19, 40-1, 60-1, 80-1, 100-1], ['1', '20', '40', '60', '80', '100'])
+            if dataset_name == 'EMNIST':
+                plt.xticks([0, 9, 20-1, 30-1, 40-1, 50-1, 60-1], ['0', '10', '20', '30', '40', '50', '60'])
+            
 
             plt.subplot(1, 2, 2)
             ax = sns.heatmap(table_resampled.T, cmap='Blues', fmt='g', vmin=0, vmax=max_v)
@@ -60,8 +62,9 @@ for i, dataset_name in enumerate(dataset_names):
             plt.title('resampled')
             plt.xlabel('Class No.')
             plt.ylabel('Client ID')
-            # plt.xticks([0, 9, 20-1, 30-1, 40-1, 50-1, 60-1], ['0', '10', '20', '30', '40', '50', '60'])
-            # plt.yticks([0, 19, 40-1, 60-1, 80-1, 100-1], ['0', '20', '40', '60', '80', '100'])
+            plt.yticks([0, 19, 40-1, 60-1, 80-1, 100-1], ['1', '20', '40', '60', '80', '100'])
+            if dataset_name == 'EMNIST':
+                plt.xticks([0, 9, 20-1, 30-1, 40-1, 50-1, 60-1], ['0', '10', '20', '30', '40', '50', '60'])
 
             # plt.tight_layout()
             plt.suptitle(f"[{dataset_name}] ({sampling_type}) alpha={alpha}")
