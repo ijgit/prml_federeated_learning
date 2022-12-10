@@ -1,0 +1,242 @@
+0.0001
+fed_config: {'method': 'fedprox', 'init_round': None, 'num_rounds': 300, 'num_clients': 100, 'fraction': 0.1, 'alpha': 0.1}
+data_config: {'name': 'cifar10', 'num_classes': 10, 'alpha': 0.1, 'sampling_type': None}
+tm_config: {'lr': 0.01, 'momentum': 0.9, 'name': 'cifar10_cnn', 'criterion': 'Ratio_Cross_Entropy', 'optimizer': 'SGD', 'local_ep': 1, 'local_bs': 10, 'mu': 0.0001}
+system_config: {'is_mp': False, 'device': 'cuda', 'seed': 42, 'log_dir': 'log/cifar10/42_cifar10_0.1_fedprox($0.0001)_Ratio_Cross_Entropy_None', 'time_config': '2022-12-10_21:02:49', 'device_id': '1'}
+Files already downloaded and verified
+Files already downloaded and verified
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+sampling_type: None
+sampling types : ['smote', 'r_over', 'r_under']
+
+[WELCOME] Unfolding configurations...!
+cifar10_cnn(
+  (activation): ReLU(inplace=True)
+  (conv1): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1), padding=(1, 1), bias=False)
+  (maxpool1): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=1, dilation=1, ceil_mode=False)
+  (conv2): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1), padding=(1, 1), bias=False)
+  (maxpool2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=1, dilation=1, ceil_mode=False)
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (fc1): Linear(in_features=4096, out_features=512, bias=False)
+  (fc2): Linear(in_features=512, out_features=10, bias=False)
+)
+[Round: 0000] ...successfully initialized model (# parameters: 2155872)!
+0it [00:00, ?it/s]                  [Round: 0000] ...successfully created all 100 clients!
+0it [00:00, ?it/s]                  [Round: 0000] ...successfully finished setup of all 100 clients!
+  0%|          | 0/100 [00:00<?, ?it/s]  4%|▍         | 4/100 [00:00<00:02, 35.59it/s]  8%|▊         | 8/100 [00:00<00:02, 35.31it/s] 15%|█▌        | 15/100 [00:00<00:01, 49.74it/s] 22%|██▏       | 22/100 [00:00<00:01, 56.84it/s] 30%|███       | 30/100 [00:00<00:01, 62.94it/s] 38%|███▊      | 38/100 [00:00<00:00, 67.38it/s] 46%|████▌     | 46/100 [00:00<00:00, 68.72it/s] 53%|█████▎    | 53/100 [00:00<00:00, 66.03it/s] 60%|██████    | 60/100 [00:00<00:00, 65.94it/s] 68%|██████▊   | 68/100 [00:01<00:00, 68.82it/s] 76%|███████▌  | 76/100 [00:01<00:00, 71.06it/s] 86%|████████▌ | 86/100 [00:01<00:00, 77.60it/s] 94%|█████████▍| 94/100 [00:01<00:00, 72.49it/s]                                                [Round: 0000] ...successfully transmitted models to all 100 clients!
+[Round: 0001] Select clients...!
+  0%|          | 0/10 [00:00<?, ?it/s] 30%|███       | 3/10 [00:00<00:00, 27.09it/s] 90%|█████████ | 9/10 [00:00<00:00, 44.80it/s]                                              [Round: 0001] ...successfully transmitted models to 10 selected clients!
+[Round: 0001] Start updating selected 10 clients...!
+  0%|          | 0/10 [00:00<?, ?it/s]                                      Traceback (most recent call last):
+  File "main.py", line 108, in <module>
+    central_server.fit()
+  File "/home/ijeong/workspace/Lecture/PRML/Project/code/prml_federeated_learning/FedLearning/src/server.py", line 308, in fit
+    self.train_federated_model()
+  File "/home/ijeong/workspace/Lecture/PRML/Project/code/prml_federeated_learning/FedLearning/src/server.py", line 251, in train_federated_model
+    selected_total_size = self.update_selected_clients(sampled_client_indices)
+  File "/home/ijeong/workspace/Lecture/PRML/Project/code/prml_federeated_learning/FedLearning/src/server.py", line 172, in update_selected_clients
+    self.clients[idx].client_update(self._round)
+  File "/home/ijeong/workspace/Lecture/PRML/Project/code/prml_federeated_learning/FedLearning/src/fedprox_client.py", line 104, in client_update
+    self.task_model_update()
+  File "/home/ijeong/workspace/Lecture/PRML/Project/code/prml_federeated_learning/FedLearning/src/fedprox_client.py", line 92, in task_model_update
+    loss_func = Ratio_Cross_Entropy(device=self.device, class_num=self.num_class, size_average=True)
+  File "/home/ijeong/workspace/Lecture/PRML/Project/code/prml_federeated_learning/FedLearning/src/criterion.py", line 120, in __init__
+    self.alpha = Variable(alpha)
+TypeError: Variable data has to be a tensor, but got float
