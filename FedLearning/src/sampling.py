@@ -202,6 +202,7 @@ class ClientDataset(Dataset):
         _y = torch.Tensor(y_resampled)
         print(f"  resampled.shape; {_X.shape}, {_y.shape}")
         print(f">>>>> Resampling Completed : {self.sampling_type}")
+
         return _X, _y
 
 class MyAugmentator():
@@ -224,6 +225,8 @@ class MyAugmentator():
                     MyRandomAffine,
                     transforms.ToTensor(),
         ])
+
+        self.once = True
 
     def fit_resample(self, reshaped_X_train, _y):
 
@@ -264,19 +267,42 @@ class MyAugmentator():
             # find index where _y == _class_no
             index_list = list(np.where(_y == _class_no)[0])
 
+            has_channel = False
+            if len(list(reshaped_X_train[index_list[0]].shape)) > 2:
+                has_channel = True
+
             while(_left_count > 0) :
                 rand_index = index_list[np.random.randint(0, len(index_list))]
 
                 will_be_augmentated = reshaped_X_train[rand_index]
                 # print(f"will_be_augmentated.shape: {will_be_augmentated.shape}")
-                augmentated = self.my_transform(will_be_augmentated).numpy()
-                # print(f"augmentated.shape: {augmentated.shape}")
-                converted_shape = list(augmentated.shape)
-                converted_shape.append(converted_shape[0])
-                converted_shape = converted_shape[1:]
 
-                resampled_x[x_origin_shape[0] + created_count] = augmentated.reshape(converted_shape)
-                resampled_y[x_origin_shape[0] + created_count] = _y[rand_index]
+                if has_channel:
+                    augmentated = self.my_transform(will_be_augmentated).permute(1, 2, 0).numpy() * 255.0 # change C, H, W to H, W, C 
+                else:
+                    augmentated = self.my_transform(will_be_augmentated).numpy().reshape(will_be_augmentated.shape) * 255.0 # in EMNIST case
+
+                resampled_x[x_origin_shape[0] + created_count] = augmentated.astype(reshaped_X_train.dtype)
+                resampled_y[x_origin_shape[0] + created_count] = _y[rand_index].astype(_y.dtype)
+
+                print(f"will_be_augmentated:{will_be_augmentated}")
+                print(f"augmentated:{resampled_x[x_origin_shape[0] + created_count]}")
+
+                if self.once and created_count < 3:
+                    plt.figure(figsize=(6,3))
+                    plt.subplot(1,2,1)
+                    plt.imshow(will_be_augmentated)
+                    plt.subplot(1,2,2)
+                    plt.imshow(augmentated)
+                    plt.show()
+                    plt.savefig(f"./png/test_image_{created_count}.png")
+                    print(f"will_be_augmentated: {will_be_augmentated.shape}")
+                    print(will_be_augmentated)
+
+                    print(f"augmentated: {augmentated.shape}")
+                    print(augmentated)
+                else :
+                    self.once = False
 
                 created_count = created_count + 1
                 _left_count = _left_count -1
