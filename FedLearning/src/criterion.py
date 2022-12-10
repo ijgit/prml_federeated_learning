@@ -5,9 +5,8 @@ import numpy as np
 import torch.nn.functional as F
 from torch.autograd import Variable
 # from sklearn.preprocessing import label_binarize
-
 class FocalLoss(nn.Module):
-    def __init__(self, gamma=0, alpha=None, size_average=False):
+    def __init__(self, gamma=0, alpha=None, size_average=True):
         super(FocalLoss, self).__init__()
         self.gamma = gamma
         self.alpha = alpha
@@ -22,8 +21,7 @@ class FocalLoss(nn.Module):
             input = input.contiguous().view(-1,input.size(2))   # N,H*W,C => N*H*W,C
         target = target.view(-1,1)
 
-        # logpt = F.log_softmax(input)
-        logpt = F.log_softmax(input, dim=1)
+        logpt = F.log_softmax(input)
         logpt = logpt.gather(1,target)
         logpt = logpt.view(-1)
         pt = Variable(logpt.data.exp())
@@ -37,7 +35,6 @@ class FocalLoss(nn.Module):
         loss = -1 * (1-pt)**self.gamma * logpt
         if self.size_average: return loss.mean()
         else: return loss.sum()
-        
         
 
 # class FocalLoss(nn.Module):
@@ -111,7 +108,7 @@ class Ratio_Cross_Entropy(nn.Module):
                                     instead summed for each minibatch.
         """
 
-    def __init__(self, device, class_num, alpha=None, size_average=False):
+    def __init__(self, device, class_num, alpha=1.0, size_average=False):
         self.device = device
         super(Ratio_Cross_Entropy, self).__init__()
         if alpha is None:
