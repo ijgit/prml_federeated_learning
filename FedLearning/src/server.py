@@ -24,7 +24,7 @@ from .utils import *
 from .fedavg_client import Client as FedAvg_Client
 from .feddyn_client import Client as FedDyn_Client
 from .fedprox_client import Client as FedProx_Client
-
+from sklearn import metrics
 
 from .criterion import *
 logger = logging.getLogger(__name__)
@@ -244,7 +244,7 @@ class Server(object):
 
         # updated selected clients with local dataset
         if self.mp_flag:
-            with pool.ThreadPool(12) as workhorse:
+            with pool.ThreadPool(5) as workhorse:
                 selected_total_size = workhorse.map(self.mp_update_selected_clients, sampled_client_indices)
             selected_total_size = sum(selected_total_size)
         else:
@@ -260,7 +260,7 @@ class Server(object):
         self.t_model.eval()
         self.t_model.to(self.device)
 
-        test_loss, correct = 0, 0
+        test_loss, correct, f1_score = 0, 0, 0
         with torch.no_grad():
             for data, labels in self.test_dataloader:
                 data, labels = data.float().to(self.device), labels.long().to(self.device)
@@ -282,18 +282,24 @@ class Server(object):
                 predicted = preds.argmax(dim=1, keepdim=True)
                 correct += predicted.eq(labels.view_as(predicted)).sum().item()
 
-                if self.device != 'cpu': torch.cuda.empty_cache()
+                _predicted = predicted.detach().cpu().numpy().argmax(-1)
+                
+                _, _, f1_macro, _ = metrics.precision_recall_fscore_support(labels.detach().cpu().numpy(), _predicted, average='macro', zero_division=0)
+                f1_score += f1_macro
 
+                if self.device != 'cpu': torch.cuda.empty_cache()
+        
         self.t_model.to('cpu')
+        f1_score = f1_score / len(self.test_dataloader)
         test_loss = test_loss / len(self.test_dataloader)
         test_accuracy = correct / len(self.test_dataset)
-        return test_loss, test_accuracy
+        return test_loss, test_accuracy, f1_score
 
 
     def fit(self):
         """Execute the whole process of the federated learning."""
         if self.init_round == None:
-            self.results = {"loss": [], "accuracy": []}
+            self.results = {"loss": [], "accuracy": [], "f1-score": []}
         else:
             with open(os.path.join(f"{self.log_dir}", "result.pkl"), "rb") as f:
                 self.results = pickle.load(f)
@@ -307,7 +313,7 @@ class Server(object):
             
             self.train_federated_model()
 
-            test_loss, test_accuracy = self.evaluate_global_task_model()
+            test_loss, test_accuracy, f1_score = self.evaluate_global_task_model()
             self.results['loss'].append(test_loss)
             self.results['accuracy'].append(test_accuracy)
 
@@ -315,10 +321,12 @@ class Server(object):
             config_info = f"[{self.data_config['name']}]_alpha:{self.data_config['alpha']}_method:{self.method}(mu:{self.tm_config['mu']})_loss:{self.tm_config['criterion']}_sampling:{self.data_config['sampling_type']}"
             self.writer.add_scalars('Loss', {f"{config_info}": test_loss}, self._round)
             self.writer.add_scalars('Accuracy', {f"{config_info}": test_accuracy}, self._round)
+            self.writer.add_scalars('F1', {f"{config_info}": f1_score}, self._round)
 
             message = f"[Round: {str(self._round).zfill(4)}] Evaluate global model's performance...!\
                 \n\t[Server] ...finished evaluation!\
                 \n\t=> Loss: {test_loss:.4f}\
+                \n\t=> F1: {100. * f1_score:.2f}\
                 \n\t=> Accuracy: {100. * test_accuracy:.2f}%\n"            
             print(message); logging.info(message)
             del message; gc.collect()
