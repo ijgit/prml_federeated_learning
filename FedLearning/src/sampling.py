@@ -118,7 +118,7 @@ def partition_dataset(targets, class_to_idx, num_client, alpha, seed):
 class ClientDataset(Dataset):
     """TensorDataset with support of transforms."""
     def __init__(self, data, targets, class_to_idx, sampling_type, seed, transform=None):
-        self.s_types = ["smote", "r_over", "r_under", "augment"]
+        self.s_types = ["smote", "r_over", "r_under", "r_under_client", "augment"]
         self.seed = seed
 
         # assert all(tensors[0].size(0) == tensor.size(0) for tensor in tensors)
@@ -168,6 +168,12 @@ class ClientDataset(Dataset):
             reshaped_X_train = _X.reshape(_X.shape[0], -1)
             resampler = SMOTE(random_state=self.seed)
         elif self.sampling_type == "r_under":
+            # from imblearn.under_sampling import RandomUnderSampler
+            # reshaped_X_train = _X.reshape(_X.shape[0], -1)
+            # resampler = RandomUnderSampler(random_state=self.seed)
+            return self.data, self.targets # do nothing 
+
+        elif self.sampling_type == "r_under_client":
             from imblearn.under_sampling import RandomUnderSampler
             reshaped_X_train = _X.reshape(_X.shape[0], -1)
             resampler = RandomUnderSampler(random_state=self.seed)

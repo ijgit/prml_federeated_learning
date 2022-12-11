@@ -14,6 +14,8 @@ from torch.utils.data import DataLoader
 from .optimizer import *
 from .criterion import *
 
+from .sampling import ClientDataset
+
 logger = logging.getLogger(__name__)
 
 def model_parameter_vector(model):
@@ -37,6 +39,7 @@ class Client(object):
         self.alpha=1e-2
         self.id = client_id
         self.data = local_data
+        self.origClientDataset = local_data
         self.num_class = len(self.data.class_to_idx.values())
         self.log_path = log_path
         self.device = device
@@ -68,6 +71,21 @@ class Client(object):
         """Return a total size of the client's local data."""
         return len(self.data)
 
+    def update_undersampling(self):
+        print(f"run undersampling on client #{self.id}")
+        new_seed = np.random.randint(np.iinfo(np.int32).max)
+
+        newly_undersampling = ClientDataset(
+            data = self.origClientDataset.data,
+            targets = self.origClientDataset.targets,
+            class_to_idx = self.origClientDataset.class_to_idx, 
+            sampling_type="r_under_client", 
+            seed=new_seed,
+            transform=self.origClientDataset.transform
+        )
+
+        self.data = newly_undersampling
+        self.dataloader = DataLoader(self.data, batch_size=self.tm_local_bs, shuffle=True)
 
     def setup(self, tm_config):
         """Set up common configuration of each client; called by center server."""
@@ -83,6 +101,9 @@ class Client(object):
         '''update target local model using local dataset'''
         self.t_model.train()
         self.t_model.to(self.device)
+
+        if self.origClientDataset.sampling_type == "r_under":
+            self.update_undersampling()
 
         if self.tm_optimizer == "SGD":
             optimizer = torch.optim.__dict__[self.tm_optimizer](
