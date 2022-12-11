@@ -10,6 +10,10 @@ alphas = [0.1, 1.0, 10.0]
 sampling_types = ['r_under', 'r_over', 'smote', 'augment']
 client_ids = [i for i in range(100)]
 
+dataset_names = ['CIFAR10']
+alphas = [5.0]
+sampling_types = ['smote']
+
 for i, dataset_name in enumerate(dataset_names):
     class_size = class_sizes[i]
     for alpha in alphas:
