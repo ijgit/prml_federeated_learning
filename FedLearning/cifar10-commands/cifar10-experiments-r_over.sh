@@ -9,6 +9,6 @@
 # bash cifar10-alpha_10_sampling_r_under.sh
 # bash cifar10-alpha_10_sampling_smote.sh
 
-bash cifar10-ce-None.sh
-bash cifar10-rce-None.sh
-bash cifar10-fl-None.sh
+bash cifar10-ce-r_over.sh
+bash cifar10-rce-r_over.sh
+bash cifar10-fl-r_over.sh
