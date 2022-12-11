@@ -8,16 +8,16 @@
 
 # Fix Setting
 is_mp='False';num_clients=100;fraction=0.1
-rounds=100;seed=42;alpha=3;sampling_type=smote
+rounds=100;seed=42;alpha=10;sampling_type=augment
 
 # CIFAR-10
 dataset_name='cifar10';tm_local_bs=10
 
 #################### FedProx ########################
-# device=7
-# tm_criterion=CrossEntropyLoss;method=fedavg;mu=None
-# filename="${seed}_${dataset_name}_${alpha}_${method}(mu:${mu})_${tm_criterion}_${sampling_type}"
-# python main.py --mp=${is_mp} --method=${method} --sampling_type=${sampling_type} --tm_mu=${mu} --tm_criterion=${tm_criterion} --tm_local_bs=${tm_local_bs} --device=${device} --alpha=${alpha} --dataset_name=${dataset_name} --num_clients=${num_clients} --fraction=${fraction} --rounds=${rounds} > ./output/${filename}.out
+device=7
+tm_criterion=CrossEntropyLoss;method=fedavg;mu=None
+filename="${seed}_${dataset_name}_${alpha}_${method}(mu:${mu})_${tm_criterion}_${sampling_type}"
+python main.py --mp=${is_mp} --method=${method} --sampling_type=${sampling_type} --tm_mu=${mu} --tm_criterion=${tm_criterion} --tm_local_bs=${tm_local_bs} --device=${device} --alpha=${alpha} --dataset_name=${dataset_name} --num_clients=${num_clients} --fraction=${fraction} --rounds=${rounds} > ./output/${filename}.out
 
 # tm_criterion=FocalLoss;method=fedavg;mu=None
 # filename="${seed}_${dataset_name}_${alpha}_${method}(mu:${mu})_${tm_criterion}_${sampling_type}"
@@ -72,13 +72,13 @@ dataset_name='cifar10';tm_local_bs=10
 ###########################################################
 
 # # EMNIST
-dataset_name='emnist';tm_local_bs=100
+# dataset_name='emnist';tm_local_bs=100
 
 # #################### FedProx ########################
-device=7
-tm_criterion=CrossEntropyLoss;method=fedavg;mu=None
-filename="${seed}_${dataset_name}_${alpha}_${method}(mu:${mu})_${tm_criterion}_${sampling_type}"
-python main.py --mp=${is_mp} --method=${method} --sampling_type=${sampling_type} --tm_mu=${mu} --tm_criterion=${tm_criterion} --tm_local_bs=${tm_local_bs} --device=${device} --alpha=${alpha} --dataset_name=${dataset_name} --num_clients=${num_clients} --fraction=${fraction} --rounds=${rounds} > ./output/${filename}.out 2>&1 &
+# device=7
+# tm_criterion=CrossEntropyLoss;method=fedavg;mu=None
+# filename="${seed}_${dataset_name}_${alpha}_${method}(mu:${mu})_${tm_criterion}_${sampling_type}"
+# python main.py --mp=${is_mp} --method=${method} --sampling_type=${sampling_type} --tm_mu=${mu} --tm_criterion=${tm_criterion} --tm_local_bs=${tm_local_bs} --device=${device} --alpha=${alpha} --dataset_name=${dataset_name} --num_clients=${num_clients} --fraction=${fraction} --rounds=${rounds} > ./output/${filename}.out 2>&1 &
 
 # tm_criterion=FocalLoss;method=fedavg;mu=None
 # filename="${seed}_${dataset_name}_${alpha}_${method}(mu:${mu})_${tm_criterion}_${sampling_type}"

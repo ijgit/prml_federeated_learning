@@ -128,6 +128,7 @@ class ClientDataset(Dataset):
         self.class_to_idx = class_to_idx
         self.transform = transform
         self.sampling_type = sampling_type
+        self.dataset_name = dataset_name
 
         print(f"sampling_type: {self.sampling_type}")
         if self.sampling_type in self.s_types:
@@ -184,7 +185,7 @@ class ClientDataset(Dataset):
 
         elif self.sampling_type == "augment":
             reshaped_X_train = _X
-            resampler = MyAugmentator(random_state=self.seed)
+            resampler = MyAugmentator(random_state=self.seed, dataset_name=self.dataset_name,client_id=self.client_id,sampling_type=self.sampling_type)
 
         else :
             return self.data, self.targets # do nothing
@@ -206,7 +207,10 @@ class ClientDataset(Dataset):
         return _X, _y
 
 class MyAugmentator():
-    def __init__(self, random_state):
+    def __init__(self, random_state, dataset_name, client_id, sampling_type):
+        self.dataset_name=dataset_name
+        self.client_id=client_id
+        self.sampling_type=sampling_type
         self.random_state = random_state
         np.random.seed(self.random_state)
 
@@ -291,16 +295,20 @@ class MyAugmentator():
                 if self.once and created_count < 3:
                     plt.figure(figsize=(6,3))
                     plt.subplot(1,2,1)
+                    plt.title("origin")
                     plt.imshow(will_be_augmentated)
                     plt.subplot(1,2,2)
-                    plt.imshow(augmentated)
+                    plt.imshow(augmentated.astype(np.int))
+                    plt.title("augmentation")
                     plt.show()
-                    plt.savefig(f"./png/test_image_{created_count}.png")
-                    print(f"will_be_augmentated: {will_be_augmentated.shape}")
-                    print(will_be_augmentated)
 
-                    print(f"augmentated: {augmentated.shape}")
-                    print(augmentated)
+                    c_file = f"sample_img.{self.dataset_name}.{self.sampling_type}.{self.client_id}.{created_count}"
+                    plt.savefig(f"./png/{c_file}.png")
+                    # print(f"will_be_augmentated: {will_be_augmentated.shape}")
+                    # print(will_be_augmentated)
+
+                    # print(f"augmentated: {augmentated.shape}")
+                    # print(augmentated)
                 else :
                     self.once = False
 
