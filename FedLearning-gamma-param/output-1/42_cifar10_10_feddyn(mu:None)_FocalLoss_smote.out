@@ -1,0 +1,22 @@
+None
+fed_config: {'method': 'feddyn', 'init_round': None, 'num_rounds': 300, 'num_clients': 100, 'fraction': 0.1, 'alpha': 10.0}
+data_config: {'name': 'cifar10', 'num_classes': 10, 'alpha': 10.0, 'sampling_type': 'smote'}
+tm_config: {'lr': 0.01, 'momentum': 0.9, 'name': 'cifar10_cnn', 'criterion': 'FocalLoss', 'optimizer': 'SGD', 'local_ep': 1, 'local_bs': 10, 'mu': None}
+system_config: {'is_mp': False, 'device': 'cuda', 'seed': 42, 'log_dir': 'log/cifar10/42_cifar10_10.0_feddyn(None)_FocalLoss_smote', 'time_config': '2022-12-12_02:17:54', 'device_id': '3'}
+Files already downloaded and verified
+Files already downloaded and verified
+sampling_type: smote
+Traceback (most recent call last):
+  File "main.py", line 101, in <module>
+    partitioned_train_set, test_dataset = prepare_dataset(seed=args.seed, dataset_name=args.dataset_name, num_client=args.num_clients,alpha=args.alpha, sampling_type=args.sampling_type)
+  File "/home/ijeong/workspace/prml_federeated_learning/FedLearning-gamma-param/src/sampling.py", line 396, in prepare_dataset
+    partitioned_train_set = partition_with_dirichlet_distribution(dataset_name, train_dataset.data, train_dataset.targets, train_dataset.class_to_idx, num_client, alpha, transform, seed, sampling_type)
+  File "/home/ijeong/workspace/prml_federeated_learning/FedLearning-gamma-param/src/sampling.py", line 337, in partition_with_dirichlet_distribution
+    splited_client_dataset = [
+  File "/home/ijeong/workspace/prml_federeated_learning/FedLearning-gamma-param/src/sampling.py", line 338, in <listcomp>
+    ClientDataset(
+  File "/home/ijeong/workspace/prml_federeated_learning/FedLearning-gamma-param/src/sampling.py", line 133, in __init__
+    self.data, self.targets = self.sampling()
+  File "/home/ijeong/workspace/prml_federeated_learning/FedLearning-gamma-param/src/sampling.py", line 167, in sampling
+    from imblearn.over_sampling import SMOTE
+ModuleNotFoundError: No module named 'imblearn'

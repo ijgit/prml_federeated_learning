@@ -6,7 +6,7 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 # from sklearn.preprocessing import label_binarize
 class FocalLoss(nn.Module):
-    def __init__(self, gamma=5, alpha=None, size_average=True):
+    def __init__(self, gamma=1, alpha=None, size_average=True):
         super(FocalLoss, self).__init__()
         self.gamma = gamma
         self.alpha = alpha

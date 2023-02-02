@@ -1,0 +1,10 @@
+bash emnist-alpha_0.1_sampling_None.sh
+bash emnist-alpha_0.1_sampling_r_over.sh
+bash emnist-alpha_0.1_sampling_r_under.sh
+bash emnist-alpha_1_sampling_None.sh
+bash emnist-alpha_1_sampling_r_over.sh
+bash emnist-alpha_1_sampling_r_under.sh
+bash emnist-alpha_10_sampling_None.sh
+bash emnist-alpha_10_sampling_r_over.sh
+bash emnist-alpha_10_sampling_r_under.sh
+bash emnist-alpha_10_sampling_smote.sh
